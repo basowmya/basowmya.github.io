@@ -1,0 +1,23 @@
+{
+  "name": "sowmya-art-gallery",
+  "version": "0.0.1",
+  "description": "Sowmya's Art Gallery",
+  "private": true,
+  "main": "js/bundle.js",
+  "scripts": {
+    "start": "beefy js/app.js:js/bundle.js --live --open -- -t reactify",
+    "prod": "browserify -e js/app.js -o js/bundle.js -t reactify -g uglifyify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dheeraj V S",
+  "license": "Proprietary",
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.23.7"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.6",
+    "reactify": "^1.1.1",
+    "uglifyify": "^3.0.1"
+  }
+}
