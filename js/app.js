@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015, Dheeraj V S. All rights reserved.
+ * Copyright (c) 2015, Sowmya B A. All rights reserved.
  */
 
 var React = require('react'),
@@ -20,11 +20,16 @@ var React = require('react'),
 
 var Navigation = React.createClass({
   render: function () {
+
+    function handleSelect() {
+      // Do nothing. Just by registering a handler, the menu will be closed automatically
+    }
+
     return (
       <Navbar brand="Sowmya's Art Gallery">
         <Nav>
           <NavItem eventKey={1} href='#'>Home</NavItem>
-          <DropdownButton eventKey={2} title='Gallery'>
+          <DropdownButton eventKey={2} title='Gallery' onSelect={handleSelect}>
             {
               data.categories.map(function (category, index) {
                 return (
@@ -35,7 +40,7 @@ var Navigation = React.createClass({
               })
             }
           </DropdownButton>
-          <NavItem eventKey={3} href='#'>About</NavItem>
+          <NavItem eventKey={3} href='#about'>About</NavItem>
           <NavItem eventKey={4} href='#'>Contact</NavItem>
         </Nav>
       </Navbar>
@@ -94,13 +99,30 @@ var App = React.createClass({
   }
 });
 
+var About = React.createClass({
+  render: function () {
+    return (
+      <div>About</div>
+    );
+  }
+});
+
+var Gallery = React.createClass({
+  render: function () {
+    return (
+      <div>Gallery: {this.props.params.name}</div>
+    );
+  }
+});
+
 var routes = (
   <Route handler={App}>
     <DefaultRoute handler={Home}/>
+    <Route path="gallery/:name" handler={Gallery}/>
+    <Route path="about" handler={About}/>
   </Route>
 );
 
 Router.run(routes, function (Root) {
   React.render(<Root/>, document.body);
 });
-//React.render(<App data={data}/>, document.getElementById('app'));
