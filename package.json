@@ -5,8 +5,8 @@
   "private": true,
   "main": "js/bundle.js",
   "scripts": {
-    "start": "beefy js/app.js:js/bundle.js --live --open -- -t reactify",
-    "prod": "browserify -e js/app.js -o js/bundle.js -t reactify -g uglifyify",
+    "start": "beefy js/index.js:js/bundle.js --live --open -- -t reactify",
+    "prod": "browserify -e js/index.js -o js/bundle.js -t reactify -g uglifyify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dheeraj V S",

@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ */
+
+'use strict';
+
 var data = {
   "categories": [
     {
