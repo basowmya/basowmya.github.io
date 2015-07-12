@@ -3,6 +3,10 @@
  */
 
 var React = require('react'),
+  Router = require('react-router'),
+  Route = Router.Route,
+  RouteHandler = Router.RouteHandler,
+  DefaultRoute = Router.DefaultRoute,
   Navbar = require('react-bootstrap').Navbar,
   Nav = require('react-bootstrap').Nav,
   NavItem = require('react-bootstrap').NavItem,
@@ -22,7 +26,7 @@ var Navigation = React.createClass({
           <NavItem eventKey={1} href='#'>Home</NavItem>
           <DropdownButton eventKey={2} title='Gallery'>
             {
-              this.props.categories.map(function (category, index) {
+              data.categories.map(function (category, index) {
                 return (
                   <MenuItem key={category.id} eventKey={index + 1}>
                     {category.name}
@@ -51,7 +55,7 @@ var Footer = React.createClass({
 
 var Categories = React.createClass({
   render: function () {
-    var cols = this.props.categories.map(function (category, index) {
+    var cols = data.categories.map(function (category, index) {
       var col = [
         <Col xs={6} sm={4}>
           <Thumbnail href='#' alt={category.name} src={category.image} />
@@ -72,16 +76,31 @@ var Categories = React.createClass({
   }
 });
 
+var Home = React.createClass({
+  render: function () {
+    return <Categories/>;
+  }
+});
+
 var App = React.createClass({
   render: function () {
     return (
       <div>
-        <Navigation categories={this.props.data.categories}/>
-        <Categories categories={this.props.data.categories}/>
+        <Navigation/>
+        <RouteHandler/>
         <Footer/>
       </div>
     );
   }
 });
 
-React.render(<App data={data}/>, document.getElementById('app'));
+var routes = (
+  <Route handler={App}>
+    <DefaultRoute handler={Home}/>
+  </Route>
+);
+
+Router.run(routes, function (Root) {
+  React.render(<Root/>, document.body);
+});
+//React.render(<App data={data}/>, document.getElementById('app'));
