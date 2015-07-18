@@ -20,8 +20,12 @@ var data = {
       "image": "img/items/zen-01-s.jpg"
     }, {
       "id": 4,
-      "name": "Others",
+      "name": "Miscellaneous",
       "image": "img/items/mur-01-s.jpg"
+    }, {
+      "id": 5,
+      "name": "Hand Painted Vases",
+      "image": "img/items/pot-01-s.jpg"
     }
   ],
   "items": [

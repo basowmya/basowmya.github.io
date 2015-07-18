@@ -5,32 +5,72 @@
 'use strict';
 
 var React = require('react'),
-  Grid = require('react-bootstrap').Grid,
-  Row = require('react-bootstrap').Row,
-  Col = require('react-bootstrap').Col,
-  Thumbnail = require('react-bootstrap').Thumbnail,
+  _ = require('lodash'),
+  bootstrap = require('react-bootstrap'),
+  Panel = bootstrap.Panel,
+  Thumbnail = bootstrap.Thumbnail,
+  Slick = require('react-slick'),
   data = require('../data');
+
+var Carousel = React.createClass({
+  render: function () {
+    var settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    },
+      thumbnails = _.map(
+        _.filter(data.items, {category: this.props.category.id}),
+        function (item) {
+          return (
+            <Thumbnail key={item.id} href='#' alt={item.name} src={item.images.small[0]} />
+          );
+        }
+      );
+
+    return (
+      <Slick {...settings}>
+        {thumbnails}
+      </Slick>
+    );
+  }
+});
 
 var Categories = React.createClass({
   render: function () {
-    var cols = data.categories.map(function (category, index) {
-      var col = [
-        <Col xs={6} sm={4}>
-          <Thumbnail href='#' alt={category.name} src={category.image} />
-        </Col>
-      ];
-
-      if ((index % 2) !== 0) {
-        col.push(<div className="clearfix visible-xs-block"></div>);
-      }
-      if (((index + 1) % 3) === 0) {
-        col.push(<div className="clearfix visible-sm-block"></div>);
-      }
-
-      return col;
+    var panels = data.categories.map(function (category, index) {
+      return (
+        <Panel key={category.id} header={category.name}>
+          <Carousel category={category}/>
+        </Panel>
+      );
     });
-
-    return <Grid><Row>{cols}</Row></Grid>;
+    return (
+      <div>{panels}</div>
+    );
   }
 });
 
