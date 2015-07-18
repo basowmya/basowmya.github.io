@@ -6,12 +6,14 @@
   "main": "js/bundle.js",
   "scripts": {
     "start": "beefy js/index.js:js/bundle.js --live --open -- -t reactify",
+    "less": "lessc styles/app.less > styles/app.css",
     "prod": "browserify -e js/index.js -o js/bundle.js -t reactify -g uglifyify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dheeraj V S",
   "license": "Proprietary",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "lodash": "^3.10.0",
     "react": "^0.13.3",
     "react-bootstrap": "^0.23.7",

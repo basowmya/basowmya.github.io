@@ -1,12 +1,13 @@
-@import "../lib/bootstrap/less/bootstrap";
+@import "../node_modules/bootstrap/less/bootstrap";
 
 @icon-font-path:        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/fonts/";
-@body-bg:               #000;
+@body-bg:               #dddddd;
 @text-color:            @navbar-inverse-color;
-@grid-float-breakpoint: 302px;
+@thumbnail-bg:          white;
+@grid-float-breakpoint: 310px;
 
 @media (max-width: (@screen-sm-min - 1)) and (min-width: @grid-float-breakpoint) {
-  .navbar > .container-fluid {
+  .navbar .container {
     padding-left: 0;
     padding-right: 0;
 
@@ -19,6 +20,34 @@
       padding-right: 0;
     }
   }
+}
+
+.panel {
+  background-color: @body-bg;
+  border: none;
+  // margin-bottom: 0;
+}
+
+.panel-default > .panel-heading {
+  // color: @text-color;
+  background-color: @body-bg;
+  border: none;
+}
+
+.panel-body {
+  padding: 15px 30px;
+}
+
+.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.thumbnail {
+  margin-bottom: 0;
 }
 
 .thumbnail .caption {

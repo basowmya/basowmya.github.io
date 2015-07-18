@@ -7,38 +7,54 @@
 var React = require('react'),
   _ = require('lodash'),
   bootstrap = require('react-bootstrap'),
+  Button = bootstrap.Button,
   Panel = bootstrap.Panel,
   Thumbnail = bootstrap.Thumbnail,
+  mui = require('material-ui'),
+  Paper = mui.Paper,
+  RaisedButton = mui.RaisedButton,
   Slick = require('react-slick'),
   data = require('../data');
 
 var Carousel = React.createClass({
   render: function () {
     var settings = {
+        arrows: true,
+        centerPadding: '600px',
         dots: true,
+        draggable: true,
         infinite: false,
-        speed: 500,
-        slidesToShow: 4,
+        lazyLoad: true,
+        slidesToShow: 5,
         slidesToScroll: 4,
+        speed: 500,
         responsive: [{
-            breakpoint: 1024,
+            breakpoint: 400,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false
             }
         }, {
             breakpoint: 480,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                dots: false
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                dots: false
             }
         }]
     },
@@ -46,7 +62,9 @@ var Carousel = React.createClass({
         _.filter(data.items, {category: this.props.category.id}),
         function (item) {
           return (
-            <Thumbnail key={item.id} href='#' alt={item.name} src={item.images.small[0]} />
+            <Paper zDepth={3}>
+              <Thumbnail key={item.id} href={'#'} alt={item.name} src={item.images.small[0]} />
+            </Paper>
           );
         }
       );
@@ -59,11 +77,13 @@ var Carousel = React.createClass({
   }
 });
 
+// <Panel key={category.id} header={<Button>{category.name}</Button>}>
+
 var Categories = React.createClass({
   render: function () {
     var panels = data.categories.map(function (category, index) {
       return (
-        <Panel key={category.id} header={category.name}>
+        <Panel key={category.id} header={<RaisedButton label={category.name} primary={true} />}>
           <Carousel category={category}/>
         </Panel>
       );
