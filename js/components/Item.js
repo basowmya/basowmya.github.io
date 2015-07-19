@@ -66,7 +66,7 @@ var ItemView = React.createClass({
             <RaisedButton className='vertical-align' linkButton={true} href={href} label={category.name} primary={true} />
           </div>
         }>
-          <ItemGrid items={similarItems}/>
+          <ItemGrid items={similarItems} showDetails={true} />
       </Panel>
     </div>
     );
