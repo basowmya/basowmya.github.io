@@ -31,7 +31,7 @@ var Categories = React.createClass({
         <Panel key={category.id} header={
           <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
         }>
-          <CategoryGrid items={items}/>
+          <CategoryGrid items={items} singleRow={true}/>
         </Panel>
       );
     });
