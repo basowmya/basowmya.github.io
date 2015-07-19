@@ -62,7 +62,7 @@ var ItemView = React.createClass({
         </Panel>
         <Panel header={
           <div>
-            <span className='h3'>Similar items in </span>
+            <span className='h4'>Similar items in </span>
             <RaisedButton className='vertical-align' linkButton={true} href={href} label={category.name} primary={true} />
           </div>
         }>
