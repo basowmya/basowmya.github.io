@@ -12,7 +12,8 @@ var React = require('react'),
   Home = require('./components/Home'),
   Gallery = require('./components/Gallery'),
   Item = require('./components/Item'),
-  About = require('./components/About');
+  About = require('./components/About'),
+  Contact = require('./components/Contact');
 
 var routes = (
   <Route handler={App}>
@@ -20,6 +21,7 @@ var routes = (
     <Route name='item' path='item/:id' handler={Item}/>
     <Route name='gallery' path='gallery/:id' handler={Gallery}/>
     <Route name='about' path='about' handler={About}/>
+    <Route name='contact' path='contact' handler={Contact}/>
   </Route>
 );
 
