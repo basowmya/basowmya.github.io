@@ -31,7 +31,7 @@ var Menubar = React.createClass({
             {
               data.categories.map(function (category) {
                 return (
-                  <MenuItem key={category.id} eventKey={category.name}>
+                  <MenuItem key={category.id} eventKey={category.id}>
                     {category.name}
                   </MenuItem>
                 );

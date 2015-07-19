@@ -7,7 +7,6 @@
 var React = require('react'),
   Navigation = require('react-router').Navigation,
   bootstrap = require('react-bootstrap'),
-  Button = bootstrap.Button,
   Panel = bootstrap.Panel,
   Thumbnail = bootstrap.Thumbnail,
   Grid = bootstrap.Grid,
@@ -16,11 +15,10 @@ var React = require('react'),
   mui = require('material-ui'),
   Paper = mui.Paper,
   RaisedButton = mui.RaisedButton,
-  FlatButton = mui.FlatButton,
   _ = require('lodash'),
   data = require('../data');
 
-var Carousel = React.createClass({
+var CategoryRow = React.createClass({
   render: function () {
     var cols = _.map(
         _.filter(data.items, {category: this.props.category.id}),
@@ -35,7 +33,7 @@ var Carousel = React.createClass({
                           'hidden-xs hidden-sm hidden-md hidden-lg'
             }>
               <Paper zDepth={3}>
-                <Thumbnail key={item.id} href={'#'} alt={item.name} src={item.images.small[0]} />
+                <Thumbnail key={item.id} href='#' alt={item.name} src={item.images.small[0]} />
               </Paper>
             </Col>
           );
@@ -55,12 +53,9 @@ var Categories = React.createClass({
       var href = self.makeHref('gallery', category);
       return (
         <Panel key={category.id} header={
-          <div>
-            <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
-            <FlatButton className={'pull-right'} label={'See more of ' + category.name} primary={true} />
-          </div>
+          <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
         }>
-          <Carousel category={category}/>
+          <CategoryRow category={category}/>
         </Panel>
       );
     });

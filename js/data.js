@@ -7,23 +7,23 @@
 var data = {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Oil Paintings",
       "image": "img/items/oil-01-s.jpg"
     }, {
-      "id": 2,
+      "id": "2",
       "name": "Kalamkari",
       "image": "img/items/kal-01-s.jpg"
     }, {
-      "id": 3,
+      "id": "3",
       "name": "Zentangles",
       "image": "img/items/zen-01-s.jpg"
     }, {
-      "id": 4,
+      "id": "4",
       "name": "Miscellaneous",
       "image": "img/items/mur-01-s.jpg"
     }, {
-      "id": 5,
+      "id": "5",
       "name": "Hand Painted Vases",
       "image": "img/items/pot-01-s.jpg"
     }
@@ -32,7 +32,7 @@ var data = {
     {
       "id": "oil-01",
       "name": "The Maharashtrian Lady",
-      "category": 1,
+      "category": "1",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Oil on canvas",
@@ -43,7 +43,7 @@ var data = {
     }, {
       "id": "oil-02",
       "name": "Lady Playing Swarbat",
-      "category": 1,
+      "category": "1",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Oil on canvas",
@@ -54,7 +54,7 @@ var data = {
     }, {
       "id": "oil-03",
       "name": "The Buddha",
-      "category": 1,
+      "category": "1",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Oil on canvas",
@@ -65,7 +65,7 @@ var data = {
     }, {
       "id": "oil-04",
       "name": "Toy Seller",
-      "category": 1,
+      "category": "1",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Oil on canvas",
@@ -76,7 +76,7 @@ var data = {
     }, {
       "id": "oil-05",
       "name": "Weeping Boy",
-      "category": 1,
+      "category": "1",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Oil on canvas",
@@ -87,7 +87,7 @@ var data = {
     }, {
       "id": "kal-01",
       "name": "Ganesha Dancing",
-      "category": 2,
+      "category": "2",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -98,7 +98,7 @@ var data = {
     }, {
       "id": "kal-02",
       "name": "Saraswathi",
-      "category": 2,
+      "category": "2",
       "price": 12000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -109,7 +109,7 @@ var data = {
     }, {
       "id": "kal-03",
       "name": "Peacock",
-      "category": 2,
+      "category": "2",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -120,7 +120,7 @@ var data = {
     }, {
       "id": "kal-04",
       "name": "Radha Krishna",
-      "category": 2,
+      "category": "2",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -131,7 +131,7 @@ var data = {
     }, {
       "id": "kal-05",
       "name": "The Buddha",
-      "category": 2,
+      "category": "2",
       "price": 10000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -142,7 +142,7 @@ var data = {
     }, {
       "id": "kal-06",
       "name": "Twin Elephants",
-      "category": 2,
+      "category": "2",
       "price": 8000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -153,7 +153,7 @@ var data = {
     }, {
       "id": "kal-07",
       "name": "Twin Horses",
-      "category": 2,
+      "category": "2",
       "price": 8000,
       "size": "24\" x 36\" (inches) with frame",
       "description": "Media - Acrylic on Cloth",
@@ -164,7 +164,7 @@ var data = {
     }, {
       "id": "zen-01",
       "name": "Humming Bird",
-      "category": 3,
+      "category": "3",
       "price": 2500,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Pen and pencil on paper",
@@ -175,7 +175,7 @@ var data = {
     }, {
       "id": "zen-02",
       "name": "Bird 2",
-      "category": 3,
+      "category": "3",
       "price": 2500,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Pen and pencil on paper",
@@ -186,7 +186,7 @@ var data = {
     }, {
       "id": "zen-03",
       "name": "Bird 3",
-      "category": 3,
+      "category": "3",
       "price": 2500,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Pen and pencil on paper",
@@ -197,7 +197,7 @@ var data = {
     }, {
       "id": "zen-04",
       "name": "Bird 4",
-      "category": 3,
+      "category": "3",
       "price": 2500,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Pen and pencil on paper",
@@ -208,7 +208,7 @@ var data = {
     }, {
       "id": "zen-05",
       "name": "Floral Girl",
-      "category": 3,
+      "category": "3",
       "price": 2500,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Pen and pencil on paper",
@@ -219,7 +219,7 @@ var data = {
     }, {
       "id": "mur-01",
       "name": "Lady with Pot",
-      "category": 4,
+      "category": "4",
       "price": 8000,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Mural",
@@ -230,7 +230,7 @@ var data = {
     }, {
       "id": "mar-01",
       "name": "Lady Playing Instrument",
-      "category": 4,
+      "category": "4",
       "price": 8000,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Marble Painting",
@@ -241,7 +241,7 @@ var data = {
     }, {
       "id": "pcl-01",
       "name": "Fruit Seller",
-      "category": 4,
+      "category": "4",
       "price": 8000,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Colour Pencils",
@@ -252,7 +252,7 @@ var data = {
     }, {
       "id": "mnk-01",
       "name": "Rajasthani woman",
-      "category": 4,
+      "category": "4",
       "price": 8000,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Meenakari",
@@ -263,7 +263,7 @@ var data = {
     }, {
       "id": "acr-01",
       "name": "Egyptian Pharoah",
-      "category": 4,
+      "category": "4",
       "price": 8000,
       "size": "13\" x 15.5\" (inches) with frame",
       "description": "Media - Acrylic Paint",
@@ -274,7 +274,7 @@ var data = {
     }, {
       "id": "pot-01",
       "name": "Leopard Prints",
-      "category": 5,
+      "category": "5",
       "price": 300,
       "size": "6\" x 8\" (width x height in inches)",
       "description": "Media - Acrylic on Terracotta Pot",
@@ -285,7 +285,7 @@ var data = {
     }, {
       "id": "pot-02",
       "name": "Elephants at Sunset",
-      "category": 5,
+      "category": "5",
       "price": 400,
       "size": "6\" x 8\" (width x height in inches)",
       "description": "Media - Acrylic on Terracotta Pot",
@@ -296,7 +296,7 @@ var data = {
     }, {
       "id": "pot-03",
       "name": "Giraffes at Sunset",
-      "category": 5,
+      "category": "5",
       "price": 400,
       "size": "6\" x 8\" (width x height in inches)",
       "description": "Media - Acrylic on Terracotta Pot",
@@ -307,7 +307,7 @@ var data = {
     }, {
       "id": "pot-04",
       "name": "Kathakali face",
-      "category": 5,
+      "category": "5",
       "price": 600,
       "size": "6\" x 8\" (width x height in inches)",
       "description": "Media - Acrylic on Terracotta Pot",
@@ -318,7 +318,7 @@ var data = {
     }, {
       "id": "pot-05",
       "name": "Ajantha Ellora",
-      "category": 5,
+      "category": "5",
       "price": 800,
       "size": "6\" x 8\" (width x height in inches)",
       "description": "Media - Acrylic on Terracotta Pot",
