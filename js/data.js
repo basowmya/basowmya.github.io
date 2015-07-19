@@ -7,6 +7,11 @@
 var data = {
   "categories": [
     {
+      "id": "0",
+      "name": "Others",
+      "image": "img/items/mur-01-s.jpg"
+    },
+    {
       "id": "1",
       "name": "Oil Paintings",
       "image": "img/items/oil-01-s.jpg"
@@ -23,11 +28,6 @@ var data = {
     },
     {
       "id": "4",
-      "name": "Others",
-      "image": "img/items/mur-01-s.jpg"
-    },
-    {
-      "id": "5",
       "name": "Hand Painted Vases",
       "image": "img/items/pot-01-s.jpg"
     }
@@ -518,7 +518,7 @@ var data = {
     {
       "id": "mur-01",
       "name": "Lady with Pot",
-      "category": "4",
+      "category": "0",
       "price": 8000,
       "size": [13, 15.5],
       "outOfStock": true,
@@ -535,7 +535,7 @@ var data = {
     {
       "id": "mar-01",
       "name": "Lady Playing Instrument",
-      "category": "4",
+      "category": "0",
       "price": 8000,
       "size": [13, 15.5],
       "outOfStock": true,
@@ -552,7 +552,7 @@ var data = {
     {
       "id": "pcl-01",
       "name": "Fruit Seller",
-      "category": "4",
+      "category": "0",
       "price": 8000,
       "size": [13, 15.5],
       "outOfStock": true,
@@ -569,7 +569,7 @@ var data = {
     {
       "id": "mnk-01",
       "name": "Rajasthani woman",
-      "category": "4",
+      "category": "0",
       "price": 8000,
       "size": [13, 15.5],
       "outOfStock": true,
@@ -586,7 +586,7 @@ var data = {
     {
       "id": "acr-01",
       "name": "Egyptian Pharoah",
-      "category": "4",
+      "category": "0",
       "price": 8000,
       "size": [13, 15.5],
       "description": "Media - Acrylic Paint",
@@ -602,7 +602,7 @@ var data = {
     {
       "id": "pot-01",
       "name": "Leopard Prints",
-      "category": "5",
+      "category": "4",
       "price": 300,
       "size": [6, 8],
       "description": "Media - Acrylic on Terracotta Pot",
@@ -618,7 +618,7 @@ var data = {
     {
       "id": "pot-02",
       "name": "Elephants at Sunset",
-      "category": "5",
+      "category": "4",
       "price": 400,
       "size": [6, 8],
       "description": "Media - Acrylic on Terracotta Pot",
@@ -634,7 +634,7 @@ var data = {
     {
       "id": "pot-03",
       "name": "Giraffes at Sunset",
-      "category": "5",
+      "category": "4",
       "price": 400,
       "size": [6, 8],
       "description": "Media - Acrylic on Terracotta Pot",
@@ -650,7 +650,7 @@ var data = {
     {
       "id": "pot-04",
       "name": "Kathakali face",
-      "category": "5",
+      "category": "4",
       "price": 600,
       "size": [6, 8],
       "description": "Media - Acrylic on Terracotta Pot",
@@ -666,7 +666,7 @@ var data = {
     {
       "id": "pot-05",
       "name": "Ajantha Ellora",
-      "category": "5",
+      "category": "4",
       "price": 800,
       "size": [6, 8],
       "description": "Media - Acrylic on Terracotta Pot",

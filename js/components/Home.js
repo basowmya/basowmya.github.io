@@ -21,9 +21,12 @@ var Categories = React.createClass({
 
   render: function () {
     var self = this;
-    var panels = data.categories.map(function (category, index) {
+    var panels = data.categories.map(function (category) {
       var href = self.makeHref('gallery', category),
-        items = _.take(_.filter(data.items, {category: category.id}), 4);
+        items = _.chain(data.items)
+          .filter({category: category.id})
+          .sample(4).value();
+
       return (
         <Panel key={category.id} header={
           <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
@@ -33,7 +36,9 @@ var Categories = React.createClass({
       );
     });
     return (
-      <div>{panels}</div>
+      <div>
+        {_.chain(panels).rest().shuffle().concat(_.first(panels)).value()}
+      </div>
     );
   }
 });

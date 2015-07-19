@@ -28,9 +28,11 @@ var ItemView = React.createClass({
       item = _.find(data.items, 'id', this.props.params.id),
       category = _.find(data.categories, 'id', item.category),
       href = self.makeHref('gallery', category),
-      similarItems = _.sample(_.filter(data.items, function (obj) {
-        return obj.category === item.category && obj.id !== item.id;
-      }), 4);
+      similarItems = _.chain(data.items)
+        .filter(function (obj) {
+          return obj.category === item.category && obj.id !== item.id;
+        })
+        .sample(4).value();
 
     return (
       <div>
