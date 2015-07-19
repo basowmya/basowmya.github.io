@@ -22,12 +22,13 @@ var Categories = React.createClass({
   render: function () {
     var self = this;
     var panels = data.categories.map(function (category, index) {
-      var href = self.makeHref('gallery', category);
+      var href = self.makeHref('gallery', category),
+        items = _.take(_.filter(data.items, {category: category.id}), 4);
       return (
         <Panel key={category.id} header={
           <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
         }>
-          <CategoryGrid category={category}/>
+          <CategoryGrid items={items}/>
         </Panel>
       );
     });

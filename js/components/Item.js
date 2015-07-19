@@ -27,7 +27,10 @@ var ItemView = React.createClass({
     var self = this,
       item = _.find(data.items, 'id', this.props.params.id),
       category = _.find(data.categories, 'id', item.category),
-      href = self.makeHref('gallery', category);
+      href = self.makeHref('gallery', category),
+      similarItems = _.sample(_.filter(data.items, function (obj) {
+        return obj.category === item.category && obj.id !== item.id;
+      }), 4);
 
     return (
       <div>
@@ -36,13 +39,16 @@ var ItemView = React.createClass({
             <Row>
               <Col xs={12} sm={6}>
                 <Paper zDepth={3}>
-                  <Thumbnail alt={item.name} src={item.images.small[0]} />
+                  <Thumbnail alt={item.name} src={item.images.small[0]}>
+                    <p>Click for a larger view</p>
+                  </Thumbnail>
                 </Paper>
               </Col>
               <Col xs={12} sm={6}>
                 <p>{item.description}</p>
-                <p>{item.size}</p>
+                <p>{item.size[0]} x {item.size[1]} inches ({(item.size[0] * 2.54).toFixed(1)} x {(item.size[1] * 2.54).toFixed(1)} cm)</p>
                 <p>{item.price}</p>
+                { item.outOfStock ? <p>Currently out of stock; Contact artist to place an order.</p> : ''}
               </Col>
             </Row>
           </Grid>
@@ -53,7 +59,7 @@ var ItemView = React.createClass({
             <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
           </span>
         }>
-          <CategoryGrid category={category}/>
+          <CategoryGrid items={similarItems}/>
       </Panel>
     </div>
     );
