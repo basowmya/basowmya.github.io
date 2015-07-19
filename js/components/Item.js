@@ -16,6 +16,8 @@ var React = require('react'),
   mui = require('material-ui'),
   Paper = mui.Paper,
   RaisedButton = mui.RaisedButton,
+  Colors = mui.Styles.Colors,
+  Zoomin = require('material-ui/lib/svg-icons/action/zoom-in'),
   CategoryGrid = require('./CategoryGrid'),
   _ = require('lodash'),
   data = require('../data');
@@ -42,7 +44,10 @@ var ItemView = React.createClass({
               <Col xs={12} sm={6}>
                 <Paper zDepth={3}>
                   <Thumbnail alt={item.name} src={item.images.small[0]}>
-                    <p>Click for a larger view</p>
+                    <div>
+                      <Zoomin className='vertical-align' color={Colors.grey500}/>
+                      <span>Click for a larger view</span>
+                    </div>
                   </Thumbnail>
                 </Paper>
               </Col>
@@ -56,10 +61,10 @@ var ItemView = React.createClass({
           </Grid>
         </Panel>
         <Panel header={
-          <span>
+          <div>
             <span className='h3'>Similar items in </span>
-            <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
-          </span>
+            <RaisedButton className='vertical-align' linkButton={true} href={href} label={category.name} primary={true} />
+          </div>
         }>
           <CategoryGrid items={similarItems}/>
       </Panel>
