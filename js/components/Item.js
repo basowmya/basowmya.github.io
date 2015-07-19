@@ -18,7 +18,7 @@ var React = require('react'),
   RaisedButton = mui.RaisedButton,
   Colors = mui.Styles.Colors,
   Zoomin = require('material-ui/lib/svg-icons/action/zoom-in'),
-  CategoryGrid = require('./CategoryGrid'),
+  ItemGrid = require('./ItemGrid'),
   _ = require('lodash'),
   data = require('../data');
 
@@ -66,7 +66,7 @@ var ItemView = React.createClass({
             <RaisedButton className='vertical-align' linkButton={true} href={href} label={category.name} primary={true} />
           </div>
         }>
-          <CategoryGrid items={similarItems}/>
+          <ItemGrid items={similarItems}/>
       </Panel>
     </div>
     );

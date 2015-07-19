@@ -5,14 +5,14 @@
 'use strict';
 
 var React = require('react'),
-  CategoryGrid = require('./CategoryGrid'),
+  ItemGrid = require('./ItemGrid'),
   _ = require('lodash'),
   data = require('../data');
 
 var Gallery = React.createClass({
   render: function () {
     var items = _.filter(data.items, {category: this.props.params.id});
-    return <CategoryGrid items={items} showDetails={true} />;
+    return <ItemGrid items={items} showDetails={true} />;
   }
 });
 

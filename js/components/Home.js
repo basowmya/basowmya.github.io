@@ -12,7 +12,7 @@ var React = require('react'),
   mui = require('material-ui'),
   Paper = mui.Paper,
   RaisedButton = mui.RaisedButton,
-  CategoryGrid = require('./CategoryGrid'),
+  ItemGrid = require('./ItemGrid'),
   _ = require('lodash'),
   data = require('../data');
 
@@ -31,7 +31,7 @@ var Categories = React.createClass({
         <Panel key={category.id} header={
           <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
         }>
-          <CategoryGrid items={items} singleRow={true}/>
+          <ItemGrid items={items} singleRow={true}/>
         </Panel>
       );
     });

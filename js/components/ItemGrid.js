@@ -22,7 +22,7 @@ var React = require('react'),
   //   <Favorite/>
   // </IconButton>
 
-var CategoryGrid = React.createClass({
+var ItemGrid = React.createClass({
   render: function () {
     var cols = _.map(this.props.items, function (item, index) {
       var className = this.props.singleRow ?
@@ -69,4 +69,4 @@ var CategoryGrid = React.createClass({
   }
 });
 
-module.exports = CategoryGrid;
+module.exports = ItemGrid;
