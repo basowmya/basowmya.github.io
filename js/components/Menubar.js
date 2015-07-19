@@ -17,16 +17,16 @@ var Menubar = React.createClass({
   mixins: [Navigation],
 
   render: function () {
-    var transitionTo = this.transitionTo;
+    var self = this;
 
     function handleSelect(key) {
-      transitionTo('/gallery/' + key);
+      self.transitionTo('/gallery/' + key);
     }
 
     return (
-      <Navbar brand="Sowmya's Art Gallery" inverse>
+      <Navbar brand="Sowmya's Art Gallery">
         <Nav>
-          <NavItem eventKey={1} href='#'>Home</NavItem>
+          <NavItem eventKey={1} href={'#'}>Home</NavItem>
           <DropdownButton eventKey={2} title='Gallery' onSelect={handleSelect}>
             {
               data.categories.map(function (category) {

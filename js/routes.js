@@ -16,8 +16,8 @@ var React = require('react'),
 var routes = (
   <Route handler={App}>
     <DefaultRoute handler={Home}/>
-    <Route path="gallery/:name" handler={Gallery}/>
-    <Route path="about" handler={About}/>
+    <Route name='gallery' path='gallery/:name' handler={Gallery}/>
+    <Route name='about' path='about' handler={About}/>
   </Route>
 );
 

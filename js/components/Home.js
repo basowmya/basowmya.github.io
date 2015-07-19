@@ -5,7 +5,7 @@
 'use strict';
 
 var React = require('react'),
-  _ = require('lodash'),
+  Navigation = require('react-router').Navigation,
   bootstrap = require('react-bootstrap'),
   Button = bootstrap.Button,
   Panel = bootstrap.Panel,
@@ -17,6 +17,7 @@ var React = require('react'),
   Paper = mui.Paper,
   RaisedButton = mui.RaisedButton,
   FlatButton = mui.FlatButton,
+  _ = require('lodash'),
   data = require('../data');
 
 var Carousel = React.createClass({
@@ -25,7 +26,7 @@ var Carousel = React.createClass({
         _.filter(data.items, {category: this.props.category.id}),
         function (item, index) {
           return (
-            <Col xs={6} sm={4} md={3} lg={2}
+            <Col key={index} xs={6} sm={4} md={3} lg={2}
             className={
               index < 2 ? '' :
               index < 3 ? 'hidden-xs' :
@@ -46,12 +47,16 @@ var Carousel = React.createClass({
 });
 
 var Categories = React.createClass({
+  mixins: [Navigation],
+
   render: function () {
+    var self = this;
     var panels = data.categories.map(function (category, index) {
+      var href = self.makeHref('gallery', category);
       return (
         <Panel key={category.id} header={
           <div>
-            <RaisedButton label={category.name} primary={true} />
+            <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
             <FlatButton className={'pull-right'} label={'See more of ' + category.name} primary={true} />
           </div>
         }>
