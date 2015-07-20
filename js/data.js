@@ -123,10 +123,10 @@ var data = {
       "description": "Media - Acrylic on Cloth",
       "images": {
         "small": [
-          "img/items/kal-04-s.jpg"
+          "img/items/kal-01-s.jpg"
         ],
         "large": [
-          "img/items/kal-04-l.jpg"
+          "img/items/kal-01-l.jpg"
         ]
       }
     },
@@ -139,10 +139,10 @@ var data = {
       "description": "Media - Acrylic on Cloth",
       "images": {
         "small": [
-          "img/items/kal-01-s.jpg"
+          "img/items/kal-02-s.jpg"
         ],
         "large": [
-          "img/items/kal-01-l.jpg"
+          "img/items/kal-02-l.jpg"
         ]
       }
     },
@@ -155,10 +155,10 @@ var data = {
       "description": "Media - Acrylic on Cloth",
       "images": {
         "small": [
-          "img/items/kal-02-s.jpg"
+          "img/items/kal-03-s.jpg"
         ],
         "large": [
-          "img/items/kal-02-l.jpg"
+          "img/items/kal-03-l.jpg"
         ]
       }
     },
@@ -171,10 +171,10 @@ var data = {
       "description": "Media - Acrylic on Cloth",
       "images": {
         "small": [
-          "img/items/kal-05-s.jpg"
+          "img/items/kal-04-s.jpg"
         ],
         "large": [
-          "img/items/kal-05-l.jpg"
+          "img/items/kal-04-l.jpg"
         ]
       }
     },
@@ -188,10 +188,10 @@ var data = {
       "description": "Media - Acrylic on Cloth",
       "images": {
         "small": [
-          "img/items/kal-03-s.jpg"
+          "img/items/kal-05-s.jpg"
         ],
         "large": [
-          "img/items/kal-03-l.jpg"
+          "img/items/kal-05-l.jpg"
         ]
       }
     },
@@ -245,7 +245,7 @@ var data = {
     },
     {
       "id": "zen-02",
-      "name": "Bird 2",
+      "name": "Fly Catcher 1",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
@@ -261,7 +261,7 @@ var data = {
     },
     {
       "id": "zen-03",
-      "name": "Bird 3",
+      "name": "Fly Catcher 2",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
@@ -277,7 +277,7 @@ var data = {
     },
     {
       "id": "zen-04",
-      "name": "Bird 4",
+      "name": "Fly Catcher 3",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
@@ -295,7 +295,7 @@ var data = {
       "id": "zen-05",
       "name": "Floral Girl",
       "category": "3",
-      "price": 2500,
+      "price": 3000,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
@@ -309,209 +309,211 @@ var data = {
     },
     {
       "id": "zen-06",
-      "name": "Floral Girl",
+      "name": "Tribal Girl",
       "category": "3",
-      "price": 2500,
+      "price": 3000,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-06-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-06-l.jpg"
         ]
       }
     },
     {
       "id": "zen-07",
-      "name": "Floral Girl",
+      "name": "Mermaid",
       "category": "3",
-      "price": 2500,
+      "price": 3000,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-07-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-07-l.jpg"
         ]
       }
     },
     {
       "id": "zen-08",
-      "name": "Floral Girl",
+      "name": "War Horse",
       "category": "3",
       "price": 2500,
-      "size": [13, 15.5],
+      "size": [15.5, 13],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-08-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-08-l.jpg"
         ]
       }
     },
     {
       "id": "zen-09",
-      "name": "Floral Girl",
+      "name": "Wild Horse",
       "category": "3",
       "price": 2500,
-      "size": [13, 15.5],
+      "size": [20, 16.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-09-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-09-l.jpg"
         ]
       }
     },
     {
       "id": "zen-10",
-      "name": "Floral Girl",
+      "name": "Blaze",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-10-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-10-l.jpg"
         ]
       }
     },
     {
       "id": "zen-11",
-      "name": "Floral Girl",
+      "name": "Fossil Shell",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-11-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-11-l.jpg"
         ]
       }
     },
     {
       "id": "zen-12",
-      "name": "Floral Girl",
+      "name": "Peacock",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
+      "outOfStock": true,
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-12-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-12-l.jpg"
         ]
       }
     },
     {
       "id": "zen-13",
-      "name": "Floral Girl",
+      "name": "Tangled Peacock Web",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-13-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-13-l.jpg"
         ]
       }
     },
     {
       "id": "zen-14",
-      "name": "Floral Girl",
+      "name": "Tribal Elephant",
       "category": "3",
-      "price": 2500,
-      "size": [13, 15.5],
+      "price": 3000,
+      "size": [17, 19.5],
+      "outOfStock": true,
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-14-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-14-l.jpg"
         ]
       }
     },
     {
       "id": "zen-15",
-      "name": "Floral Girl",
+      "name": "Dancing Ganesha",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-15-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-15-l.jpg"
         ]
       }
     },
     {
       "id": "zen-16",
-      "name": "Floral Girl",
+      "name": "Mooshika Ganesha",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-16-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-16-l.jpg"
         ]
       }
     },
     {
       "id": "zen-17",
-      "name": "Floral Girl",
+      "name": "Ganesha",
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-17-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-17-l.jpg"
         ]
       }
     },
     {
       "id": "zen-18",
-      "name": "Floral Girl",
+      "name": "Modaka Ganesha",
       "category": "3",
       "price": 2500,
-      "size": [13, 15.5],
+      "size": [13, 16.5],
       "description": "Media - Pen and pencil on paper",
       "images": {
         "small": [
-          "img/items/zen-05-s.jpg"
+          "img/items/zen-18-s.jpg"
         ],
         "large": [
-          "img/items/zen-05-l.jpg"
+          "img/items/zen-18-l.jpg"
         ]
       }
     },
@@ -519,8 +521,8 @@ var data = {
       "id": "mur-01",
       "name": "Lady with Pot",
       "category": "0",
-      "price": 8000,
-      "size": [13, 15.5],
+      "price": 10000,
+      "size": [24, 30],
       "outOfStock": true,
       "description": "Media - Mural",
       "images": {
@@ -536,8 +538,8 @@ var data = {
       "id": "mar-01",
       "name": "Lady Playing Instrument",
       "category": "0",
-      "price": 8000,
-      "size": [13, 15.5],
+      "price": 3000,
+      "size": [9, 10],
       "outOfStock": true,
       "description": "Media - Marble Painting",
       "images": {
@@ -553,8 +555,8 @@ var data = {
       "id": "pcl-01",
       "name": "Fruit Seller",
       "category": "0",
-      "price": 8000,
-      "size": [13, 15.5],
+      "price": 10000,
+      "size": [24, 30],
       "outOfStock": true,
       "description": "Media - Colour Pencils",
       "images": {
@@ -571,9 +573,9 @@ var data = {
       "name": "Rajasthani woman",
       "category": "0",
       "price": 8000,
-      "size": [13, 15.5],
+      "size": [30, 24],
       "outOfStock": true,
-      "description": "Meenakari",
+      "description": "Meenakari - Mixed Media, Oil on Canvas",
       "images": {
         "small": [
           "img/items/mnk-01-s.jpg"
@@ -584,11 +586,27 @@ var data = {
       }
     },
     {
+      "id": "mnk-02",
+      "name": "Mother and Children",
+      "category": "0",
+      "price": 8000,
+      "size": [18, 25],
+      "description": "Meenakari - Mixed Media, Oil on Canvas",
+      "images": {
+        "small": [
+          "img/items/mnk-02-s.jpg"
+        ],
+        "large": [
+          "img/items/mnk-02-l.jpg"
+        ]
+      }
+    },
+    {
       "id": "acr-01",
       "name": "Egyptian Pharoah",
       "category": "0",
-      "price": 8000,
-      "size": [13, 15.5],
+      "price": 4000,
+      "size": [22, 18],
       "description": "Media - Acrylic Paint",
       "images": {
         "small": [
@@ -604,7 +622,7 @@ var data = {
       "name": "Leopard Prints",
       "category": "4",
       "price": 300,
-      "size": [6, 8],
+      "size": [3.5, 6],
       "description": "Media - Acrylic on Terracotta Pot",
       "images": {
         "small": [
@@ -620,7 +638,7 @@ var data = {
       "name": "Elephants at Sunset",
       "category": "4",
       "price": 400,
-      "size": [6, 8],
+      "size": [4.75, 5.5],
       "description": "Media - Acrylic on Terracotta Pot",
       "images": {
         "small": [
@@ -636,7 +654,7 @@ var data = {
       "name": "Giraffes at Sunset",
       "category": "4",
       "price": 400,
-      "size": [6, 8],
+      "size": [5, 5.5],
       "description": "Media - Acrylic on Terracotta Pot",
       "images": {
         "small": [
@@ -652,7 +670,7 @@ var data = {
       "name": "Kathakali face",
       "category": "4",
       "price": 600,
-      "size": [6, 8],
+      "size": [4, 5.5],
       "description": "Media - Acrylic on Terracotta Pot",
       "images": {
         "small": [
@@ -668,7 +686,7 @@ var data = {
       "name": "Ajantha Ellora",
       "category": "4",
       "price": 800,
-      "size": [6, 8],
+      "size": [6, 5.5],
       "description": "Media - Acrylic on Terracotta Pot",
       "images": {
         "small": [
@@ -676,6 +694,167 @@ var data = {
         ],
         "large": [
           "img/items/pot-05-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-06",
+      "name": "Spiral Warli",
+      "category": "4",
+      "price": 700,
+      "size": [4.25, 5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-06-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-06-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-07",
+      "name": "Warli",
+      "category": "4",
+      "price": 300,
+      "size": [3.5, 6],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-07-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-07-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-08",
+      "name": "Black Ovals",
+      "category": "4",
+      "price": 500,
+      "size": [4, 5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-08-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-08-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-09",
+      "name": "Pink and Black Floral",
+      "category": "4",
+      "price": 300,
+      "size": [3.5, 4.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-09-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-09-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-10",
+      "name": "Black Circles",
+      "category": "4",
+      "price": 300,
+      "size": [3.5, 4.5],
+      outOfStock: true,
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-10-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-10-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-11",
+      "name": "Lady Bug Small",
+      "category": "4",
+      "price": 300,
+      "size": [4.5, 4],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-11-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-11-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-12",
+      "name": "Lady Bug",
+      "category": "4",
+      "price": 600,
+      "size": [4.5, 9],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-12-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-12-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-13",
+      "name": "White Circles on Red",
+      "category": "4",
+      "price": 500,
+      "size": [4.5, 5.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-13-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-13-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-14",
+      "name": "Black and White Triangles",
+      "category": "4",
+      "price": 600,
+      "size": [4.5, 5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-14-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-14-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-15",
+      "name": "Brown Crackled",
+      "category": "4",
+      "price": 400,
+      "size": [4.5, 5.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-14-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-14-l.jpg"
         ]
       }
     }
