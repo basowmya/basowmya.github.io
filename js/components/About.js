@@ -38,6 +38,7 @@ var About = React.createClass({
              <ul>
                <li>1998, Prize winner at Mysore Dussehra Exhibition for "Unity is Fruits of Diversity"</li>
                <li>1999, Conducted fabric painting workshop organised by Pidilite for students of vocational course at Sri Jayachamarajendra Polytechnic, Bangalore</li>
+               <li>2015, Conducted a demonstration of stencil art at Cosmopolitan Club, Bangalore</li>
              </ul>
            </CardText>
            <CardActions>
