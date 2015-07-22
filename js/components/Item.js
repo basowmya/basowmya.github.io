@@ -7,6 +7,7 @@
 var React = require('react'),
   bootstrap = require('react-bootstrap'),
   Panel = bootstrap.Panel,
+  Modal = bootstrap.Modal,
   Thumbnail = bootstrap.Thumbnail,
   Grid = bootstrap.Grid,
   Row = bootstrap.Row,
@@ -22,6 +23,18 @@ var React = require('react'),
   data = require('../data');
 
 var ItemView = React.createClass({
+  getInitialState: function () {
+    return { showModal: false };
+  },
+
+  closeModal: function () {
+    this.setState({ showModal: false });
+  },
+
+  openModal: function () {
+    this.setState({ showModal: true });
+  },
+
   render: function () {
     var item = _.find(data.items, 'id', this.props.params.id),
       category = _.find(data.categories, 'id', item.category),
@@ -37,7 +50,7 @@ var ItemView = React.createClass({
           <Grid>
             <Row>
               <Col xs={12} sm={6}>
-                <Paper zDepth={3}>
+                <Paper zDepth={3} onClick={this.openModal}>
                   <Thumbnail alt={item.name} src={item.images.small[0]}>
                     <div>
                       <Zoomin className='vertical-align' color={Colors.grey500}/>
@@ -55,6 +68,7 @@ var ItemView = React.createClass({
             </Row>
           </Grid>
         </Panel>
+
         <Panel header={
           <div>
             <span className='h4'>Similar items in </span>
@@ -63,6 +77,12 @@ var ItemView = React.createClass({
         }>
           <ItemGrid items={similarItems} showDetails={true} />
       </Panel>
+
+      <Modal show={this.state.showModal} onHide={this.closeModal}>
+        <div onClick={this.closeModal}>
+          <img alt={item.name} src={item.images.large[0]} className='center-block' />
+        </div>
+      </Modal>
     </div>
     );
   }
