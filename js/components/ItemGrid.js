@@ -14,6 +14,7 @@ var React = require('react'),
   Col = bootstrap.Col,
   mui = require('material-ui'),
   Paper = mui.Paper,
+  currency = require('../currency'),
   _ = require('lodash');
 
   // IconButton = mui.IconButton,
@@ -40,7 +41,7 @@ var ItemGrid = React.createClass({
                   this.props.showDetails ? (
                     <div>
                       <p className='item-name'>{item.name}</p>
-                      <p className='item-price'>{item.price}</p>
+                      <p className='item-price'>{currency(item.price)}</p>
                     </div>
                   ) : ''
                 }

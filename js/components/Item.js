@@ -6,8 +6,6 @@
 
 var React = require('react'),
   bootstrap = require('react-bootstrap'),
-  Router = require('react-router'),
-  Navigation = Router.Navigation,
   Panel = bootstrap.Panel,
   Thumbnail = bootstrap.Thumbnail,
   Grid = bootstrap.Grid,
@@ -15,21 +13,18 @@ var React = require('react'),
   Col = bootstrap.Col,
   mui = require('material-ui'),
   Paper = mui.Paper,
-  RaisedButton = mui.RaisedButton,
   Colors = mui.Styles.Colors,
   Zoomin = require('material-ui/lib/svg-icons/action/zoom-in'),
+  CategoryButton = require('./CategoryButton'),
   ItemGrid = require('./ItemGrid'),
+  currency = require('../currency'),
   _ = require('lodash'),
   data = require('../data');
 
 var ItemView = React.createClass({
-  mixins: [Navigation],
-
   render: function () {
-    var self = this,
-      item = _.find(data.items, 'id', this.props.params.id),
+    var item = _.find(data.items, 'id', this.props.params.id),
       category = _.find(data.categories, 'id', item.category),
-      href = self.makeHref('gallery', category),
       similarItems = _.chain(data.items)
         .filter(function (obj) {
           return obj.category === item.category && obj.id !== item.id;
@@ -52,9 +47,9 @@ var ItemView = React.createClass({
                 </Paper>
               </Col>
               <Col xs={12} sm={6}>
-                <p>{item.description}</p>
-                <p>{item.size[0]} x {item.size[1]} inches ({(item.size[0] * 2.54).toFixed(1)} x {(item.size[1] * 2.54).toFixed(1)} cm)</p>
-                <p>{item.price}</p>
+                <p className='item-description'>{item.description}</p>
+                <p className='item-size'>{item.size[0]} x {item.size[1]} inches ({(item.size[0] * 2.54).toFixed(1)} x {(item.size[1] * 2.54).toFixed(1)} cm)</p>
+                <p className='item-price'>{currency(item.price)}</p>
                 { item.outOfStock ? <p>Currently out of stock; Contact artist to place an order.</p> : ''}
               </Col>
             </Row>
@@ -63,7 +58,7 @@ var ItemView = React.createClass({
         <Panel header={
           <div>
             <span className='h4'>Similar items in </span>
-            <RaisedButton className='vertical-align' linkButton={true} href={href} label={category.name} primary={true} />
+            <CategoryButton category={category} />
           </div>
         }>
           <ItemGrid items={similarItems} showDetails={true} />

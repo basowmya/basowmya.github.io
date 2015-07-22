@@ -5,31 +5,25 @@
 'use strict';
 
 var React = require('react'),
-  Router = require('react-router'),
-  Navigation = Router.Navigation,
   bootstrap = require('react-bootstrap'),
   Panel = bootstrap.Panel,
   mui = require('material-ui'),
   Paper = mui.Paper,
-  RaisedButton = mui.RaisedButton,
+  CategoryButton = require('./CategoryButton'),
   ItemGrid = require('./ItemGrid'),
   _ = require('lodash'),
   data = require('../data');
 
 var Categories = React.createClass({
-  mixins: [Navigation],
-
   render: function () {
-    var self = this;
     var panels = data.categories.map(function (category) {
-      var href = self.makeHref('gallery', category),
-        items = _.chain(data.items)
+      var items = _.chain(data.items)
           .filter({category: category.id})
           .sample(4).value();
 
       return (
         <Panel key={category.id} header={
-          <RaisedButton linkButton={true} href={href} label={category.name} primary={true} />
+          <CategoryButton category={category} />
         }>
           <ItemGrid items={items} singleRow={true}/>
         </Panel>
