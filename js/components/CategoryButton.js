@@ -7,9 +7,7 @@
 var React = require('react'),
   Router = require('react-router'),
   Navigation = Router.Navigation,
-  mui = require('material-ui'),
-  Paper = mui.Paper,
-  RaisedButton = mui.RaisedButton;
+  RaisedButton = require('material-ui').RaisedButton;
 
 var CategoryButton = React.createClass({
   mixins: [Navigation],

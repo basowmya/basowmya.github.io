@@ -7,8 +7,6 @@
 var React = require('react'),
   bootstrap = require('react-bootstrap'),
   Panel = bootstrap.Panel,
-  mui = require('material-ui'),
-  Paper = mui.Paper,
   CategoryButton = require('./CategoryButton'),
   ItemGrid = require('./ItemGrid'),
   _ = require('lodash'),
