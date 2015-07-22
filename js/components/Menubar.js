@@ -36,9 +36,9 @@ var Menubar = React.createClass({
     }
 
     return (
-      <Navbar brand="Sowmya's Art Gallery">
+      <Navbar brand={<a href='#'>Sowmya&apos;s Art Gallery</a>}>
         <Nav>
-          <NavItem eventKey={1} href={'#'} active={false}>Home</NavItem>
+          <NavItem eventKey={1} href='#' active={false}>Home</NavItem>
           <DropdownButton eventKey={2} title='Gallery' onSelect={handleSelect} active={false} >
             {galleryItems}
           </DropdownButton>
