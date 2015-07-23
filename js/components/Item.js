@@ -79,9 +79,8 @@ var ItemView = React.createClass({
       </Panel>
 
       <Modal show={this.state.showModal} onHide={this.closeModal}>
-        <div onClick={this.closeModal}>
-          <img alt={item.name} src={item.images.large[0]} className='center-block' />
-        </div>
+        <img alt={item.name} src={item.images.large[0]}
+        className='center-block img-responsive' onClick={this.closeModal} />
       </Modal>
     </div>
     );
