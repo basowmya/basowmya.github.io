@@ -46,7 +46,7 @@ var ItemView = React.createClass({
 
     return (
       <div>
-        <Panel header={<h3>{item.name}</h3>}>
+        <Panel>
           <Grid>
             <Row>
               <Col xs={12} sm={6}>
@@ -60,10 +60,11 @@ var ItemView = React.createClass({
                 </Paper>
               </Col>
               <Col xs={12} sm={6}>
+                <p className='item-heading'>{item.name}</p>
                 <p className='item-description'>{item.description}</p>
                 <p className='item-size'>{item.size[0]} x {item.size[1]} inches ({(item.size[0] * 2.54).toFixed(1)} x {(item.size[1] * 2.54).toFixed(1)} cm)</p>
                 <p className='item-price'>{currency(item.price)}</p>
-                { item.outOfStock ? <p>Currently out of stock; Contact artist to place an order.</p> : ''}
+                { item.outOfStock ? <p>Out of stock; Contact artist to place an order.</p> : ''}
               </Col>
             </Row>
           </Grid>

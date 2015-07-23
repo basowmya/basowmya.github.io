@@ -575,7 +575,7 @@ var data = {
     },
     {
       "id": "pcl-04",
-      "name": "Lady With The Lamp",
+      "name": "Lady with the Lamp",
       "category": "5",
       "price": 10000,
       "size": [20, 24],
