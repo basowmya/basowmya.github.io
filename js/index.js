@@ -18,3 +18,10 @@ var React = require('react'),
 Router.run(routes, function (Root) {
   React.render(<Root/>, document.body);
 });
+
+// Prevent context menu on img elements to prevent saving images
+document.body.addEventListener('contextmenu', function (e) {
+  if (e.srcElement.nodeName === 'IMG') {
+    e.preventDefault();
+  }
+});
