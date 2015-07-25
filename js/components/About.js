@@ -42,7 +42,7 @@ var About = React.createClass({
              </ul>
            </CardText>
            <CardActions>
-             <RaisedButton linkButton={true} href={href} label={'Contact the artist'} primary={true} />
+             <RaisedButton linkButton={true} href={href} label='Contact the artist' primary={true} />
            </CardActions>
          </Card>
        </div>

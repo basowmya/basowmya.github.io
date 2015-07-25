@@ -18,7 +18,8 @@
     "numeral": "^1.5.3",
     "react": "^0.13.3",
     "react-bootstrap": "^0.23.7",
-    "react-slick": "^0.6.3"
+    "react-slick": "^0.6.3",
+    "superagent": "^1.2.0"
   },
   "devDependencies": {
     "browserify": "^10.2.6",
