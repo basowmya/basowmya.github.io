@@ -56,10 +56,10 @@ var ItemGrid = React.createClass({
           col.push(<div className='clearfix visible-xs-block'></div>);
         }
         if ((index + 1) % 3 === 0) {
-          col.push(<div className='clearfix hidden-xs hidden-lg'></div>);
+          col.push(<div className='clearfix visible-sm-block'></div>);
         }
         if ((index + 1) % 4 === 0) {
-          col.push(<div className='clearfix visible-lg-block'></div>);
+          col.push(<div className='clearfix visible-md-block visible-lg-block'></div>);
         }
       }
 
