@@ -12,14 +12,19 @@ var React = require('react'),
   Grid = bootstrap.Grid,
   Row = bootstrap.Row,
   Col = bootstrap.Col,
+  ButtonToolbar = bootstrap.ButtonToolbar,
+  ButtonGroup = bootstrap.ButtonGroup,
   mui = require('material-ui'),
   Paper = mui.Paper,
   Toolbar = mui.Toolbar,
   ToolbarGroup = mui.ToolbarGroup,
   ToolbarTitle = mui.ToolbarTitle,
+  FlatButton = mui.FlatButton,
+  RaisedButton = mui.RaisedButton,
   IconButton = mui.IconButton,
   Colors = mui.Styles.Colors,
   Zoomin = require('material-ui/lib/svg-icons/action/zoom-in'),
+  AddShoppingCart = require('material-ui/lib/svg-icons/action/add-shopping-cart'),
   Email = require('material-ui/lib/svg-icons/communication/email'),
   CategoryButton = require('./CategoryButton'),
   ItemGrid = require('./ItemGrid'),
@@ -43,19 +48,19 @@ var ItemView = React.createClass({
 
   render: function () {
     var styles = {
-        ShareButton: {
+        shareButton: {
           // backgroundColor: '#4bbe51',
           // color: 'white',
           textTransform: 'none'
         },
         whatsAppImg: {
-          'float': 'left',
-          marginLeft: '5px',
-          marginTop: '1px'
+          // 'float': 'left',
+          // marginLeft: '5px',
+          // marginTop: '1px'
         },
         emailIcon: {
-          'float': 'left',
-          verticalAlign: 'middle'
+          // 'float': 'left',
+          // verticalAlign: 'middle'
         }
       },
 
@@ -102,24 +107,28 @@ var ItemView = React.createClass({
                 <p>{size}</p>
                 <p className='item-price'>{currency(item.price)}</p>
                 { item.outOfStock ? <p>Available as commissioned work</p> : ''}
+                <ButtonToolbar>
+                  <ButtonGroup>
+                    <RaisedButton label='Buy' linkButton={true} primary={true}>
+                      <AddShoppingCart color={Colors.white} className='vertical-align'/>
+                    </RaisedButton>
+                  </ButtonGroup>
+                  <ButtonGroup>
+                    <FlatButton label='WhatsApp' linkButton={true} primary={true}
+                    href={'whatsapp://send?text=' + shareText}
+                    style={styles.shareButton}>
+                      <img src='img/whatsapp.png' alt='WhatsApp'
+                      width='24px' height='24px'/>
+                    </FlatButton>
 
-                <Toolbar style={{display: 'inline-block', width: 'auto', height: '48px'}}>
-                  <ToolbarGroup>
-                    <ToolbarTitle className='vertical-align' text='Share via:'
-                    style={{fontSize: '14px', lineHeight: '48px'}} />
-
-                    <IconButton href={'whatsapp://send?text=' + shareText}
-                    linkButton={true} tooltip='WhatsApp' tooltipPosition='top-center'>
-                      <img className='vertical-align' src='img/whatsapp.png' alt='WhatsApp' width='24px' height='24px'/>
-                    </IconButton>
-
-                    <IconButton linkButton={true} target='_blank'
+                    <FlatButton label='Email' linkButton={true} primary={true}
+                    target='_blank' tooltip='Email' tooltipPosition='top-center'
                     href={'mailto:?body=' + shareText +'&subject=' + shareSubject}
-                    tooltip='Email' tooltipPosition='top-center'>
-                      <Email className='vertical-align' color={Colors.blue500} />
-                    </IconButton>
-                  </ToolbarGroup>
-                </Toolbar>
+                    style={styles.shareButton}>
+                      <Email color={Colors.pinkA200} className='vertical-align'/>
+                    </FlatButton>
+                  </ButtonGroup>
+                </ButtonToolbar>
               </Col>
             </Row>
           </Grid>

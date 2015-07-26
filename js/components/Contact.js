@@ -144,7 +144,7 @@ var Contact = React.createClass({
           <CardTitle title='Contact the Artist' titleStyle={{fontSize: 24}}/>
           <form action='http://formspree.io/sowmya.ba@gmail.com'>
             <TextField style={styles.textfield} name='name'
-            floatingLabelText='Name' onChange={this.handleNameChange}
+            floatingLabelText='Full Name' onChange={this.handleNameChange}
             errorText={this.state.errorTextName}/>
 
             <TextField style={styles.textfield} name='_replyto' type='email'
