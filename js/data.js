@@ -43,7 +43,7 @@ var data = {
       "name": "The Maharashtrian Lady",
       "category": "1",
       "price": 15000,
-      "size": [24, 36],
+      "size": [20, 28],
       "outOfStock": true,
       "description": "Media - Oil on canvas",
       "images": {
@@ -59,8 +59,8 @@ var data = {
       "id": "oil-02",
       "name": "Lady Playing Swarbat",
       "category": "1",
-      "price": 12000,
-      "size": [24, 36],
+      "price": 15000,
+      "size": [23.5, 27.5],
       "description": "Media - Oil on canvas",
       "images": {
         "small": [
@@ -75,8 +75,8 @@ var data = {
       "id": "oil-03",
       "name": "The Buddha",
       "category": "1",
-      "price": 8000,
-      "size": [24, 36],
+      "price": 10000,
+      "size": [22.5, 22.5],
       "description": "Media - Oil on canvas",
       "images": {
         "small": [
@@ -107,8 +107,8 @@ var data = {
       "id": "oil-05",
       "name": "Weeping Boy",
       "category": "1",
-      "price": 4000,
-      "size": [24, 36],
+      "price": 5000,
+      "size": [17.5, 21.5],
       "description": "Media - Oil on canvas",
       "images": {
         "small": [
@@ -155,7 +155,7 @@ var data = {
       "id": "kal-03",
       "name": "Saraswathi",
       "category": "2",
-      "price": 12000,
+      "price": 15000,
       "size": [24, 30],
       "description": "Media - Acrylic on Cloth",
       "images": {
