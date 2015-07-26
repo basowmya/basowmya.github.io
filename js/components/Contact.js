@@ -32,9 +32,6 @@ var Contact = React.createClass({
   handlePhoneChange: function (e) {
     this.setState({phone: e.target.value});
   },
-  // handleSubjectChange: function (e) {
-  //   this.setState({subject: e.target.value});
-  // },
   handleMessageChange: function (e) {
     this.setState({message: e.target.value});
   },
@@ -69,8 +66,6 @@ var Contact = React.createClass({
             floatingLabelText='Email' onChange={this.handleEmailChange}/>
             <TextField style={styles.textfield} name='phone' type='tel'
             floatingLabelText='Phone Number' onChange={this.handlePhoneChange}/>
-            <TextField style={styles.textfield} name='subject'
-            floatingLabelText='Subject' onChange={this.handleSubjectChange}/>
             <TextField style={styles.textfield} name='message' multiLine={true} rows={3}
             floatingLabelText='Message' onChange={this.handleMessageChange}/>
             <CardActions>
