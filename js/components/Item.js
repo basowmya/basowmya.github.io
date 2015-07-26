@@ -101,7 +101,7 @@ var ItemView = React.createClass({
                 <p>{item.description}</p>
                 <p>{size}</p>
                 <p className='item-price'>{currency(item.price)}</p>
-                { item.outOfStock ? <p>Out of stock; Contact artist to place an order.</p> : ''}
+                { item.outOfStock ? <p>Available as commissioned work</p> : ''}
 
                 <Toolbar style={{display: 'inline-block', width: 'auto', height: '48px'}}>
                   <ToolbarGroup>
