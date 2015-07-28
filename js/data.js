@@ -787,54 +787,54 @@ var data = {
         ]
       }
     },
-    // {
-    //   "id": "pot-07",
-    //   "name": "Warli",
-    //   "category": "4",
-    //   "price": 300,
-    //   "size": [3.5, 6],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-07-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-07-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-08",
-    //   "name": "Black Ovals",
-    //   "category": "4",
-    //   "price": 400,
-    //   "size": [4, 5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-08-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-08-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-09",
-    //   "name": "Pink and Black Floral",
-    //   "category": "4",
-    //   "price": 300,
-    //   "size": [3.5, 4.5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-09-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-09-l.jpg"
-    //     ]
-    //   }
-    // },
+    {
+      "id": "pot-07",
+      "name": "Warli",
+      "category": "4",
+      "price": 400,
+      "size": [3.5, 6],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-07-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-07-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-08",
+      "name": "Black Ovals",
+      "category": "4",
+      "price": 400,
+      "size": [4.2, 5.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-08-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-08-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-09",
+      "name": "Sunflower",
+      "category": "4",
+      "price": 500,
+      "size": [5.5, 3.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-09-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-09-l.jpg"
+        ]
+      }
+    },
     {
       "id": "pot-10",
       "name": "Black Circles",
@@ -851,119 +851,135 @@ var data = {
           "img/items/pot-10-l.jpg"
         ]
       }
+    },
+    {
+      "id": "pot-11",
+      "name": "Lady Bug Small",
+      "category": "4",
+      "price": 300,
+      "size": [3.9, 4.6],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-11-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-11-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-12",
+      "name": "Lady Bug",
+      "category": "4",
+      "price": 500,
+      "size": [4, 9],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-12-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-12-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-13",
+      "name": "White Circles on Red",
+      "category": "4",
+      "price": 400,
+      "size": [4.2, 5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-13-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-13-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-14",
+      "name": "Black and White Triangles",
+      "category": "4",
+      "price": 500,
+      "size": [4.5, 5.2],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-14-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-14-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-15",
+      "name": "Brown Crackled",
+      "category": "4",
+      "price": 300,
+      "size": [4.3, 5.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-15-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-15-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-16",
+      "name": "Creepers",
+      "category": "4",
+      "price": 500,
+      "size": [4.5, 5.2],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-16-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-16-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-17",
+      "name": "Wedges",
+      "category": "4",
+      "price": 500,
+      "size": [4.4, 4],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-17-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-17-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-18",
+      "name": "Pink and Black Floral",
+      "category": "4",
+      "price": 250,
+      "size": [3.5, 4.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-18-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-18-l.jpg"
+        ]
+      }
     }
-    // {
-    //   "id": "pot-11",
-    //   "name": "Lady Bug Small",
-    //   "category": "4",
-    //   "price": 300,
-    //   "size": [4.5, 4],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-11-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-11-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-12",
-    //   "name": "Lady Bug",
-    //   "category": "4",
-    //   "price": 600,
-    //   "size": [4.5, 9],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-12-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-12-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-13",
-    //   "name": "White Circles on Red",
-    //   "category": "4",
-    //   "price": 500,
-    //   "size": [4.5, 5.5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-13-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-13-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-14",
-    //   "name": "Black and White Triangles",
-    //   "category": "4",
-    //   "price": 500,
-    //   "size": [4.5, 5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-14-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-14-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-15",
-    //   "name": "Brown Crackled",
-    //   "category": "4",
-    //   "price": 400,
-    //   "size": [4.5, 5.5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-15-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-15-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-16",
-    //   "name": "Creepers",
-    //   "category": "4",
-    //   "price": 500,
-    //   "size": [4.5, 5.5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-16-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-16-l.jpg"
-    //     ]
-    //   }
-    // },
-    // {
-    //   "id": "pot-17",
-    //   "name": "Abstract Disc",
-    //   "category": "4",
-    //   "price": 500,
-    //   "size": [3, 6.5],
-    //   "description": "Media - Acrylic on Terracotta Pot",
-    //   "images": {
-    //     "small": [
-    //       "img/items/pot-17-s.jpg"
-    //     ],
-    //     "large": [
-    //       "img/items/pot-17-l.jpg"
-    //     ]
-    //   }
-    // }
   ]
 };
 
