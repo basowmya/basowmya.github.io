@@ -966,10 +966,10 @@ var data = {
     },
     {
       "id": "pot-18",
-      "name": "Pink and Black Floral",
+      "name": "Abstract Triangles",
       "category": "4",
       "price": 250,
-      "size": [3.5, 4.5],
+      "size": [3, 6.5],
       "description": "Media - Acrylic on Terracotta Pot",
       "images": {
         "small": [
@@ -977,6 +977,22 @@ var data = {
         ],
         "large": [
           "img/items/pot-18-l.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pot-19",
+      "name": "Pink and Black Floral",
+      "category": "4",
+      "price": 250,
+      "size": [3.5, 4.5],
+      "description": "Media - Acrylic on Terracotta Pot",
+      "images": {
+        "small": [
+          "img/items/pot-19-s.jpg"
+        ],
+        "large": [
+          "img/items/pot-19-l.jpg"
         ]
       }
     }
