@@ -21,7 +21,7 @@ var Contact = React.createClass({
   getInitialState: function () {
     return {
       _subject: '[Sowmya Art Gallery]',
-      // _cc: 'dheerajvs@gmail.com',
+      _cc: 'dheerajvs@gmail.com',
       isLoading: false,
       snackbarMessage: ''
      };
@@ -71,27 +71,24 @@ var Contact = React.createClass({
     this.setState({isLoading: true});
 
     request
-      .post('//formspree.io/dheerajvs@gmail.com')
+      .post('//formspree.io/sowmya.ba@gmail.com')
       .send(formData)
-      // .query(formData)
-      .type('json')
+      .type('form')
       .accept('json')
       .end(function (err, res) {
-        var errText = (err.response && err.response.body && err.response.body.error) ||
-          'unknown error';
-
-        console.log('err: ' + JSON.stringify(err));
-        console.log('res: ' + JSON.stringify(res));
-
+        var errText;
         this.setState({isLoading: false});
 
         if (err) {
+          errText = (err.response && err.response.body && err.response.body.error) ||
+            'unknown error';
           this.setState({
             snackbarMessage: 'Error ' + (err.status || '(unknown status)') + ': ' + errText
           });
         }
         else {
           this.setState({snackbarMessage: 'Thanks for your message!'});
+          // TODO: Set two-way data-binding
           this.setState({name: null, email: null, phone: null, message: null});
         }
 
