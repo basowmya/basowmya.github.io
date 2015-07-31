@@ -23,6 +23,7 @@ var React = require('react'),
   RaisedButton = mui.RaisedButton,
   IconButton = mui.IconButton,
   Colors = mui.Styles.Colors,
+  Snackbar = mui.Snackbar,
   Zoomin = require('material-ui/lib/svg-icons/action/zoom-in'),
   AddShoppingCart = require('material-ui/lib/svg-icons/action/add-shopping-cart'),
   Email = require('material-ui/lib/svg-icons/communication/email'),
@@ -44,6 +45,10 @@ var ItemView = React.createClass({
 
   openModal: function () {
     this.setState({ showModal: true });
+  },
+
+  handleBuy: function () {
+    this.refs.snackbar.show();
   },
 
   render: function () {
@@ -109,7 +114,7 @@ var ItemView = React.createClass({
                 { item.outOfStock ? <p>Available as commissioned work</p> : ''}
                 <ButtonToolbar>
                   <ButtonGroup>
-                    <RaisedButton label='Buy' linkButton={true} primary={true}>
+                    <RaisedButton label='Buy' onTouchTap={this.handleBuy} primary={true}>
                       <AddShoppingCart color={Colors.white} className='vertical-align'/>
                     </RaisedButton>
                   </ButtonGroup>
@@ -147,6 +152,9 @@ var ItemView = React.createClass({
         <img alt={item.name} src={item.images.large[0]}
         className='center-block img-responsive' onClick={this.closeModal} />
       </Modal>
+
+      <Snackbar ref='snackbar' message='This feature is not yet implemented.'
+      autoHideDuration={2000} />
     </div>
     );
   }
