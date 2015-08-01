@@ -54,18 +54,7 @@ var ItemView = React.createClass({
   render: function () {
     var styles = {
         shareButton: {
-          // backgroundColor: '#4bbe51',
-          // color: 'white',
           textTransform: 'none'
-        },
-        whatsAppImg: {
-          // 'float': 'left',
-          // marginLeft: '5px',
-          // marginTop: '1px'
-        },
-        emailIcon: {
-          // 'float': 'left',
-          // verticalAlign: 'middle'
         }
       },
 
@@ -96,8 +85,8 @@ var ItemView = React.createClass({
         <Panel>
           <Grid>
             <Row>
-              <Col xs={12} sm={6}>
-                <Paper zDepth={3} onClick={this.openModal}>
+              <Col xs={12} sm={6} style={{textAlign: 'center'}}>
+                <Paper zDepth={3} onClick={this.openModal} style={{display: 'inline-block', marginBottom: '20px'}}>
                   <Thumbnail alt={item.name} src={item.images.small[0]}>
                     <div>
                       <Zoomin className='vertical-align' color={Colors.grey500}/>
