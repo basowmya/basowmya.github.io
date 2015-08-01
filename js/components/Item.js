@@ -133,7 +133,7 @@ var ItemView = React.createClass({
 
       <Modal show={this.state.showModal} onHide={this.closeModal}>
         <img alt={item.name} src={item.images.large[this.imageIndex]}
-        className='center-block img-responsive' onClick={this.closeModal} />
+        className='center-block img-responsive' onTouchTap={this.closeModal} />
       </Modal>
 
       <Snackbar ref='snackbar' message='This feature is not yet implemented.'

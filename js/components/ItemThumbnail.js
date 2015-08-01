@@ -34,7 +34,6 @@ var ItemThumbnail = React.createClass({
         button: {minWidth: (imgHeight + 2 * buttonPadding) + 'px'},
         container: {padding: '9px'},
         paper: {display: 'inline-block', marginBottom: '20px'}
-        // inkBar: {marginBottom: '2px'}
       };
 
     // TODO: conditionally apply margin-top
@@ -54,7 +53,7 @@ var ItemThumbnail = React.createClass({
 
             {item.images.small.map(function (src, index) {
               return (
-                <FlatButton primary={true} style={styles.button} key={index}
+                <FlatButton primary={true} style={styles.button} key={src}
                 onTouchTap={function () {
                   this.setState({imageIndex: index});
                 }.bind(this)}>
