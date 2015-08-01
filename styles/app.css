@@ -6809,8 +6809,9 @@ a:focus {
   text-decoration: none;
 }
 .thumbnail {
-  padding: 0;
   border: none;
+  margin-bottom: 0;
+  padding: 0;
 }
 .thumbnail .caption {
   text-align: center;
