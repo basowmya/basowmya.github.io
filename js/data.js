@@ -428,6 +428,7 @@ var data = {
       "category": "4",
       "price": 500,
       "size": [4.75, 5.5],
+      "imageCount": 2,
       "description": "Media - Acrylic on Terracotta Pot"
     },
     {
@@ -437,6 +438,7 @@ var data = {
       "price": 500,
       "size": [5, 5.5],
       "outOfStock": true,
+      "imageCount": 3,
       "description": "Media - Acrylic on Terracotta Pot"
     },
     {
@@ -485,6 +487,7 @@ var data = {
       "category": "4",
       "price": 500,
       "size": [5.5, 3.5],
+      "imageCount": 2,
       "description": "Media - Acrylic on Terracotta Pot"
     },
     {

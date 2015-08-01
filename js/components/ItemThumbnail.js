@@ -11,7 +11,6 @@ var React = require('react'),
   Paper = mui.Paper,
   FlatButton = mui.FlatButton,
   Colors = mui.Styles.Colors,
-  // InkBar = require('material-ui/lib/ink-bar'),
   Zoomin = require('material-ui/lib/svg-icons/action/zoom-in');
 
 var ItemThumbnail = React.createClass({
@@ -81,7 +80,5 @@ var ItemThumbnail = React.createClass({
     );
   }
 });
-
-// <InkBar left={2 * imgHeight + 'px'} width={imgHeight + 'px'} style={styles.inkBar}/>
 
 module.exports = ItemThumbnail;
