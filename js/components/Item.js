@@ -29,11 +29,14 @@ var React = require('react'),
   Email = require('material-ui/lib/svg-icons/communication/email'),
   CategoryButton = require('./CategoryButton'),
   ItemGrid = require('./ItemGrid'),
+  ItemThumbnail = require('./ItemThumbnail'),
   currency = require('../currency'),
   _ = require('lodash'),
   data = require('../data');
 
 var ItemView = React.createClass({
+
+  imageIndex: 0,
 
   getInitialState: function () {
     return { showModal: false };
@@ -86,14 +89,8 @@ var ItemView = React.createClass({
           <Grid>
             <Row>
               <Col xs={12} sm={6} style={{textAlign: 'center'}}>
-                <Paper zDepth={3} onClick={this.openModal} style={{display: 'inline-block', marginBottom: '20px'}}>
-                  <Thumbnail alt={item.name} src={item.images.small[0]}>
-                    <div>
-                      <Zoomin className='vertical-align' color={Colors.grey500}/>
-                      <span>Click for a larger view</span>
-                    </div>
-                  </Thumbnail>
-                </Paper>
+                <ItemThumbnail item={item} onTouchTap={this.openModal}
+                onChange={function (index) { this.imageIndex = index; }.bind(this)}/>
               </Col>
               <Col xs={12} sm={6}>
                 <p className='item-heading'>{item.name}</p>
@@ -138,7 +135,7 @@ var ItemView = React.createClass({
       </Panel>
 
       <Modal show={this.state.showModal} onHide={this.closeModal}>
-        <img alt={item.name} src={item.images.large[0]}
+        <img alt={item.name} src={item.images.large[this.imageIndex]}
         className='center-block img-responsive' onClick={this.closeModal} />
       </Modal>
 

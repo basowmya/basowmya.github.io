@@ -4,8 +4,6 @@
 
 'use strict';
 
-var _ = require('lodash');
-
 var data = {
   "categories": [
     {
@@ -573,13 +571,22 @@ var data = {
   ]
 };
 
-data.items = _.chain(data.items).map(function (item) {
+data.items = data.items.map(function (item) {
+  if (!item.imageCount) {
+    item.imageCount = 1;
+  }
+
   item.images = {
-    small: ['img/items/' + item.id + '-s.jpg'],
-    large: ['img/items/' + item.id + '-l.jpg']
+    small: [],
+    large: []
   };
 
+  for (var i = 0; i < item.imageCount; ++i) {
+    item.images.small.push('img/items/' + item.id + '-' + (i || '') + 's.jpg');
+    item.images.large.push('img/items/' + item.id + '-' + (i || '') + 'l.jpg');
+  }
+
   return item;
-}).value();
+});
 
 module.exports = data;
