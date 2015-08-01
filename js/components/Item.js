@@ -89,7 +89,7 @@ var ItemView = React.createClass({
           <Grid>
             <Row>
               <Col xs={12} sm={6} style={{textAlign: 'center'}}>
-                <ItemThumbnail item={item} onTouchTap={this.openModal}
+                <ItemThumbnail item={item} key={item.id} onTouchTap={this.openModal}
                 onChange={function (index) { this.imageIndex = index; }.bind(this)}/>
               </Col>
               <Col xs={12} sm={6}>
