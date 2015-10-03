@@ -42,7 +42,7 @@ var data = {
       "id": "oil-01",
       "name": "The Maharashtrian Lady",
       "category": "1",
-      "price": 15000,
+      "price": 20000,
       "size": [20, 28],
       "outOfStock": true,
       "description": "Media - Oil on canvas"
@@ -51,7 +51,7 @@ var data = {
       "id": "oil-02",
       "name": "Lady Playing Swarbat",
       "category": "1",
-      "price": 15000,
+      "price": 20000,
       "size": [23.5, 27.5],
       "description": "Media - Oil on canvas"
     },
@@ -67,7 +67,7 @@ var data = {
       "id": "oil-04",
       "name": "Toy Seller",
       "category": "1",
-      "price": 8000,
+      "price": 12000,
       "size": [24, 36],
       "description": "Media - Oil on canvas"
     },
@@ -91,7 +91,7 @@ var data = {
       "id": "kal-02",
       "name": "Dancing Ganesha",
       "category": "2",
-      "price": 10000,
+      "price": 12000,
       "size": [24, 28],
       "description": "Media - Acrylic on Cloth"
     },
@@ -107,7 +107,7 @@ var data = {
       "id": "kal-04",
       "name": "The Buddha",
       "category": "2",
-      "price": 10000,
+      "price": 12000,
       "size": [26, 32],
       "description": "Media - Acrylic on Cloth"
     },
@@ -124,7 +124,7 @@ var data = {
       "id": "kal-06",
       "name": "Twin Elephants",
       "category": "2",
-      "price": 8000,
+      "price": 9000,
       "size": [28.5, 22.5],
       "description": "Media - Acrylic on Cloth"
     },
@@ -132,7 +132,7 @@ var data = {
       "id": "kal-07",
       "name": "Twin Horses",
       "category": "2",
-      "price": 8000,
+      "price": 9000,
       "size": [28.5, 22.5],
       "description": "Media - Acrylic on Cloth"
     },
@@ -331,7 +331,7 @@ var data = {
       "id": "mur-01",
       "name": "Lady with Pot",
       "category": "0",
-      "price": 10000,
+      "price": 20000,
       "size": [24, 30],
       "outOfStock": true,
       "description": "Media - Mural"
@@ -340,7 +340,7 @@ var data = {
       "id": "mur-02",
       "name": "The Two Sisters",
       "category": "0",
-      "price": 10000,
+      "price": 12000,
       "size": [24, 36],
       "outOfStock": true,
       "description": "Media - Mural"
@@ -349,7 +349,7 @@ var data = {
       "id": "mur-03",
       "name": "Rajasthani lady at the Window",
       "category": "0",
-      "price": 12000,
+      "price": 14000,
       "size": [24, 36],
       "outOfStock": true,
       "description": "Media - Mural"
@@ -367,7 +367,7 @@ var data = {
       "id": "pas-01",
       "name": "Vegetable Seller",
       "category": "0",
-      "price": 10000,
+      "price": 12000,
       "size": [20, 24],
       "outOfStock": true,
       "description": "Media - Oil Pastels"
@@ -385,7 +385,7 @@ var data = {
       "id": "mnk-01",
       "name": "Rajasthani woman",
       "category": "0",
-      "price": 8000,
+      "price": 10000,
       "size": [30, 24],
       "outOfStock": true,
       "description": "Meenakari - Mixed Media, Oil on Canvas"
@@ -394,7 +394,7 @@ var data = {
       "id": "mnk-02",
       "name": "Mother and Children",
       "category": "0",
-      "price": 8000,
+      "price": 10000,
       "size": [18, 25],
       "description": "Meenakari - Mixed Media, Oil on Canvas"
     },
@@ -453,8 +453,9 @@ var data = {
       "id": "pot-05",
       "name": "Ajantha Ellora",
       "category": "4",
-      "price": 800,
+      "price": 880,
       "size": [6, 5.5],
+      "outOfStock": true,
       "description": "Media - Acrylic on Terracotta Pot"
     },
     {
@@ -496,7 +497,7 @@ var data = {
       "category": "4",
       "price": 300,
       "size": [3.5, 4.5],
-      outOfStock: true,
+      "outOfStock": true,
       "description": "Media - Acrylic on Terracotta Pot"
     },
     {
@@ -561,14 +562,7 @@ var data = {
       "category": "4",
       "price": 250,
       "size": [3, 6.5],
-      "description": "Media - Acrylic on Terracotta Pot"
-    },
-    {
-      "id": "pot-19",
-      "name": "Pink and Black Floral",
-      "category": "4",
-      "price": 250,
-      "size": [3.5, 4.5],
+      "outOfStock": true,
       "description": "Media - Acrylic on Terracotta Pot"
     }
   ]
