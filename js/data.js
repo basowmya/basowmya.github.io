@@ -256,6 +256,7 @@ var data = {
       "category": "3",
       "price": 2500,
       "size": [13, 15.5],
+      "outOfStock": true,
       "description": "Media - Pen and pencil on paper"
     },
     {
