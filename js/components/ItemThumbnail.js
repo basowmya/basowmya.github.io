@@ -57,7 +57,8 @@ var ItemThumbnail = React.createClass({
                 onTouchTap={function () {
                   this.setState({imageIndex: index});
                 }.bind(this)}>
-                  <img alt={item.name} src={src} width='auto' height={imgHeight + 'px'}/>
+                  <img alt={item.name} src={src} key={src}
+                  width='auto' height={imgHeight + 'px'}/>
                 </FlatButton>
               );
             }.bind(this))}

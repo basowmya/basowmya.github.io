@@ -94,7 +94,7 @@ var ItemView = React.createClass({
                 <p>{item.description}</p>
                 <p>{size}</p>
                 <p className='item-price'>{currency(item.price)}</p>
-                { item.outOfStock ? <p>Available as commissioned work</p> : ''}
+                { item.outOfStock ? <p>Out of stock<br/>Available as commissioned work</p> : ''}
                 <ButtonToolbar>
                   <ButtonGroup>
                     <RaisedButton label='Buy' onTouchTap={this.handleBuy} primary={true}>
