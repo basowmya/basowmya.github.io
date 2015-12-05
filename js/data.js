@@ -17,6 +17,11 @@ var data = {
       "image": "img/items/oil-01-s.jpg"
     },
     {
+      "id": "6",
+      "name": "Tanjore Paintings",
+      "image": "img/items/tan-01-s.jpg"
+    },
+    {
       "id": "2",
       "name": "Kalamkari",
       "image": "img/items/kal-01-s.jpg"
@@ -78,6 +83,24 @@ var data = {
       "price": 5000,
       "size": [17.5, 21.5],
       "description": "Media - Oil on canvas"
+    },
+    {
+      "id": "tan-01",
+      "name": "Ganesha",
+      "category": "6",
+      "price": 25000,
+      "size": [16, 20],
+      "outOfStock": true,
+      "description": "Tanjore Painting - Antique Style"
+    },
+    {
+      "id": "tan-02",
+      "name": "Subramanya with Sri Valli and Devayani",
+      "category": "6",
+      "price": 30000,
+      "size": [16, 20],
+      "outOfStock": true,
+      "description": "Tanjore Painting - Antique Style"
     },
     {
       "id": "kal-01",
