@@ -33,7 +33,7 @@ var About = React.createClass({
            <CardText>
              <p><span className="drop-caps">B</span>orn and brought up in Bangalore, Sowmya had always shown precocious talent in the fields of art and athletics. She forayed into fine-arts at the age of ten and has never stopped learning.</p>
              <p>She began her professional career in the IT industry, worked at a number of startups in engineering and business development positions and also founded a software company of her own. Despite a successful career, she found her true calling as a fine-arts painter.</p>
-             <p>Sowmya's repertoire now extends from traditional oil paintings and kalamkari to murals, pastels and zentangles. She conducts workshops on kalamkari, fabric painting and zentangles. So far she has trained several hundred students.</p>
+             <p>Sowmya's repertoire now extends from traditional oil paintings and tanjore paintings to kalamkari, murals and zentangles. She conducts workshops on kalamkari, fabric painting and zentangles. So far she has trained several hundred students.</p>
              <h3>Awards &amp; Workshops</h3>
              <ul>
                <li>1998, Prize winner at Mysore Dussehra Exhibition for "Unity is Fruits of Diversity"</li>

@@ -103,6 +103,15 @@ var data = {
       "description": "Tanjore Painting - Antique Style"
     },
     {
+      "id": "tan-03",
+      "name": "Venkateshwara",
+      "category": "6",
+      "price": 20000,
+      "size": [13, 17],
+      "outOfStock": true,
+      "description": "Tanjore Painting - Classic Style"
+    },
+    {
       "id": "kal-01",
       "name": "Radha Krishna",
       "category": "2",
