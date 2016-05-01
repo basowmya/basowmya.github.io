@@ -1,45 +1,43 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
-
-'use strict';
 
 var data = {
   "categories": [
-    {
-      "id": "0",
-      "name": "Others",
-      "image": "img/items/mur-01-s.jpg"
-    },
     {
       "id": "1",
       "name": "Oil Paintings",
       "image": "img/items/oil-01-s.jpg"
     },
     {
-      "id": "6",
+      "id": "2",
       "name": "Tanjore Paintings",
       "image": "img/items/tan-01-s.jpg"
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "Kalamkari",
       "image": "img/items/kal-01-s.jpg"
     },
     {
-      "id": "3",
+      "id": "4",
+      "name": "Colour Pencil Sketches",
+      "image": "img/items/pcl-01-s.jpg"
+    },
+    {
+      "id": "5",
       "name": "Zentangles",
       "image": "img/items/zen-01-s.jpg"
     },
     {
-      "id": "4",
+      "id": "6",
       "name": "Hand Painted Vases",
       "image": "img/items/pot-01-s.jpg"
     },
     {
-      "id": "5",
-      "name": "Colour Pencil Sketches",
-      "image": "img/items/pcl-01-s.jpg"
+      "id": "7",
+      "name": "Others",
+      "image": "img/items/mur-01-s.jpg"
     }
   ],
   "items": [
@@ -619,4 +617,4 @@ data.items = data.items.map(function (item) {
   return item;
 });
 
-module.exports = data;
+export default data;

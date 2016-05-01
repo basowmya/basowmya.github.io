@@ -1,44 +1,36 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
+import data from '../data';
 
-var React = require('react'),
-  bootstrap = require('react-bootstrap'),
-  Panel = bootstrap.Panel,
-  CategoryButton = require('./CategoryButton'),
-  ItemGrid = require('./ItemGrid'),
-  _ = require('lodash'),
-  data = require('../data');
+import CategoryButton from './CategoryButton';
+import ItemGrid from './ItemGrid';
+import Panel from 'react-bootstrap/lib/Panel';
 
-var Categories = React.createClass({
-  render: function () {
-    var panels = data.categories.map(function (category) {
-      var items = _.chain(data.items)
-          .filter({category: category.id})
-          .sample(4).value();
-
-      return (
-        <Panel key={category.id} header={
-          <CategoryButton category={category} />
-        }>
-          <ItemGrid items={items} singleRow={true}/>
-        </Panel>
-      );
-    });
+export default class Home extends React.Component {
+  render() {
     return (
-      <div>
-        {_.chain(panels).rest().shuffle().concat(_.first(panels)).value()}
-      </div>
+      <div>{
+        data.categories.map(category => {
+          let items = sampleSize(
+            data.items.filter(item => item.category === category.id),
+            4
+          );
+
+          return (
+            <Panel
+              key={category.id}
+              header={ <CategoryButton category={category} /> }
+            >
+              <ItemGrid items={items} singleRow={true}/>
+            </Panel>
+          );
+        })
+      }</div>
     );
+    // {_.chain(panels).rest().shuffle().concat(_.first(panels)).value()}
   }
-});
-
-var Home = React.createClass({
-  render: function () {
-    return <Categories/>;
-  }
-});
-
-module.exports = Home;
+}

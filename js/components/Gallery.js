@@ -1,19 +1,21 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
+import React from 'react';
+import ItemGrid from './ItemGrid';
+import data from '../data';
 
-var React = require('react'),
-  ItemGrid = require('./ItemGrid'),
-  _ = require('lodash'),
-  data = require('../data');
+export default class Home extends React.Component {
 
-var Gallery = React.createClass({
-  render: function () {
-    var items = _.filter(data.items, {category: this.props.params.id});
-    return <ItemGrid items={items} showDetails={true} />;
+  render() {
+    return (
+      <ItemGrid
+        items={
+          data.items.filter(({category}) => category === this.props.params.id)
+        }
+        showDetails={true}
+      />
+    );
   }
-});
-
-module.exports = Gallery;
+}

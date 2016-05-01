@@ -1,10 +1,8 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
-
-var numeral = require('numeral');
+import numeral from 'numeral';
 
 // load a language
 numeral.language('in', {
@@ -19,8 +17,4 @@ numeral.language('in', {
 // switch between languages
 numeral.language('in');
 
-var currency = function (num) {
-  return numeral(num).format('$ 0,0');
-};
-
-module.exports = currency;
+export default num => numeral(num).format('$ 0,0');

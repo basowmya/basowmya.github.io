@@ -1,37 +1,31 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
+import React from 'react';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import LightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import Menubar from './Menubar';
+import Footer from './Footer';
 
-var React = require('react'),
-  Router = require('react-router'),
-  RouteHandler = Router.RouteHandler,
-  Menubar = require('./Menubar'),
-  Footer = require('./Footer'),
-  mui = require('material-ui'),
-  ThemeManager = new mui.Styles.ThemeManager();
-
-var App = React.createClass({
-  childContextTypes: {
+export default class App extends React.Component {
+  static childContextTypes = {
     muiTheme: React.PropTypes.object
-  },
+  }
 
-  getChildContext: function () {
+  getChildContext() {
     return {
-      muiTheme: ThemeManager.getCurrentTheme()
+      muiTheme: getMuiTheme(LightBaseTheme)
     };
-  },
+  }
 
-  render: function () {
+  render() {
     return (
       <div>
         <Menubar/>
-        <RouteHandler/>
+          {this.props.children}
         <Footer/>
       </div>
     );
   }
-});
-
-module.exports = App;
+}

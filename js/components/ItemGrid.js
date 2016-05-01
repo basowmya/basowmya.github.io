@@ -1,44 +1,38 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
+import React from 'react';
+import data from '../data';
 
-var React = require('react'),
-  Router = require('react-router'),
-  Link = Router.Link,
-  bootstrap = require('react-bootstrap'),
-  Thumbnail = bootstrap.Thumbnail,
-  Grid = bootstrap.Grid,
-  Row = bootstrap.Row,
-  Col = bootstrap.Col,
-  mui = require('material-ui'),
-  Paper = mui.Paper,
-  currency = require('../currency'),
-  _ = require('lodash');
+import CategoryButton from './CategoryButton';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Panel from 'react-bootstrap/lib/Panel';
+import Thumbnail from 'react-bootstrap/lib/Thumbnail';
+import Paper from 'material-ui/Paper';
+import Link from 'react-router/lib/Link';
+import currency from '../currency';
 
-  // IconButton = mui.IconButton,
-  // Favorite = require('material-ui/lib/svg-icons/action/favorite'),
-  // <IconButton className='float-right' tooltip='Shortlist' touch={true}>
-  //   <Favorite/>
-  // </IconButton>
+export default class ItemGrid extends React.Component {
+  render() {
+    let props = this.props;
 
-var ItemGrid = React.createClass({
-  render: function () {
-    var cols = _.map(this.props.items, function (item, index) {
-      var className = this.props.singleRow ?
+    let cols = props.items.map((item, index) => {
+      let colClassName = props.singleRow ?
         (index < 2 ? '' :
           index < 3 ? 'hidden-xs' :
           index < 4 ? 'hidden-xs hidden-sm' :
                       'hidden-xs hidden-sm hidden-md hidden-lg') : '';
 
       var col = [
-        <Col key={item.id} xs={6} sm={4} md={3} className={className} style={{textAlign: 'center'}}>
+        <Col key={item.id} xs={6} sm={4} md={3} className={colClassName} style={{textAlign: 'center'}}>
           <Paper zDepth={3} style={{display: 'inline-block', marginBottom: '20px', marginTop: '20px'}}>
-            <Link to='item' params={item}>
+            <Link to={'item/' + item.id}>
               <Thumbnail key={item.id} src={item.images.small[0]} alt={item.name}>
                 {
-                  this.props.showDetails ? (
+                  props.showDetails ? (
                     <div>
                       <p className='item-name'>{item.name}</p>
                       <p className='item-price'>{currency(item.price)}</p>
@@ -51,7 +45,7 @@ var ItemGrid = React.createClass({
         </Col>
       ];
 
-      if (!this.props.singleRow) {
+      if (!props.singleRow) {
         if ((index + 1) % 2 === 0) {
           col.push(<div className='clearfix visible-xs-block'></div>);
         }
@@ -64,10 +58,8 @@ var ItemGrid = React.createClass({
       }
 
       return col;
-    }, this);
+    });
 
     return <Grid><Row>{cols}</Row></Grid>;
   }
-});
-
-module.exports = ItemGrid;
+}

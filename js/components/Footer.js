@@ -1,19 +1,11 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
+import React from 'react';
 
-var React = require('react');
-
-var Footer = React.createClass({
-  render: function () {
-    return (
-      <footer>
-        <p>Copyright &copy; 2015, Sowmya B A</p>
-      </footer>
-    );
-  }
-});
-
-module.exports = Footer;
+export default () => (
+  <footer>
+    <p>Copyright &copy; 2016, Sowmya B A</p>
+  </footer>
+);
