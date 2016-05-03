@@ -9,7 +9,7 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Panel from 'react-bootstrap/lib/Panel';
-// import ItemThumbnail from './ItemThumbnail';
+import ItemThumbnail from './ItemThumbnail';
 
 // bootstrap = require('react-bootstrap'),
 // Modal = bootstrap.Modal,
@@ -89,10 +89,10 @@ export default class Item extends React.Component {
           <Grid>
             <Row>
               <Col xs={12} sm={6} style={{textAlign: 'center'}}>
-                {/*<ItemThumbnail
+                <ItemThumbnail
                   item={item}
                   key={item.id}
-                />*/}
+                />
               </Col>
               {/*
                 {onTouchTap={this.openModal}
