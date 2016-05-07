@@ -10,7 +10,7 @@ numeral.language('in', {
         thousands: ','
     },
     currency: {
-        symbol: 'Rs.'
+        symbol: '\u20B9'
     }
 });
 
