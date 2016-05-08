@@ -9,11 +9,11 @@ import CategoryButton from './CategoryButton';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-import Panel from 'react-bootstrap/lib/Panel';
-import Thumbnail from 'react-bootstrap/lib/Thumbnail';
 import Paper from 'material-ui/Paper';
 import Link from 'react-router/lib/Link';
-import currency from '../currency';
+// import currency from '../currency';
+
+import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 
 export default class ItemGrid extends React.Component {
   render() {
@@ -30,16 +30,12 @@ export default class ItemGrid extends React.Component {
         <Col key={item.id} xs={6} sm={4} md={3} className={colClassName} style={{textAlign: 'center'}}>
           <Paper zDepth={3} style={{display: 'inline-block', marginBottom: '20px', marginTop: '20px'}}>
             <Link to={'item/' + item.id}>
-              <Thumbnail key={item.id} src={item.images.small[0]} alt={item.name}>
-                {
-                  props.showDetails ? (
-                    <div>
-                      <p className='item-name'>{item.name}</p>
-                      <p className='item-price'>{currency(item.price)}</p>
-                    </div>
-                  ) : ''
-                }
-              </Thumbnail>
+              <Card>
+                <CardMedia>
+                  <img src={item.images.small[0]} />
+                </CardMedia>
+                <CardTitle subtitle={item.name} />
+              </Card>
             </Link>
           </Paper>
         </Col>

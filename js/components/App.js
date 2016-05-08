@@ -22,8 +22,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Menubar/>
-          {this.props.children}
+        <Menubar location={this.props.location} />
+        {this.props.children}
         <Footer/>
       </div>
     );

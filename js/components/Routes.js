@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import App from './App';
 import Home from './Home';
 import Gallery from './Gallery';
@@ -12,11 +12,11 @@ import Item from './Item';
 // import Contact from './Contact';
 
 export default (
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
+  <Router history={hashHistory} >
+    <Route path="/" component={App} >
       <IndexRoute component={Home} />
-      <Route path='gallery/:id' component={Gallery}/>
-      <Route path='item/:id' component={Item}/>
+      <Route path='gallery/:id' component={Gallery} />
+      <Route path='item/:id' component={Item} />
       {/*
       <Route path='about' component={About}/>
       <Route path='contact' component={Contact}/>*/}

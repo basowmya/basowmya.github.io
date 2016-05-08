@@ -9,7 +9,7 @@ import FlatButton from 'material-ui/FlatButton';
 import Zoomin from 'material-ui/svg-icons/action/zoom-in';
 import {grey500} from 'material-ui/styles/colors';
 
-export default class ItemGrid extends React.Component {
+export default class ItemThumbnail extends React.Component {
 
   constructor(props) {
     super(props);

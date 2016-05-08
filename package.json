@@ -5,9 +5,8 @@
   "private": true,
   "main": "js/bundle.js",
   "scripts": {
-    "start": "watchify -v -e js/index.js -o js/bundle.js",
-    "build": "browserify -e js/index.js -o js/bundle.js",
-    "watch": "watchify -v -e js/index.js -o js/bundle.js",
+    "start": "watchify -v --debug -e js/index.js -o js/bundle.js",
+    "build": "browserify --debug -e js/index.js -o js/bundle.js",
     "beefy": "beefy js/index.js:js/bundle.js --live --open",
     "serve": "live-server --watch=js/bundle.js,index.html",
     "less": "lessc styles/app.less > styles/app.css",
