@@ -8,8 +8,8 @@ import App from './App';
 import Home from './Home';
 import Gallery from './Gallery';
 import Item from './Item';
-// import About from './About';
-// import Contact from './Contact';
+import About from './About';
+import Contact from './Contact';
 
 export default (
   <Router history={hashHistory} >
@@ -17,9 +17,8 @@ export default (
       <IndexRoute component={Home} />
       <Route path='gallery/:id' component={Gallery} />
       <Route path='item/:id' component={Item} />
-      {/*
       <Route path='about' component={About}/>
-      <Route path='contact' component={Contact}/>*/}
+      <Route path='contact' component={Contact}/>
     </Route>
   </Router>
 );

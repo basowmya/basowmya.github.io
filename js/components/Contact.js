@@ -1,39 +1,38 @@
 /*
- * Copyright (c) 2015, Sowmya B A. All rights reserved.
+ * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-'use strict';
+import React from 'react';
+import Avatar from 'material-ui/Avatar';
+import {Card, CardActions, CardHeader, CardText, CardTitle} from 'material-ui/Card';
+import LinearProgress from 'material-ui/LinearProgress';
+import Snackbar from 'material-ui/Snackbar';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+import pick from 'lodash/pick';
+import request from 'superagent';
 
-var React = require('react'),
-  mui = require('material-ui'),
-  Card = mui.Card,
-  CardTitle = mui.CardTitle,
-  CardActions = mui.CardActions,
-  RaisedButton = mui.RaisedButton,
-  TextField = mui.TextField,
-  Snackbar = mui.Snackbar,
-  LinearProgress = mui.LinearProgress,
-  _ = require('lodash'),
-  request = require('superagent');
+export default class Contact extends React.Component {
 
-var Contact = React.createClass({
-
-  getInitialState: function () {
-    return {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
       _subject: '[Sowmya Art Gallery]',
       _cc: 'dheerajvs@gmail.com',
       isLoading: false,
-      snackbarMessage: ''
-     };
-  },
+      snackbarMessage: '',
+      openSnackbar: false
+    };
+  }
 
-  handleNameChange: function (e) {
+  handleNameChange = (e) => {
     this.setState({
       name: e.target.value,
       errorTextName: ''
     });
-  },
-  handleEmailChange: function (e) {
+  };
+
+  handleEmailChange = (e) => {
     this.setState({
       email: e.target.value,
       errorTextEmail: ''
@@ -42,8 +41,9 @@ var Contact = React.createClass({
     if (!this.state.phone && this.state.errorTextPhone) {
       this.setState({errorTextPhone: ''});
     }
-  },
-  handlePhoneChange: function (e) {
+  };
+
+  handlePhoneChange = (e) => {
     this.setState({
       phone: e.target.value,
       errorTextPhone: ''
@@ -52,21 +52,30 @@ var Contact = React.createClass({
     if (!this.state.email && this.state.errorTextEmail) {
       this.setState({errorTextEmail: ''});
     }
-  },
-  handleMessageChange: function (e) {
+  };
+
+  handleMessageChange = (e) => {
     this.setState({
       message: e.target.value,
       errorTextMessage: ''
     });
-  },
+  };
 
-  handleSubmit: function (e) {
+  handleRequestClose = () => {
+    this.setState({
+      openSnackbar: false,
+    });
+  };
+
+  handleSubmit = (e) => {
     if (!this.validateForm()) {
       return;
     }
 
-    var formData = _.pick(this.state,
-      ['name', 'email', 'phone', 'message', '_subject', '_cc']);
+    let formData = pick(
+      this.state,
+      ['name', 'email', 'phone', 'message', '_subject', '_cc']
+    );
 
     this.setState({isLoading: true});
 
@@ -75,12 +84,11 @@ var Contact = React.createClass({
       .send(formData)
       .type('form')
       .accept('json')
-      .end(function (err, res) {
-        var errText;
+      .end((err, res) => {
         this.setState({isLoading: false});
 
         if (err) {
-          errText = (err.response && err.response.body && err.response.body.error) ||
+          let errText = (err.response && err.response.body && err.response.body.error) ||
             'unknown error';
           this.setState({
             snackbarMessage: 'Error ' + (err.status || '(unknown status)') + ': ' + errText
@@ -92,12 +100,12 @@ var Contact = React.createClass({
           this.setState({name: null, email: null, phone: null, message: null});
         }
 
-        this.refs.snackbar.show();
-      }.bind(this));
-  },
+        this.setState({openSnackbar: true});
+      });
+  };
 
-  validateForm: function () {
-    var state = this.state,
+  validateForm() {
+    let state = this.state,
       isValid = true;
 
     if (!state.name) {
@@ -125,10 +133,10 @@ var Contact = React.createClass({
     }
 
     return isValid;
-  },
+  }
 
-  render: function () {
-    var styles = {
+  render() {
+    let styles = {
       textfield: {
         display: 'block',
         margin: '0 16px'
@@ -138,35 +146,61 @@ var Contact = React.createClass({
     return (
       <div className='container'>
         <Card>
-          <CardTitle title='Contact the Artist' titleStyle={{fontSize: 24}}/>
+          <CardTitle
+            title='Contact the Artist'
+            titleStyle={{fontSize: 24}}
+          />
           <form action='http://formspree.io/sowmya.ba@gmail.com'>
-            <TextField style={styles.textfield} name='name'
-            floatingLabelText='Full Name' onChange={this.handleNameChange}
-            errorText={this.state.errorTextName}/>
-
-            <TextField style={styles.textfield} name='_replyto' type='email'
-            floatingLabelText='Email' onChange={this.handleEmailChange}
-            errorText={this.state.errorTextEmail}/>
-
-            <TextField style={styles.textfield} name='phone' type='tel'
-            floatingLabelText='Phone Number' onChange={this.handlePhoneChange}
-            errorText={this.state.errorTextPhone}/>
-
-            <TextField style={styles.textfield} name='message' multiLine={true} rows={3}
-            floatingLabelText='Message' onChange={this.handleMessageChange}
-            errorText={this.state.errorTextMessage}/>
-
+            <TextField
+              style={styles.textfield}
+              name='name'
+              floatingLabelText='Full Name'
+              onChange={this.handleNameChange}
+              errorText={this.state.errorTextName}
+            />
+            <TextField
+              style={styles.textfield}
+              name='_replyto'
+              type='email'
+              floatingLabelText='Email'
+              onChange={this.handleEmailChange}
+              errorText={this.state.errorTextEmail}
+            />
+            <TextField
+              style={styles.textfield}
+              name='phone'
+              type='tel'
+              floatingLabelText='Phone Number'
+              onChange={this.handlePhoneChange}
+              errorText={this.state.errorTextPhone}
+            />
+            <TextField
+              style={styles.textfield}
+              name='message'
+              multiLine={true}
+              rows={3}
+              floatingLabelText='Message'
+              onChange={this.handleMessageChange}
+              errorText={this.state.errorTextMessage}
+            />
             <CardActions>
-              <RaisedButton label='Submit' primary={true}
-              disabled={this.state.isLoading} onTouchTap={this.handleSubmit}/>
+              <RaisedButton
+                label='Submit'
+                primary={true}
+                disabled={this.state.isLoading}
+                onTouchTap={this.handleSubmit}
+              />
               {this.state.isLoading ? <LinearProgress/> : <span/>}
-              <Snackbar ref='snackbar' message={this.state.snackbarMessage}/>
+              <Snackbar
+                open={this.state.openSnackbar}
+                message={this.state.snackbarMessage}
+                autoHideDuration={3000}
+                onRequestClose={this.handleSnackbarClose}
+              />
             </CardActions>
           </form>
         </Card>
       </div>
     );
   }
-});
-
-module.exports = Contact;
+}
