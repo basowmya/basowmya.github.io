@@ -6,9 +6,7 @@ import React from 'react';
 import data from '../data';
 
 import CategoryButton from './CategoryButton';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import Paper from 'material-ui/Paper';
 import Link from 'react-router/lib/Link';
 // import currency from '../currency';
@@ -41,17 +39,17 @@ export default class ItemGrid extends React.Component {
         </Col>
       ];
 
-      if (!props.singleRow) {
-        if ((index + 1) % 2 === 0) {
-          col.push(<div className='clearfix visible-xs-block'></div>);
-        }
-        if ((index + 1) % 3 === 0) {
-          col.push(<div className='clearfix visible-sm-block'></div>);
-        }
-        if ((index + 1) % 4 === 0) {
-          col.push(<div className='clearfix visible-md-block visible-lg-block'></div>);
-        }
-      }
+      // if (!props.singleRow) {
+      //   if ((index + 1) % 2 === 0) {
+      //     col.push(<div className='clearfix visible-xs-block'></div>);
+      //   }
+      //   if ((index + 1) % 3 === 0) {
+      //     col.push(<div className='clearfix visible-sm-block'></div>);
+      //   }
+      //   if ((index + 1) % 4 === 0) {
+      //     col.push(<div className='clearfix visible-md-block visible-lg-block'></div>);
+      //   }
+      // }
 
       return col;
     });
