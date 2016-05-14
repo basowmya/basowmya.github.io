@@ -5,10 +5,7 @@
 import React from 'react';
 import sampleSize from 'lodash/sampleSize';
 import data from '../data';
-
-import CategoryButton from './CategoryButton';
 import ItemGrid from './ItemGrid';
-import Panel from 'react-bootstrap/lib/Panel';
 
 export default class Home extends React.Component {
   render() {
@@ -21,12 +18,10 @@ export default class Home extends React.Component {
           );
 
           return (
-            <Panel
-              key={category.id}
-              header={ <CategoryButton category={category} /> }
-            >
+            <div key={category.id} >
+              <h3>{category.name}</h3>
               <ItemGrid items={items} singleRow={true}/>
-            </Panel>
+            </div>
           );
         })
       }</div>

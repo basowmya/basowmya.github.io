@@ -5,11 +5,9 @@
 import React from 'react';
 import data from '../data';
 
-import CategoryButton from './CategoryButton';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Paper from 'material-ui/Paper';
 import Link from 'react-router/lib/Link';
-// import currency from '../currency';
 
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 
