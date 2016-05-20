@@ -8,7 +8,7 @@
     "start": "watchify -v --debug -e js/index.js -o js/bundle.js",
     "build": "browserify --debug -e js/index.js -o js/bundle.js",
     "beefy": "beefy js/index.js:js/bundle.js --live --open",
-    "serve": "live-server --watch=js/bundle.js,index.html",
+    "serve": "live-server --watch=js/bundle.js,index.html,styles/normalize.css",
     "less": "lessc styles/app.less > styles/app.css",
     "prod": "NODE_ENV=production browserify -e js/index.js -o js/bundle.js -g uglifyify",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,7 @@
     "material-ui": "^0.15.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-flexbox": "^3.0.0",
     "react-flexbox-grid": "^0.9.6",
     "react-router": "^2.4.0",
     "react-tap-event-plugin": "^1.0.0",

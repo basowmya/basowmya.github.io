@@ -6,7 +6,7 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family: 'Roboto', sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -41,26 +41,6 @@ nav,
 section,
 summary { /* 1 */
   display: block;
-}
-
-/**
- * Add the correct display in IE 9-.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
 }
 
 /**
@@ -152,15 +132,6 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
-
-/**
- * Add the correct background and color in IE 9-.
- */
-
-mark {
-  background-color: #ff0;
-  color: #000;
 }
 
 /**
@@ -292,19 +263,6 @@ select { /* 1 */
 }
 
 /**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-html [type="button"], /* 1 */
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-}
-
-/**
  * Remove the inner border and padding in Firefox.
  */
 
@@ -417,4 +375,41 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+}
+
+
+/*! app.css */
+
+.flex-item {
+  display: flex;
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .flex-item {
+    flex-basis: 50%
+  }
+
+  .flex-item-2, .flex-item-3 {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 991px) {
+  .flex-item {
+    flex-basis: 33%
+  }
+
+  .flex-item-3 {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .flex-item {
+    flex-basis: 25%
+  }
 }

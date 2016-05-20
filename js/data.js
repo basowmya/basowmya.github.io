@@ -619,3 +619,4 @@ data.items = data.items.map(function (item) {
 });
 
 export default data;
+export let {categories, items} = data;
