@@ -91,7 +91,7 @@ export default class Contact extends React.Component {
           let errText = (err.response && err.response.body && err.response.body.error) ||
             'unknown error';
           this.setState({
-            snackbarMessage: 'Error ' + (err.status || '(unknown status)') + ': ' + errText
+            snackbarMessage: `Error ${(err.status || '(unknown status)')}: {$errText}`
           });
         }
         else {
@@ -144,12 +144,11 @@ export default class Contact extends React.Component {
     };
 
     return (
-      <div className='container'>
-        <Card>
-          <CardTitle
-            title='Contact the Artist'
-            titleStyle={{fontSize: 24}}
-          />
+        // <Card>
+        //   <CardTitle
+        //     title='Contact the Artist'
+        //     titleStyle={{fontSize: 24}}
+        //   />
           <form action='http://formspree.io/sowmya.ba@gmail.com'>
             <TextField
               style={styles.textfield}
@@ -178,12 +177,12 @@ export default class Contact extends React.Component {
               style={styles.textfield}
               name='message'
               multiLine={true}
-              rows={3}
+              rows={2}
               floatingLabelText='Message'
               onChange={this.handleMessageChange}
               errorText={this.state.errorTextMessage}
             />
-            <CardActions>
+            {/*<CardActions>
               <RaisedButton
                 label='Submit'
                 primary={true}
@@ -197,10 +196,9 @@ export default class Contact extends React.Component {
                 autoHideDuration={3000}
                 onRequestClose={this.handleSnackbarClose}
               />
-            </CardActions>
+            </CardActions>*/}
           </form>
-        </Card>
-      </div>
+        // </Card>
     );
   }
 }

@@ -6,6 +6,7 @@ import React from 'react';
 import {items, categories} from '../data';
 import sampleSize from 'lodash/sampleSize';
 import ItemGrid from './ItemGrid';
+import Contact from './Contact';
 
 import Dialog from 'material-ui/Dialog';
 import IconMenu from 'material-ui/IconMenu';
@@ -26,13 +27,25 @@ export default class Item extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
+      openEnquire: false,
       openLargeImage: false,
       openShare: false,
       shareAnchorEl: null
     };
   }
 
-  handleOpenLargeImage = () => this.setState({openLargeImage: true});
+  handleOpenEnquire = (event) => {
+    event.preventDefault();
+    this.setState({openEnquire: true})
+  };
+
+  handleCloseEnquire = () => this.setState({openEnquire: false});
+
+  handleOpenLargeImage = (event) => {
+    event.preventDefault();
+    this.setState({openLargeImage: true})
+  };
+
   handleCloseLargeImage = () => this.setState({openLargeImage: false});
 
   handleOpenShare = (event) => {
@@ -44,7 +57,7 @@ export default class Item extends React.Component {
     });
   };
 
-  handleCloseShare = () => this.setState({ openShare: false });
+  handleCloseShare = () => this.setState({openShare: false});
 
   render = () => {
     const styles = {
@@ -59,107 +72,108 @@ export default class Item extends React.Component {
 
     const item = items.filter(({id}) => id === this.props.params.id)[0];
 
-    const moreItems = sampleSize(
-      items.filter(
-        ({id, category}) => category === item.category && id !== item.id
-      ),
-      4
-    );
+    if (!this.moreItems || this.itemId !== item.id) {
+      this.itemId = item.id;
+      this.moreItems = sampleSize(
+        items.filter(
+          ({id, category}) => category === item.category && id !== item.id
+        ),
+        4
+      );
+    }
 
-    const size = [
-      item.size[0], ' x ', item.size[1], ' inches (',
-      Math.round(item.size[0] * 2.54), ' x ',
-      Math.round(item.size[1] * 2.54),' cm)'
-    ].join('');
+    const size = `${item.size[0]} x ${item.size[1]} inches ` +
+      `(${Math.round(item.size[0] * 2.54)} x ${Math.round(item.size[1] * 2.54)} cm)`;
 
     const itemPath = (() => {
-      let loc = window.location;
-      return loc.href.replace(loc.hash, '') + loc.hash;
+      const loc = window.location;
+      return `${loc.href.replace(loc.hash, '')}${loc.hash}`;
     })();
 
-    const shareText = "Take a look at this item from Sowmya's Art Gallery: " + itemPath;
+    const shareText = `Take a look at this item from Sowmya's Art Gallery: ${itemPath}`;
     const shareSubject = "Sowmya's Art Gallery";
 
     return (
       <div>
-      <div
-        style={{
-          boxSizing: 'border-box',
-          display: 'flex',
-          alignContent: 'flex-start',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          justifyContent: 'center'
-        }}
-      >
         <div
           style={{
-            display: 'flex',
             boxSizing: 'border-box',
-            padding: '20px'
-          }}
-        >
-          <Paper
-            zDepth={3}
-            style={styles.paper}
-          >
-            <Card onTouchTap={this.handleOpenLargeImage}>
-              <CardMedia>
-                <img src={item.images.small[0]} />
-              </CardMedia>
-              {/*<CardText
-                style={{
-                  display: 'flex',
-                  alignContent: 'center',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '12px 16px'
-                }}
-              >
-                <Zoomin className='vertical-align' color={grey500}/>
-                <span>Click for a larger view</span>
-              </CardText>*/}
-            </Card>
-          </Paper>
-        </div>
-
-        <div
-          style={{
             display: 'flex',
-            flexGrow: 0,
-            padding: '20px'
+            alignContent: 'flex-start',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
           }}
         >
-          <Card>
-            <CardHeader
-              title={item.name}
-              subtitle={item.description}
-            />
-            <CardText>
-              <p>{size}</p>
-              { item.outOfStock ? <p>Out of stock (available as commissioned work)</p> : ''}
-            </CardText>
-            <CardActions>
-              <RaisedButton
-                label='Enquire'
-                primary={true}
+          <div
+            style={{
+              display: 'flex',
+              boxSizing: 'border-box',
+              padding: '20px'
+            }}
+          >
+            <Paper
+              zDepth={3}
+              style={styles.paper}
+            >
+              <Card onTouchTap={this.handleOpenLargeImage}>
+                <CardMedia>
+                  <img src={item.images.small[0]} />
+                </CardMedia>
+                {/*<CardText
+                  style={{
+                    display: 'flex',
+                    alignContent: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '12px 16px'
+                  }}
+                >
+                  <Zoomin className='vertical-align' color={grey500}/>
+                  <span>Click for a larger view</span>
+                </CardText>*/}
+              </Card>
+            </Paper>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              flexGrow: 0,
+              padding: '20px'
+            }}
+          >
+            <Card>
+              <CardHeader
+                title={item.name}
+                subtitle={item.description}
               />
-              <RaisedButton
-                label='Share'
-                icon={<ShareIcon />}
-                onTouchTap={this.handleOpenShare}
-              />
-            </CardActions>
-          </Card>
+              <CardText>
+                <p>{size}</p>
+                { item.outOfStock ? <p>Out of stock (available as commissioned work)</p> : ''}
+              </CardText>
+              <CardActions>
+                <RaisedButton
+                  label='Enquire'
+                  primary={true}
+                  onTouchTap={this.handleOpenEnquire}
+                />
+                <RaisedButton
+                  label='Share'
+                  icon={<ShareIcon />}
+                  onTouchTap={this.handleOpenShare}
+                />
+              </CardActions>
+            </Card>
+          </div>
         </div>
-      </div>
 
         <div>
-          {'More Items in ' + categories.filter(({id}) => id === item.category)[0].name}
+          {`More items in ${categories.filter(({id}) => id === item.category)[0].name}`}
         </div>
 
         <ItemGrid
-          items={moreItems}
+          items={this.moreItems}
           singleRow={true}
           showDetails={true}
         />
@@ -173,24 +187,44 @@ export default class Item extends React.Component {
             primaryText='Email'
             leftIcon={<EmailIcon />}
             linkButton
-            href={'mailto:?body=' + shareText +'&subject=' + shareSubject}
+            href={`mailto:?body=${shareText}&subject=${shareSubject}`}
             target='_blank'
           />
           <MenuItem
             primaryText='WhatsApp'
             leftIcon={<EmailIcon />}
             linkButton
-            href={'mailto:?body=' + shareText +'&subject=' + shareSubject}
+            href={`whatsapp://send?text=${shareText}`}
           />
         </Popover>
 
         <Dialog
+          autoScrollBodyContent={true}
+          open={this.state.openEnquire}
+          onRequestClose={this.handleCloseEnquire}
+        >
+          <Contact />
+        </Dialog>
+
+        <Dialog
           open={this.state.openLargeImage}
           onRequestClose={this.handleCloseLargeImage}
+          bodyStyle={{
+            padding: 0,
+            margin: 0
+          }}
+          ContentStyle={{
+            width: '100%'
+          }}
         >
-          <img src={item.images.large[0]} />
+          <img src={item.images.large[0]}
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%'
+          }}
+          />
         </Dialog>
-        </div>
+      </div>
     );
   }
 }

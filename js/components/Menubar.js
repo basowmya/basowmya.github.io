@@ -5,6 +5,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import {Popover, PopoverAnimationVertical} from 'material-ui/Popover';
@@ -15,7 +16,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 // import PersonIcon from 'material-ui/svg-icons/social/person';
 // import ContactIcon from 'material-ui/svg-icons/communication/contact-mail';
 
-import data from '../data';
+import {categories} from '../data';
 
 export default class Menubar extends React.Component {
 
@@ -30,7 +31,7 @@ export default class Menubar extends React.Component {
 
   anchorEl = undefined;
 
-  getMenuItems = (props) => data.categories.map(({id, name}) => (
+  getMenuItems = (props) => categories.map(({id, name}) => (
     <MenuItem
       key={id}
       href={'#/gallery/' + id}
@@ -55,8 +56,18 @@ export default class Menubar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          backgroundColor: getMuiTheme().tabs.backgroundColor
+        }}
+      >
         <Tabs
+          style={{
+            maxWidth: '960px',
+            width: '100%'
+          }}
           value={this.getTabValue(this.props.location.pathname)}
         >
           <Tab
@@ -89,10 +100,13 @@ export default class Menubar extends React.Component {
           open={this.state.open}
           anchorEl={this.anchorEl}
           onRequestClose={this.handleRequestClose}
+          anchorOrigin={{horizontal: 'middle', vertical: 'bottom'}}
+          targetOrigin={{horizontal: 'middle', vertical: 'top'}}
           animation={PopoverAnimationVertical}
+          style={{transformOrigin: 'left top'}}
         >
           <Menu
-            onChange={() => this.setState({ open: false })}
+            onChange={() => this.setState({open: false})}
           >
             {this.getMenuItems(this.props)}
           </Menu>

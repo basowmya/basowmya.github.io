@@ -384,15 +384,13 @@ textarea {
   display: flex;
   box-sizing: border-box;
   flex-grow: 1;
-  flex-shrink: 1;
-  padding: 20px;
+  padding: 16px;
 }
 
 @media (max-width: 480px) {
   .flex-item {
-    flex-basis: 50%
+    flex-basis: 50%;
   }
-
   .flex-item-2, .flex-item-3 {
     display: none;
   }
@@ -400,16 +398,24 @@ textarea {
 
 @media (min-width: 481px) and (max-width: 991px) {
   .flex-item {
-    flex-basis: 33%
+    flex-basis: 33%;
   }
-
   .flex-item-3 {
     display: none;
   }
 }
 
 @media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
   .flex-item {
-    flex-basis: 25%
+    flex-basis: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1168px;
   }
 }
