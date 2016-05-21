@@ -3,9 +3,17 @@
  */
 
 import React from 'react';
+import typography from 'material-ui/styles/typography';
 
 export default () => (
-  <footer>
-    <p>Copyright &copy; 2016, Sowmya B A</p>
+  <footer
+    style={{
+      fontSize: '11px',
+      fontWeight: typography.fontWeightLight,
+      marginBottom: '8px',
+      textAlign: 'center'
+    }}
+  >
+    Copyright &copy; 2016, Sowmya B A
   </footer>
 );

@@ -24,18 +24,13 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div
-        style={{
-          backgroundColor: grey300
-        }}
-      >
+      <div>
         <Menubar location={this.props.location} />
         <div
-        className='container'
+          className='container'
           style={{
             boxSizing: 'border-box',
-            marginRight: 'auto',
-            marginLeft: 'auto',
+            margin: '0 auto',
             padding: '16px'
           }}
         >

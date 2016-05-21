@@ -5,7 +5,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import {Popover, PopoverAnimationVertical} from 'material-ui/Popover';
@@ -34,7 +33,7 @@ export default class Menubar extends React.Component {
   getMenuItems = (props) => categories.map(({id, name}) => (
     <MenuItem
       key={id}
-      href={'#/gallery/' + id}
+      href={`#/gallery/${id}`}
       linkButton
       primaryText={name}
       value={id}
@@ -60,7 +59,7 @@ export default class Menubar extends React.Component {
         style={{
           display: 'flex',
           justifyContent: 'center',
-          backgroundColor: getMuiTheme().tabs.backgroundColor
+          backgroundColor: this.context.muiTheme.tabs.backgroundColor
         }}
       >
         <Tabs

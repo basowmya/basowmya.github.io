@@ -28,12 +28,25 @@ export default class ItemGrid extends React.Component {
             zDepth={3}
             style={styles.paper}
           >
-            <Link to={'item/' + item.id}>
+            <Link
+              to={'item/' + item.id}
+              style={{
+                textDecoration: 'none'
+              }}
+            >
               <Card>
                 <CardMedia>
                   <img src={item.images.small[0]} />
                 </CardMedia>
-                { props.showDetails ? <CardTitle subtitle={item.name} /> : ''}
+                { props.showDetails &&
+                    <CardTitle
+                      title={item.name}
+                      titleStyle={{
+                        fontSize: '20px',
+                        textAlign: 'center'
+                      }}
+                    />
+                }
               </Card>
             </Link>
           </Paper>
@@ -49,7 +62,7 @@ export default class ItemGrid extends React.Component {
           alignContent: 'flex-start',
           alignItems: 'flex-start',
           flexWrap: props.singleRow ? 'nowrap' : 'wrap',
-          justifyContent: 'space-around'
+          marginBottom: '20px'
         }}
       >
         {cols}
