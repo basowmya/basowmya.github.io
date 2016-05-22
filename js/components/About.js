@@ -30,8 +30,7 @@ export default () => (
       }}
     />
 
-    <CardText
-    >
+    <CardText>
       <p>
         <span
           style={{
