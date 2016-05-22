@@ -5,18 +5,22 @@
 import React from 'react';
 import {items, categories} from '../data';
 import sampleSize from 'lodash/sampleSize';
-import ItemGrid from './ItemGrid';
+import CategoryButton from './CategoryButton';
 import Contact from './Contact';
+import ItemGrid from './ItemGrid';
+import {deepOrangeA700, transparent} from 'material-ui/styles/colors';
 
 import Dialog from 'material-ui/Dialog';
 import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton/IconButton';
 import MenuItem from 'material-ui/MenuItem';
 import EmailIcon from 'material-ui/svg-icons/communication/email';
+import WhatsAppIcon from '../../img/whatsapp';
+import WarningIcon from 'material-ui/svg-icons/alert/warning';
 import ShareIcon from 'material-ui/svg-icons/social/share';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import {Card, CardActions, CardHeader, CardMedia, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardMedia, CardText, CardTitle} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import {Popover} from 'material-ui/Popover';
 // import Zoomin from 'material-ui/svg-icons/action/zoom-in';
@@ -61,7 +65,7 @@ export default class Item extends React.Component {
 
   render = () => {
     const styles = {
-      paper: {
+      center: {
         marginLeft: 'auto',
         marginRight: 'auto'
       }
@@ -98,25 +102,28 @@ export default class Item extends React.Component {
         <div
           style={{
             boxSizing: 'border-box',
+            boxShadow: '0px 2px 1px -1px #D0D0D0',
             display: 'flex',
             alignContent: 'flex-start',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             flexWrap: 'wrap',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            paddingBottom: '16px'
           }}
         >
           <div
             style={{
-              display: 'flex',
               boxSizing: 'border-box',
-              padding: '20px'
+              display: 'flex',
+              flex: '0 1 auto',
+              padding: '8px 24px 20px'
             }}
           >
-            <Paper
-              zDepth={3}
-              style={styles.paper}
-            >
-              <Card onTouchTap={this.handleOpenLargeImage}>
+              <Card
+                onTouchTap={this.handleOpenLargeImage}
+                style={styles.center}
+                zDepth={3}
+              >
                 <CardMedia>
                   <img src={item.images.small[0]} />
                 </CardMedia>
@@ -133,24 +140,49 @@ export default class Item extends React.Component {
                   <span>Click for a larger view</span>
                 </CardText>*/}
               </Card>
-            </Paper>
           </div>
 
           <div
             style={{
+              boxSizing: 'border-box',
               display: 'flex',
-              flexGrow: 0,
-              padding: '20px'
+              flex: '1 1 320px',
+              padding: '8px 24px 24px'
             }}
           >
-            <Card>
-              <CardHeader
+            <Card
+              style={{
+                backgroundColor: {transparent},
+                ...styles.center
+              }}
+            >
+              <CardTitle
                 title={item.name}
                 subtitle={item.description}
               />
-              <CardText>
+              <CardText
+                style={{
+                  paddingTop: 0
+                }}
+              >
                 <p>{size}</p>
-                { item.outOfStock ? <p>Out of stock (available as commissioned work)</p> : ''}
+                { item.outOfStock &&
+                    <p>
+                      <WarningIcon
+                        color={deepOrangeA700}
+                        style={{
+                          width: '16px',
+                          height: '16px',
+                          marginRight: '8px',
+                          verticalAlign: 'middle'
+                        }}
+                      />
+                      Out of stock (available as commissioned work)
+                    </p>
+                }
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
               </CardText>
               <CardActions>
                 <RaisedButton
@@ -158,7 +190,7 @@ export default class Item extends React.Component {
                   primary={true}
                   onTouchTap={this.handleOpenEnquire}
                 />
-                <RaisedButton
+                <FlatButton
                   label='Share'
                   icon={<ShareIcon />}
                   onTouchTap={this.handleOpenShare}
@@ -168,14 +200,29 @@ export default class Item extends React.Component {
           </div>
         </div>
 
-        <div>
-          {`More items in ${categories.filter(({id}) => id === item.category)[0].name}`}
+        <div
+        style={{
+          marginTop: '24px'
+        }}
+        >
+          <span
+            style={{
+              fontSize: '20px',
+              marginRight: '16px'
+            }}
+          >
+            More items in
+          </span>
+          <CategoryButton category={categories.filter(({id}) => id === item.category)[0]} />
         </div>
 
         <ItemGrid
           items={this.moreItems}
           singleRow={true}
           showDetails={true}
+          style={{
+            boxShadow: '0px 2px 1px -1px #D0D0D0'
+          }}
         />
 
         <Popover
@@ -192,7 +239,7 @@ export default class Item extends React.Component {
           />
           <MenuItem
             primaryText='WhatsApp'
-            leftIcon={<EmailIcon />}
+            leftIcon={<WhatsAppIcon style={{color: 'green'}} />}
             linkButton
             href={`whatsapp://send?text=${shareText}`}
           />

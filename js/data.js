@@ -102,7 +102,7 @@ var data = {
     },
     {
       "id": "tan-03",
-      "name": "Venkateshwara",
+      "name": "Vishnu",
       "category": "2",
       "price": 20000,
       "size": [13, 17],

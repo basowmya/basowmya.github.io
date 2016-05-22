@@ -3,14 +3,14 @@
  */
 
 import React from 'react';
-import Paper from 'material-ui/Paper';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import Link from 'react-router/lib/Link';
+import {transparent} from 'material-ui/styles/colors';
 
 export default class ItemGrid extends React.Component {
   render() {
     let styles = {
-      paper: {
+      center: {
         marginLeft: 'auto',
         marginRight: 'auto'
       }
@@ -24,32 +24,41 @@ export default class ItemGrid extends React.Component {
           key={item.id}
           className={`flex-item ${props.singleRow ? `flex-item-${index}` : ''}`}
         >
-          <Paper
-            zDepth={3}
-            style={styles.paper}
-          >
             <Link
               to={'item/' + item.id}
               style={{
-                textDecoration: 'none'
+                textDecoration: 'none',
+                ...styles.center
               }}
             >
-              <Card>
+              <Card
+                style={{
+                  backgroundColor: {transparent}
+                }}
+                zDepth={3}
+              >
                 <CardMedia>
                   <img src={item.images.small[0]} />
                 </CardMedia>
                 { props.showDetails &&
                     <CardTitle
-                      title={item.name}
-                      titleStyle={{
-                        fontSize: '20px',
+                      subtitle={item.name}
+                      subtitleStyle={{
                         textAlign: 'center'
                       }}
                     />
                 }
               </Card>
             </Link>
-          </Paper>
+          {/*<div
+            style={{
+              display: 'flex',
+              textAlign: 'center',
+              width: '100%'
+            }}
+          >
+            {props.showDetails ? item.name : ''}
+          </div>*/}
         </div>
       );
     });
@@ -57,6 +66,7 @@ export default class ItemGrid extends React.Component {
     return (
       <div
         style={{
+          ...this.props.style,
           boxSizing: 'border-box',
           display: 'flex',
           alignContent: 'flex-start',

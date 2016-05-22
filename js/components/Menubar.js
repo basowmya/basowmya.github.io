@@ -9,6 +9,7 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import {Popover, PopoverAnimationVertical} from 'material-ui/Popover';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import Paper from 'material-ui/Paper';
 
 // import HomeIcon from 'material-ui/svg-icons/action/home';
 // import PhotoIcon from 'material-ui/svg-icons/image/photo';
@@ -55,11 +56,11 @@ export default class Menubar extends React.Component {
 
   render() {
     return (
-      <div
+      <Paper
         style={{
           display: 'flex',
           justifyContent: 'center',
-          backgroundColor: this.context.muiTheme.tabs.backgroundColor
+          backgroundColor: this.context.muiTheme.tabs.backgroundColor,
         }}
       >
         <Tabs
@@ -110,7 +111,7 @@ export default class Menubar extends React.Component {
             {this.getMenuItems(this.props)}
           </Menu>
         </Popover>
-      </div>
+      </Paper>
     );
   }
 }

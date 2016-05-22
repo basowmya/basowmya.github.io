@@ -31,7 +31,7 @@ export default class App extends React.Component {
           style={{
             boxSizing: 'border-box',
             margin: '0 auto',
-            padding: '16px'
+            padding: '24px 16px 16px'
           }}
         >
           {this.props.children}

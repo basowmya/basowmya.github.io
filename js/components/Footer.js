@@ -10,7 +10,7 @@ export default () => (
     style={{
       fontSize: '11px',
       fontWeight: typography.fontWeightLight,
-      marginBottom: '8px',
+      marginBottom: '16px',
       textAlign: 'center'
     }}
   >

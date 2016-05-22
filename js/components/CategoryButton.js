@@ -6,14 +6,22 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 export default class CategoryButton extends React.Component {
+  static propTypes = {
+    category: React.PropTypes.object
+  };
+
   render() {
+    const {category} = this.props;
+
     return (
       <RaisedButton
-        className='vertical-align'
+        label={category.name}
         linkButton={true}
-        href={'#/gallery/' + this.props.category.id}
-        label={this.props.category.name + '\u00A0\u00A0\u25BA'}
+        href={`#/gallery/${category.id}`}
         primary={true}
+        style={{
+          marginBottom: '24px'
+        }}
       />
     );
   }
