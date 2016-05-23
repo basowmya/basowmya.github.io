@@ -181,14 +181,12 @@ export default class Item extends React.Component {
                     </p>
                 }
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </CardText>
               <CardActions>
                 <RaisedButton
                   label='Enquire'
                   primary={true}
-                  onTouchTap={this.handleOpenEnquire}
                 />
                 <FlatButton
                   label='Share'

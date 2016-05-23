@@ -4,7 +4,7 @@ let path = require('path');
 let webpack = require('webpack');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'cheap-module-eval-source-map',
   entry: './js/index.js',
   output: {
     path: path.join(__dirname, 'js'),
@@ -24,19 +24,19 @@ module.exports = {
           ],
           cacheDirectory: 'cache'
         }
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css?modules',
-        include: /flexboxgrid/,
       }
+      //, {
+      //   test: /\.css$/,
+      //   loader: 'style!css?modules',
+      //   include: /flexboxgrid/,
+      // }
     ]
   }
-  // , plugins: [
-  //   new webpack.DefinePlugin({
-  //     'process.env': {
-  //       'NODE_ENV': JSON.stringify('production')
-  //     }
-  //   })
-  // ]
+  , plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ]
 };

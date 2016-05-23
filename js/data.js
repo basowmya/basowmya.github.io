@@ -43,7 +43,7 @@ var data = {
   "items": [
     {
       "id": "oil-01",
-      "name": "The Maharashtrian Lady",
+      "name": "Maharashtrian Lady",
       "category": "1",
       "price": 20000,
       "size": [20, 28],
@@ -60,7 +60,7 @@ var data = {
     },
     {
       "id": "oil-03",
-      "name": "The Buddha",
+      "name": "Buddha",
       "category": "1",
       "price": 10000,
       "size": [22.5, 22.5],
@@ -135,7 +135,7 @@ var data = {
     },
     {
       "id": "kal-04",
-      "name": "The Buddha",
+      "name": " Buddha",
       "category": "3",
       "price": 12000,
       "size": [26, 32],
@@ -370,7 +370,7 @@ var data = {
     },
     {
       "id": "mur-02",
-      "name": "The Two Sisters",
+      "name": "Two Sisters",
       "category": "7",
       "price": 12000,
       "size": [24, 36],
