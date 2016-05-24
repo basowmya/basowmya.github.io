@@ -3,7 +3,12 @@
  */
 
 import React from 'react';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import {
+  Router, Route, hashHistory, IndexRoute, applyRouterMiddleware
+}
+from 'react-router';
+import useScroll from 'react-router-scroll';
+
 import App from './App';
 import Home from './Home';
 import Gallery from './Gallery';
@@ -12,7 +17,7 @@ import About from './About';
 import Contact from './Contact';
 
 export default (
-  <Router history={hashHistory} >
+  <Router history={hashHistory} render={applyRouterMiddleware(useScroll())} >
     <Route path="/" component={App} >
       <IndexRoute component={Home} />
       <Route path='gallery/:id' component={Gallery} />

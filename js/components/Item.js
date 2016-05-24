@@ -187,6 +187,8 @@ export default class Item extends React.Component {
                 <RaisedButton
                   label='Enquire'
                   primary={true}
+                  linkButton={true}
+                  href='#/contact'
                 />
                 <FlatButton
                   label='Share'
