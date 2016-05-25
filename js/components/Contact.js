@@ -144,12 +144,19 @@ export default class Contact extends React.Component {
     };
 
     return (
-        <Card>
+        <Card
+          style={{
+            margin: '0 auto',
+            maxWidth: '288px'
+          }}
+        >
           <CardTitle
             title='Contact the Artist'
             titleStyle={{fontSize: 24}}
           />
-          <form action='http://formspree.io/sowmya.ba@gmail.com'>
+          <form
+            action='http://formspree.io/sowmya.ba@gmail.com'
+          >
             <TextField
               style={styles.textfield}
               name='name'

@@ -4,11 +4,13 @@
 
 import React from 'react';
 import Avatar from 'material-ui/Avatar';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardHeader, CardText, CardTitle} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
-import {darkBlack} from 'material-ui/styles/colors';
+import {darkBlack, grey800} from 'material-ui/styles/colors';
+import {testimonials} from '../data';
 
 export default () => (
+  <div>
   <Card>
     <CardHeader
       avatar={
@@ -30,13 +32,18 @@ export default () => (
       }}
     />
 
-    <CardText>
+    <CardText
+      style={{
+        color: grey800,
+        lineHeight: 1.5
+      }}
+    >
       <p>
         <span
           style={{
             float: 'left',
-            fontSize: '40px',
-            lineHeight: '12px',
+            fontSize: '44px',
+            lineHeight: 0.6,
             padding: '12px 4px 0 0'
           }}
         >
@@ -63,4 +70,90 @@ export default () => (
       />
     </CardActions>
   </Card>
+
+  <div
+    style={{
+      fontSize: '24px',
+      margin: '32px 0 24px',
+      textAlign: 'center',
+      width: '100%'
+    }}
+  >
+    Testimonials
+  </div>
+  <div
+    style={{
+      display: 'flex',
+      alignContent: 'flex-start',
+      alignItems: 'stretch',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      marginBottom: '20px'
+    }}
+  >
+    {testimonials.map(({quote, author, profession}) => (
+      <Card
+        key={author}
+        containerStyle={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between'
+        }}
+        style={{
+          display: 'flex',
+          boxSizing: 'border-box',
+          flex: '0 1 auto',
+          maxWidth: '220px',
+          margin: '0 16px 16px'
+        }}
+      >
+        <CardText
+          style={{
+            color: grey800
+          }}
+        >
+          <span
+            style={{
+              display: 'inline',
+              fontSize: '64px',
+              fontFamily: 'sans-serif',
+              float: 'left',
+              lineHeight: 0,
+              padding: '12px 4px 0 0'
+            }}
+          >
+            {'\u201C'}
+          </span>
+          <span
+            style={{
+              display: 'inline-block',
+              lineHeight: 1.4,
+              textAlign: 'center'
+            }}>
+            {quote}
+          </span>
+          <span
+          style={{
+            display: 'inline',
+            fontSize: '64px',
+            fontFamily: 'sans-serif',
+            float: 'right',
+            lineHeight: 0,
+            padding: '32px 0 0',
+            marginBottom: '-30px'
+          }}
+          >
+          {'\u201D'}
+          </span>
+        </CardText>
+        <CardTitle
+          title={author}
+          subtitle={profession}
+        />
+      </Card>
+    ))
+    }
+  </div>
+
+  </div>
 );

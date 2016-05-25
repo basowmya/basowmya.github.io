@@ -93,7 +93,7 @@ var data = {
     },
     {
       "id": "tan-02",
-      "name": "Subramanya with Sri Valli and Devayani",
+      "name": "Subramanya, Valli and Devayani",
       "category": "2",
       "price": 30000,
       "size": [16, 20],
@@ -597,6 +597,23 @@ var data = {
       "outOfStock": true,
       "description": "Media - Acrylic on Terracotta Pot"
     }
+  ],
+  "testimonials": [
+    {
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum, dui id pretium dignissim, nisi sapien consequat tortor, quis cursus neque dui eget mauris. Etiam egestas, quam vitae imperdiet tempor, lorem metus interdum diam, vitae commodo risus libero id elit.",
+      "author": "Leonardo Da Vinci",
+      "profession": "Genius"
+    },
+    {
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum, dui id pretium dignissim, nisi sapien consequat tortor, quis cursus neque dui eget mauris. Etiam egestas, quam vitae imperdiet tempor, lorem metus interdum diam, vitae commodo risus libero id elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "author": "Raja Ravi Varma",
+      "profession": "Artist"
+    },
+    {
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum, dui id pretium dignissim, nisi sapien consequat tortor, quis cursus neque dui eget mauris.",
+      "author": "Vincent Van Gogh",
+      "profession": "Impressionist"
+    }
   ]
 };
 
@@ -619,4 +636,4 @@ data.items = data.items.map(function (item) {
 });
 
 export default data;
-export let {categories, items} = data;
+export let {categories, items, testimonials} = data;
