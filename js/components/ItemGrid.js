@@ -8,6 +8,11 @@ import Link from 'react-router/lib/Link';
 import {transparent} from 'material-ui/styles/colors';
 
 export default class ItemGrid extends React.Component {
+
+  static contextTypes = {
+    muiTheme: React.PropTypes.object
+  }
+
   render() {
     let styles = {
       center: {
@@ -32,9 +37,6 @@ export default class ItemGrid extends React.Component {
               }}
             >
               <Card
-                style={{
-                  backgroundColor: {transparent}
-                }}
                 zDepth={3}
               >
                 <CardMedia>
@@ -44,6 +46,7 @@ export default class ItemGrid extends React.Component {
                     <CardTitle
                       subtitle={item.name}
                       subtitleStyle={{
+                        color: this.context.muiTheme.palette.primary1Color,
                         textAlign: 'center'
                       }}
                     />

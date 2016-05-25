@@ -8,7 +8,7 @@
     "start": "watchify -v --debug -e js/index.js -o js/bundle.js",
     "build": "browserify --debug -e js/index.js -o js/bundle.js",
     "beefy": "beefy js/index.js:js/bundle.js --live --open",
-    "serve": "live-server --watch=js/bundle.js,index.html,styles/normalize.css",
+    "serve": "live-server --watch=js/bundle.js,index.html,styles/app.css",
     "less": "lessc styles/app.less > styles/app.css",
     "prod": "NODE_ENV=production browserify -e js/index.js -o js/bundle.js -g uglifyify",
     "test": "echo \"Error: no test specified\" && exit 1"

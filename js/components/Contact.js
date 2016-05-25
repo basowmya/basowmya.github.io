@@ -144,12 +144,7 @@ export default class Contact extends React.Component {
     };
 
     return (
-        <Card
-          style={{
-            margin: '0 auto',
-            maxWidth: '288px'
-          }}
-        >
+        <Card>
           <CardTitle
             title='Contact the Artist'
             titleStyle={{fontSize: 24}}

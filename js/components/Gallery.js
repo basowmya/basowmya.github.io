@@ -8,17 +8,22 @@ import {categories, items} from '../data';
 
 export default class Home extends React.Component {
 
+  static contextTypes = {
+    muiTheme: React.PropTypes.object
+  }
+
   render() {
     const {name, id} = categories.filter(({id}) => id === this.props.params.id)[0];
 
     return (
       <div
         style={{
-          boxShadow: '0px 2px 1px -1px #D0D0D0'
+          boxShadow: this.context.muiTheme.palette.boxShadow
         }}
       >
         <div
           style={{
+            color: this.context.muiTheme.palette.primary1Color,
             fontSize: '24px',
             margin: '8px 0 24px',
             textAlign: 'center',

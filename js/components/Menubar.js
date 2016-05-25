@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+import DoneIcon from 'material-ui/svg-icons/action/done';
 import {Popover, PopoverAnimationVertical} from 'material-ui/Popover';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Paper from 'material-ui/Paper';
@@ -31,19 +32,30 @@ export default class Menubar extends React.Component {
 
   anchorEl = undefined;
 
-  getMenuItems = (props) => categories.map(({id, name}) => (
-    <MenuItem
-      key={id}
-      href={`#/gallery/${id}`}
-      linkButton
-      primaryText={name}
-      value={id}
-      style={
-        props.location.pathname === '/gallery/' + id ?
-        { color: this.context.muiTheme.palette.accent1Color } : {}
-      }
-    />
-  ));
+  getMenuItems = (props) => categories.map(({id, name}) => {
+    const attr = {}
+
+    if (props.location.pathname === '/gallery/' + id) {
+      attr.rightIcon = (
+        <DoneIcon
+          style={{
+            fill: this.context.muiTheme.palette.primary1Color
+          }}
+        />
+      )
+    }
+
+    return (
+      <MenuItem
+        key={id}
+        href={`#/gallery/${id}`}
+        linkButton
+        primaryText={name}
+        value={id}
+        {...attr}
+      />
+    )
+  });
 
   getTabValue = (pathname) => (
     (pathname.lastIndexOf('/gallery/', 0) === 0 ||

@@ -8,13 +8,12 @@ import sampleSize from 'lodash/sampleSize';
 import CategoryButton from './CategoryButton';
 import Contact from './Contact';
 import ItemGrid from './ItemGrid';
-import {deepOrangeA700, transparent} from 'material-ui/styles/colors';
 
 import Dialog from 'material-ui/Dialog';
 import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton/IconButton';
 import MenuItem from 'material-ui/MenuItem';
-import EmailIcon from 'material-ui/svg-icons/communication/email';
+import EmailIcon from 'material-ui/svg-icons/communication/mail-outline';
 import WhatsAppIcon from '../../img/whatsapp';
 import WarningIcon from 'material-ui/svg-icons/alert/warning';
 import ShareIcon from 'material-ui/svg-icons/social/share';
@@ -27,6 +26,10 @@ import {Popover} from 'material-ui/Popover';
 // import {grey500} from 'material-ui/styles/colors';
 
 export default class Item extends React.Component {
+
+  static contextTypes = {
+    muiTheme: React.PropTypes.object
+  }
 
   constructor(props, context) {
     super(props, context);
@@ -102,7 +105,7 @@ export default class Item extends React.Component {
         <div
           style={{
             boxSizing: 'border-box',
-            boxShadow: '0px 2px 1px -1px #D0D0D0',
+            boxShadow: this.context.muiTheme.palette.boxShadow,
             display: 'flex',
             alignContent: 'flex-start',
             alignItems: 'flex-start',
@@ -151,10 +154,7 @@ export default class Item extends React.Component {
             }}
           >
             <Card
-              style={{
-                backgroundColor: {transparent},
-                ...styles.center
-              }}
+              style={styles.center}
             >
               <CardTitle
                 title={item.name}
@@ -169,7 +169,7 @@ export default class Item extends React.Component {
                 { item.outOfStock &&
                     <p>
                       <WarningIcon
-                        color={deepOrangeA700}
+                        color={this.context.muiTheme.palette.primary1Color}
                         style={{
                           width: '16px',
                           height: '16px',
@@ -207,6 +207,7 @@ export default class Item extends React.Component {
         >
           <span
             style={{
+              color: this.context.muiTheme.palette.primary1Color,
               fontSize: '20px',
               marginRight: '16px'
             }}
@@ -221,7 +222,7 @@ export default class Item extends React.Component {
           singleRow={true}
           showDetails={true}
           style={{
-            boxShadow: '0px 2px 1px -1px #D0D0D0'
+            boxShadow: this.context.muiTheme.palette.boxShadow
           }}
         />
 
@@ -232,16 +233,26 @@ export default class Item extends React.Component {
         >
           <MenuItem
             primaryText='Email'
-            leftIcon={<EmailIcon />}
+            leftIcon={ <EmailIcon
+              style={{ fill: this.context.muiTheme.palette.primary1Color }}
+            /> }
             linkButton
             href={`mailto:?body=${shareText}&subject=${shareSubject}`}
             target='_blank'
+            innerDivStyle={{
+              paddingLeft: '56px'
+            }}
           />
           <MenuItem
             primaryText='WhatsApp'
-            leftIcon={<WhatsAppIcon style={{color: 'green'}} />}
+            leftIcon={ <WhatsAppIcon
+              style={{ fill: this.context.muiTheme.palette.primary1Color }}
+            /> }
             linkButton
             href={`whatsapp://send?text=${shareText}`}
+            innerDivStyle={{
+              paddingLeft: '56px'
+            }}
           />
         </Popover>
 

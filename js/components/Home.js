@@ -10,6 +10,11 @@ import CategoryButton from './CategoryButton';
 import ItemGrid from './ItemGrid';
 
 export default class Home extends React.Component {
+
+  static contextTypes = {
+    muiTheme: React.PropTypes.object
+  }
+
   render() {
     return (
       <div>{
@@ -21,7 +26,7 @@ export default class Home extends React.Component {
             <div
               key={category.id}
               style={{
-                boxShadow: '0px 2px 1px -1px #D0D0D0'
+                boxShadow: this.context.muiTheme.palette.boxShadow
               }}
             >
               <CategoryButton category={category} />
@@ -32,4 +37,5 @@ export default class Home extends React.Component {
       }</div>
     );
   }
+
 }
