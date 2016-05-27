@@ -472,6 +472,7 @@ var data = {
       "price": 500,
       "size": [5, 5.5],
       "outOfStock": true,
+      "unavailable": true,
       "imageCount": 3,
       "media": "Acrylic on Terracotta Pot"
     },
@@ -490,6 +491,7 @@ var data = {
       "price": 880,
       "size": [6, 5.5],
       "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -532,6 +534,7 @@ var data = {
       "price": 300,
       "size": [3.5, 4.5],
       "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -597,6 +600,7 @@ var data = {
       "price": 250,
       "size": [3, 6.5],
       "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     }
   ],

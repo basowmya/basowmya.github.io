@@ -177,7 +177,7 @@ export default class Item extends React.Component {
                           verticalAlign: 'middle'
                         }}
                       />
-                      Out of stock (available as commissioned work)
+                      Out of stock {item.unavailable ? '' : '(available as commissioned work)'}
                     </p>
                 }
                 <p
