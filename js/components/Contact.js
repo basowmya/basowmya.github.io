@@ -114,8 +114,8 @@ export default class Contact extends React.Component {
     }
     if (!state.email && !state.phone) {
       this.setState({
-        errorTextEmail: 'Either email or phone is required',
-        errorTextPhone: 'Either email or phone is required'
+        errorTextEmail: 'Either email or phone number is required',
+        errorTextPhone: 'Either email or phone number is required'
       });
       isValid = false;
     }
@@ -155,7 +155,7 @@ export default class Contact extends React.Component {
             <TextField
               style={styles.textfield}
               name='name'
-              floatingLabelText='Full Name'
+              floatingLabelText='Name'
               onChange={this.handleNameChange}
               errorText={this.state.errorTextName}
             />
@@ -184,7 +184,11 @@ export default class Contact extends React.Component {
               onChange={this.handleMessageChange}
               errorText={this.state.errorTextMessage}
             />
-            <CardActions>
+            <CardActions
+              style={{
+                marginTop: '8px'
+              }}
+            >
               <RaisedButton
                 label='Submit'
                 primary={true}

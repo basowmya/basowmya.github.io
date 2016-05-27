@@ -49,7 +49,7 @@ var data = {
       "size": [20, 28],
       "outOfStock": true,
       "media": "Oil on canvas",
-      "description": "Recopy of Raja Ravi Varma's painting of a traditionally dressed Maharashtrian lady."
+      "description": "Recopy of Raja Ravi Varma's painting, a traditionally dressed Maharashtrian lady."
     },
     {
       "id": "oil-02",
@@ -109,7 +109,8 @@ var data = {
       "price": 20000,
       "size": [13, 17],
       "outOfStock": true,
-      "media": "Tanjore Painting - Classic Style"
+      "media": "Tanjore Painting - Classic Style",
+      "description": "Vishnu, considered as the Preserver in Hindu mythology, is depicted in a pale blue complexion wearing a Kausthubham (precious gem stone necklace), Vaijayanthi mala and a flower garland. He holds the Panchajanya Shankha (conch) in his upper left hand and the Sudarshana Chakra, in his upper right hand."
     },
     {
       "id": "kal-01",
@@ -323,7 +324,8 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "media": "Glass Marking Pencils"
+      "media": "Glass Marking Pencils",
+      "description": "Reproduction of the 18th century French painter Jean-Baptiste-Siméon Chardin's portrait of his wife."
     },
     {
       "id": "pcl-02",
@@ -345,12 +347,13 @@ var data = {
     },
     {
       "id": "pcl-04",
-      "name": "Lady with the Lamp",
+      "name": "Glow of Hope",
       "category": "4",
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "media": "Colour Pencils"
+      "media": "Colour Pencils",
+      "description": "Reproduction of Haldankar's oil painting using colour pencils."
     },
     {
       "id": "pcl-05",
@@ -359,7 +362,8 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "media": "Colour Pencils"
+      "media": "Colour Pencils",
+      "description": "C N Mangala was the first principal of NMKRV college, Bangalore. This portrait is on display in Shashwathi women's museum within the campus."
     },
     {
       "id": "mur-01",

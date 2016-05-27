@@ -165,11 +165,17 @@ export default class Item extends React.Component {
                   paddingTop: 0
                 }}
               >
+                <span
+                  style={{
+                    lineHeight: 1.5
+                  }}
+                >
+                {item.description}
+                </span>
                 <p>{size}</p>
                 { item.outOfStock &&
                     <p>
                       <WarningIcon
-                        color={this.context.muiTheme.palette.primary1Color}
                         style={{
                           width: '16px',
                           height: '16px',
@@ -180,13 +186,6 @@ export default class Item extends React.Component {
                       Out of stock {item.unavailable ? '' : '(available as commissioned work)'}
                     </p>
                 }
-                <p
-                  style={{
-                    lineHeight: 1.5
-                  }}
-                >
-                {item.description}
-                </p>
               </CardText>
               <CardActions>
                 <RaisedButton
