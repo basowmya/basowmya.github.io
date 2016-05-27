@@ -48,7 +48,8 @@ var data = {
       "price": 20000,
       "size": [20, 28],
       "outOfStock": true,
-      "description": "Media - Oil on canvas"
+      "media": "Oil on canvas",
+      "description": "Recopy of Raja Ravi Varma's painting of a traditionally dressed Maharashtrian lady."
     },
     {
       "id": "oil-02",
@@ -56,7 +57,7 @@ var data = {
       "category": "1",
       "price": 20000,
       "size": [23.5, 27.5],
-      "description": "Media - Oil on canvas"
+      "media": "Oil on canvas"
     },
     {
       "id": "oil-03",
@@ -64,7 +65,7 @@ var data = {
       "category": "1",
       "price": 10000,
       "size": [22.5, 22.5],
-      "description": "Media - Oil on canvas"
+      "media": "Oil on canvas"
     },
     {
       "id": "oil-04",
@@ -72,15 +73,16 @@ var data = {
       "category": "1",
       "price": 12000,
       "size": [24, 36],
-      "description": "Media - Oil on canvas"
+      "media": "Oil on canvas"
     },
     {
       "id": "oil-05",
-      "name": "Weeping Boy",
+      "name": "The Crying Boy",
       "category": "1",
       "price": 5000,
       "size": [17.5, 21.5],
-      "description": "Media - Oil on canvas"
+      "media": "Oil on canvas",
+      "description": "Reproduction of a painting by Italian painter Bruno Amadio, also known as Giovanni Bragolin. Prints of the painting were widely distributed from the 1950s onwards."
     },
     {
       "id": "tan-01",
@@ -89,7 +91,7 @@ var data = {
       "price": 25000,
       "size": [16, 20],
       "outOfStock": true,
-      "description": "Tanjore Painting - Antique Style"
+      "media": "Tanjore Painting - Antique Style"
     },
     {
       "id": "tan-02",
@@ -98,7 +100,7 @@ var data = {
       "price": 30000,
       "size": [16, 20],
       "outOfStock": true,
-      "description": "Tanjore Painting - Antique Style"
+      "media": "Tanjore Painting - Antique Style"
     },
     {
       "id": "tan-03",
@@ -107,7 +109,7 @@ var data = {
       "price": 20000,
       "size": [13, 17],
       "outOfStock": true,
-      "description": "Tanjore Painting - Classic Style"
+      "media": "Tanjore Painting - Classic Style"
     },
     {
       "id": "kal-01",
@@ -115,7 +117,7 @@ var data = {
       "category": "3",
       "price": 10000,
       "size": [21, 28],
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "kal-02",
@@ -123,7 +125,7 @@ var data = {
       "category": "3",
       "price": 12000,
       "size": [24, 28],
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "kal-03",
@@ -131,7 +133,7 @@ var data = {
       "category": "3",
       "price": 15000,
       "size": [24, 30],
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "kal-04",
@@ -139,7 +141,7 @@ var data = {
       "category": "3",
       "price": 12000,
       "size": [26, 32],
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "kal-05",
@@ -148,7 +150,7 @@ var data = {
       "price": 8000,
       "size": [21, 28],
       "outOfStock": true,
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "kal-06",
@@ -156,7 +158,7 @@ var data = {
       "category": "3",
       "price": 9000,
       "size": [28.5, 22.5],
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "kal-07",
@@ -164,7 +166,7 @@ var data = {
       "category": "3",
       "price": 9000,
       "size": [28.5, 22.5],
-      "description": "Media - Acrylic on Cloth"
+      "media": "Acrylic on Cloth"
     },
     {
       "id": "zen-01",
@@ -172,7 +174,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-02",
@@ -180,7 +182,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-03",
@@ -188,7 +190,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-04",
@@ -196,7 +198,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-05",
@@ -204,7 +206,7 @@ var data = {
       "category": "5",
       "price": 3000,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-06",
@@ -212,7 +214,7 @@ var data = {
       "category": "5",
       "price": 3000,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-07",
@@ -220,7 +222,7 @@ var data = {
       "category": "5",
       "price": 3000,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-08",
@@ -228,7 +230,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [15.5, 13],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-09",
@@ -236,7 +238,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [20, 16.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-10",
@@ -244,7 +246,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-11",
@@ -253,7 +255,7 @@ var data = {
       "price": 2500,
       "size": [13, 15.5],
       "outOfStock": true,
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-12",
@@ -262,7 +264,7 @@ var data = {
       "price": 2500,
       "size": [13, 15.5],
       "outOfStock": true,
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-13",
@@ -270,7 +272,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-14",
@@ -279,7 +281,7 @@ var data = {
       "price": 3000,
       "size": [17, 19.5],
       "outOfStock": true,
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-15",
@@ -288,7 +290,7 @@ var data = {
       "price": 2500,
       "size": [13, 15.5],
       "outOfStock": true,
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-16",
@@ -296,7 +298,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-17",
@@ -304,7 +306,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 15.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "zen-18",
@@ -312,7 +314,7 @@ var data = {
       "category": "5",
       "price": 2500,
       "size": [13, 16.5],
-      "description": "Media - Pen and pencil on paper"
+      "media": "Pen and pencil on paper"
     },
     {
       "id": "pcl-01",
@@ -321,7 +323,7 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Glass Marking Pencils"
+      "media": "Glass Marking Pencils"
     },
     {
       "id": "pcl-02",
@@ -330,7 +332,7 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Colour Pencils"
+      "media": "Colour Pencils"
     },
     {
       "id": "pcl-03",
@@ -339,7 +341,7 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Colour Pencils"
+      "media": "Colour Pencils"
     },
     {
       "id": "pcl-04",
@@ -348,7 +350,7 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Colour Pencils"
+      "media": "Colour Pencils"
     },
     {
       "id": "pcl-05",
@@ -357,7 +359,7 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Colour Pencils"
+      "media": "Colour Pencils"
     },
     {
       "id": "mur-01",
@@ -366,7 +368,7 @@ var data = {
       "price": 20000,
       "size": [24, 30],
       "outOfStock": true,
-      "description": "Media - Mural"
+      "media": "Mural"
     },
     {
       "id": "mur-02",
@@ -375,7 +377,7 @@ var data = {
       "price": 12000,
       "size": [24, 36],
       "outOfStock": true,
-      "description": "Media - Mural"
+      "media": "Mural"
     },
     {
       "id": "mur-03",
@@ -384,7 +386,7 @@ var data = {
       "price": 14000,
       "size": [24, 36],
       "outOfStock": true,
-      "description": "Media - Mural"
+      "media": "Mural"
     },
     {
       "id": "mar-01",
@@ -393,7 +395,7 @@ var data = {
       "price": 3000,
       "size": [9, 10],
       "outOfStock": true,
-      "description": "Media - Marble Painting"
+      "media": "Marble Painting"
     },
     {
       "id": "pas-01",
@@ -402,7 +404,7 @@ var data = {
       "price": 12000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Oil Pastels"
+      "media": "Oil Pastels"
     },
     {
       "id": "pas-02",
@@ -411,7 +413,7 @@ var data = {
       "price": 10000,
       "size": [20, 24],
       "outOfStock": true,
-      "description": "Media - Oil Pastels"
+      "media": "Oil Pastels"
     },
     {
       "id": "mnk-01",
@@ -420,7 +422,7 @@ var data = {
       "price": 10000,
       "size": [30, 24],
       "outOfStock": true,
-      "description": "Meenakari - Mixed Media, Oil on Canvas"
+      "media": "Meenakari - Mixed Media, Oil on Canvas"
     },
     {
       "id": "mnk-02",
@@ -428,7 +430,7 @@ var data = {
       "category": "7",
       "price": 10000,
       "size": [18, 25],
-      "description": "Meenakari - Mixed Media, Oil on Canvas"
+      "media": "Meenakari - Mixed Media, Oil on Canvas"
     },
     {
       "id": "acr-01",
@@ -436,15 +438,15 @@ var data = {
       "category": "7",
       "price": 4000,
       "size": [22, 18],
-      "description": "Media - Acrylic Paint"
+      "media": "Acrylic Paint"
     },
     {
       "id": "pos-01",
-      "name": "Sakhi going for Pooja",
+      "name": "Sakhi going to Pooja",
       "category": "7",
       "price": 8000,
       "size": [20, 24],
-      "description": "Media - Poster Colours"
+      "media": "Poster Colours"
     },
     {
       "id": "pot-01",
@@ -452,7 +454,7 @@ var data = {
       "category": "6",
       "price": 300,
       "size": [3.5, 6],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-02",
@@ -461,7 +463,7 @@ var data = {
       "price": 500,
       "size": [4.75, 5.5],
       "imageCount": 2,
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-03",
@@ -471,7 +473,7 @@ var data = {
       "size": [5, 5.5],
       "outOfStock": true,
       "imageCount": 3,
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-04",
@@ -479,7 +481,7 @@ var data = {
       "category": "6",
       "price": 600,
       "size": [4, 5.5],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-05",
@@ -488,7 +490,7 @@ var data = {
       "price": 880,
       "size": [6, 5.5],
       "outOfStock": true,
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-06",
@@ -496,7 +498,7 @@ var data = {
       "category": "6",
       "price": 600,
       "size": [4.25, 5],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-07",
@@ -504,7 +506,7 @@ var data = {
       "category": "6",
       "price": 400,
       "size": [3.5, 6],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-08",
@@ -512,7 +514,7 @@ var data = {
       "category": "6",
       "price": 400,
       "size": [4.2, 5.5],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-09",
@@ -521,7 +523,7 @@ var data = {
       "price": 500,
       "size": [5.5, 3.5],
       "imageCount": 2,
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-10",
@@ -530,7 +532,7 @@ var data = {
       "price": 300,
       "size": [3.5, 4.5],
       "outOfStock": true,
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-11",
@@ -538,7 +540,7 @@ var data = {
       "category": "6",
       "price": 300,
       "size": [3.9, 4.6],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-12",
@@ -546,7 +548,7 @@ var data = {
       "category": "6",
       "price": 500,
       "size": [4, 9],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-13",
@@ -554,7 +556,7 @@ var data = {
       "category": "6",
       "price": 400,
       "size": [4.2, 5],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-14",
@@ -562,7 +564,7 @@ var data = {
       "category": "6",
       "price": 500,
       "size": [4.5, 5.2],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-15",
@@ -570,7 +572,7 @@ var data = {
       "category": "6",
       "price": 300,
       "size": [4.3, 5.5],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-16",
@@ -578,7 +580,7 @@ var data = {
       "category": "6",
       "price": 500,
       "size": [4.5, 5.2],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-17",
@@ -586,7 +588,7 @@ var data = {
       "category": "6",
       "price": 500,
       "size": [4.4, 4],
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     },
     {
       "id": "pot-18",
@@ -595,7 +597,7 @@ var data = {
       "price": 250,
       "size": [3, 6.5],
       "outOfStock": true,
-      "description": "Media - Acrylic on Terracotta Pot"
+      "media": "Acrylic on Terracotta Pot"
     }
   ],
   "testimonials": [

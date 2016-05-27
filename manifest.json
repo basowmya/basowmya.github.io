@@ -2,7 +2,7 @@
 	"name": "Sowmya's Art Gallery",
 	"short_name": "Art Gallery",
 	"display": "standalone",
-	"background_color": "#E0D5CD",
+	"background_color": "#e0d5cd",
 	"icons": [
 		{
 			"src": "\/img\/icons\/android-chrome-36x36.png",
