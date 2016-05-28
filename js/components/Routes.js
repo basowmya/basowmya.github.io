@@ -17,9 +17,7 @@ import Item from './Item';
 import About from './About';
 import Contact from './Contact';
 
-ga.initialize('UA-78467354-1', {
-  debug: true
-});
+ga.initialize('UA-78467354-1');
 
 function logPageView() {
   const hash = window.location.hash;
