@@ -6,6 +6,7 @@ import React from 'react';
 import Avatar from 'material-ui/Avatar';
 import {Card, CardActions, CardHeader, CardText, CardTitle} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
+import typography from 'material-ui/styles/typography';
 import {testimonials} from '../data';
 
 export default class About extends React.Component {
@@ -34,6 +35,9 @@ export default class About extends React.Component {
           }}
           style={{
             paddingBottom: 0
+          }}
+          textStyle={{
+            paddingRight: 0
           }}
         />
 
@@ -154,6 +158,17 @@ export default class About extends React.Component {
         ))
         }
       </div>
+
+      <footer
+        style={{
+          color: this.context.muiTheme.palette.primary1Color,
+          fontSize: '11px',
+          fontWeight: typography.fontWeightLight,
+          textAlign: 'center'
+        }}
+      >
+        Website handcrafted with &#x2665; by Dheeraj V S
+      </footer>
     </div>
   );
 }

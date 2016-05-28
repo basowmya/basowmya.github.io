@@ -4,7 +4,7 @@
 
 import React from 'react';
 import Avatar from 'material-ui/Avatar';
-import {Card, CardActions, CardHeader, CardTitle} from 'material-ui/Card';
+import {Card, CardActions, CardTitle} from 'material-ui/Card';
 import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
