@@ -30,7 +30,7 @@ export default class ItemGrid extends React.Component {
           className={`flex-item ${props.singleRow ? `flex-item-${index}` : ''}`}
         >
             <Link
-              to={'item/' + item.id}
+              to={'/item/' + item.id}
               style={{
                 textDecoration: 'none',
                 ...styles.center
