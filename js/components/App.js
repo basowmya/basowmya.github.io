@@ -16,7 +16,7 @@ export default class App extends React.Component {
   getChildContext() {
     const backgroundColor = '#e0d5cd';
     const primary1Color = '#8b4513';
-    const accent1Color = '#fcf0e9';
+    const accent1Color = '#fef9f6';
 
     return {
       muiTheme: getMuiTheme({
