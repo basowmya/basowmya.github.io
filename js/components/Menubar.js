@@ -33,7 +33,7 @@ export default class Menubar extends React.Component {
   anchorEl = undefined;
 
   getMenuItems = (props) => categories.map(({id, name}) => {
-    const attr = {}
+    const attr = {};
 
     if (props.location.pathname === '/gallery/' + id) {
       attr.rightIcon = (
@@ -42,7 +42,7 @@ export default class Menubar extends React.Component {
             fill: this.context.muiTheme.palette.primary1Color
           }}
         />
-      )
+      );
     }
 
     return (
@@ -54,7 +54,7 @@ export default class Menubar extends React.Component {
         value={id}
         {...attr}
       />
-    )
+    );
   });
 
   getTabValue = (pathname) => (
@@ -72,7 +72,7 @@ export default class Menubar extends React.Component {
         style={{
           display: 'flex',
           justifyContent: 'center',
-          backgroundColor: this.context.muiTheme.tabs.backgroundColor,
+          backgroundColor: this.context.muiTheme.tabs.backgroundColor
         }}
       >
         <Tabs
@@ -89,7 +89,7 @@ export default class Menubar extends React.Component {
             linkButton
           />
           <Tab
-            label={"Gallery" + "\u00A0\u25BE"}
+            label={'Gallery\u00A0\u25BE'}
             value="/gallery/"
             onActive={this.handleGalleryActive}
             ref={(el) => { this.anchorEl = ReactDOM.findDOMNode(el); }}

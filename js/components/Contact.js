@@ -63,7 +63,7 @@ export default class Contact extends React.Component {
 
   handleRequestClose = () => {
     this.setState({
-      openSnackbar: false,
+      openSnackbar: false
     });
   };
 

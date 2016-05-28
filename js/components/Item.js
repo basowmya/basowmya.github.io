@@ -43,14 +43,14 @@ export default class Item extends React.Component {
 
   handleOpenEnquire = (event) => {
     event.preventDefault();
-    this.setState({openEnquire: true})
+    this.setState({openEnquire: true});
   };
 
   handleCloseEnquire = () => this.setState({openEnquire: false});
 
   handleOpenLargeImage = (event) => {
     event.preventDefault();
-    this.setState({openLargeImage: true})
+    this.setState({openLargeImage: true});
   };
 
   handleCloseLargeImage = () => this.setState({openLargeImage: false});
@@ -98,7 +98,7 @@ export default class Item extends React.Component {
     })();
 
     const shareText = `Take a look at this item from Sowmya's Art Gallery: ${itemPath}`;
-    const shareSubject = "Sowmya's Art Gallery";
+    const shareSubject = 'Sowmya\'s Art Gallery';
 
     return (
       <div>

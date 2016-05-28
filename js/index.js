@@ -13,7 +13,7 @@
 
  const appElement = document.getElementById('app');
 
- ReactDOM.render(Routes, appElement)
+ ReactDOM.render(Routes, appElement);
 
  // Prevent context menu on img elements to prevent saving images
  appElement.addEventListener('contextmenu', function (e) {
