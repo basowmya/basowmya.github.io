@@ -123,7 +123,7 @@ export default class Item extends React.Component {
                 zDepth={3}
               >
                 <CardMedia>
-                  <img src={item.images.small[0]} />
+                  <img src={item.images.small[0]} style={{cursor: 'pointer'}} />
                 </CardMedia>
               </Card>
           </div>
@@ -255,19 +255,28 @@ export default class Item extends React.Component {
           open={this.state.openLargeImage}
           onRequestClose={this.handleCloseLargeImage}
           bodyStyle={{
-            padding: 0,
-            margin: 0
+            padding: 0
           }}
-          ContentStyle={{
-            width: '100%'
-          }}
+          contentClassName="img-dialog-content"
         >
-          <img src={item.images.large[0]}
-          style={{
-            maxWidth: '100%',
-            maxHeight: '100%'
-          }}
-          />
+          <div
+            onTouchTap={this.handleCloseLargeImage}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignContent: 'center',
+              alignItems: 'center',
+              maxHeight: 'inherit'
+            }}
+          >
+            <img
+              src={item.images.large[0]}
+              style={{
+                maxWidth: '100%',
+                maxHeight: 'inherit'
+              }}
+            />
+          </div>
         </Dialog>
       </div>
     );

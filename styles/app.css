@@ -398,6 +398,11 @@ body {
   padding-right: 0;
 }
 
+.img-dialog-content > div {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
 @media (max-width: 480px) {
   .flex-item {
     flex-basis: 50%;
