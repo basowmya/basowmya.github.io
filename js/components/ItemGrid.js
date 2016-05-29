@@ -40,7 +40,10 @@ export default class ItemGrid extends React.Component {
                 zDepth={3}
               >
                 <CardMedia>
-                  <img src={item.images.small[0]} />
+                  <img
+                    src={item.images.small[0]}
+                    alt={item.name}
+                  />
                 </CardMedia>
                 { props.showDetails &&
                     <CardTitle

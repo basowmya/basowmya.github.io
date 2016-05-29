@@ -123,7 +123,11 @@ export default class Item extends React.Component {
                 zDepth={3}
               >
                 <CardMedia>
-                  <img src={item.images.small[0]} style={{cursor: 'pointer'}} />
+                  <img
+                    src={item.images.small[0]}
+                    alt={item.name}
+                    style={{cursor: 'pointer'}}
+                  />
                 </CardMedia>
               </Card>
           </div>
@@ -271,6 +275,7 @@ export default class Item extends React.Component {
           >
             <img
               src={item.images.large[0]}
+              alt={item.name}
               style={{
                 maxWidth: '100%',
                 maxHeight: 'inherit'
