@@ -2,22 +2,24 @@
  * Copyright (c) 2015, Sowmya B A. All rights reserved.
  */
 
- import React from 'react';
- import ReactDOM from 'react-dom';
- import injectTapEventPlugin from 'react-tap-event-plugin';
- import Routes from './components/Routes';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import Routes from './components/Routes';
 
- // Needed for onTouchTap; Can go away when react 1.0 release
- // Check this repo: https://github.com/zilverline/react-tap-event-plugin
- injectTapEventPlugin();
+// Needed for onTouchTap; Can go away when react 1.0 release
+// Check this repo: https://github.com/zilverline/react-tap-event-plugin
+injectTapEventPlugin();
 
- const appElement = document.getElementById('app');
+const appEl = document.getElementById('app');
+ReactDOM.render(Routes, appEl);
 
- ReactDOM.render(Routes, appElement);
+// Prevent context menu and drag on img elements to prevent saving images
+const preventDefaultForImg = (e) => {
+  if (e.srcElement.nodeName === 'IMG') {
+    e.preventDefault();
+  }
+};
 
- // Prevent context menu on img elements to prevent saving images
- appElement.addEventListener('contextmenu', function (e) {
-   if (e.srcElement.nodeName === 'IMG') {
-     e.preventDefault();
-   }
- });
+document.body.addEventListener('contextmenu', preventDefaultForImg);
+document.body.addEventListener('dragstart', preventDefaultForImg);

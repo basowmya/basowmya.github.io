@@ -25,7 +25,11 @@ function logPageView() {
 }
 
 export default (
-  <Router history={hashHistory} onUpdate={logPageView} render={applyRouterMiddleware(useScroll())} >
+  <Router
+    history={hashHistory}
+    onUpdate={logPageView}
+    render={applyRouterMiddleware(useScroll())}
+  >
     <Route path="/" component={App} >
       <IndexRoute component={Home} />
       <Route path='gallery/:id' component={Gallery} />

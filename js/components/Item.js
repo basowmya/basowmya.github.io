@@ -22,8 +22,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {Card, CardActions, CardMedia, CardText, CardTitle} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import {Popover} from 'material-ui/Popover';
-// import Zoomin from 'material-ui/svg-icons/action/zoom-in';
-// import {grey500} from 'material-ui/styles/colors';
 
 export default class Item extends React.Component {
 
@@ -72,9 +70,6 @@ export default class Item extends React.Component {
         marginLeft: 'auto',
         marginRight: 'auto'
       }
-      // shareButton: {
-      //   textTransform: 'none'
-      // }
     };
 
     const item = items.filter(({id}) => id === this.props.params.id)[0];
@@ -130,18 +125,6 @@ export default class Item extends React.Component {
                 <CardMedia>
                   <img src={item.images.small[0]} />
                 </CardMedia>
-                {/*<CardText
-                  style={{
-                    display: 'flex',
-                    alignContent: 'center',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    padding: '12px 16px'
-                  }}
-                >
-                  <Zoomin className='vertical-align' color={grey500}/>
-                  <span>Click for a larger view</span>
-                </CardText>*/}
               </Card>
           </div>
 
