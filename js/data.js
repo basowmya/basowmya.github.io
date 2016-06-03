@@ -610,19 +610,9 @@ var data = {
   ],
   "testimonials": [
     {
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum, dui id pretium dignissim, nisi sapien consequat tortor, quis cursus neque dui eget mauris. Etiam egestas, quam vitae imperdiet tempor, lorem metus interdum diam, vitae commodo risus libero id elit.",
-      "author": "Leonardo Da Vinci",
-      "profession": "Genius"
-    },
-    {
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum, dui id pretium dignissim, nisi sapien consequat tortor, quis cursus neque dui eget mauris. Etiam egestas, quam vitae imperdiet tempor, lorem metus interdum diam, vitae commodo risus libero id elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      "author": "Raja Ravi Varma",
-      "profession": "Artist"
-    },
-    {
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum, dui id pretium dignissim, nisi sapien consequat tortor, quis cursus neque dui eget mauris.",
-      "author": "Vincent Van Gogh",
-      "profession": "Impressionist"
+      "quote": "Sowmya is a very talented and dedicated artist. I have her painting of Radha Krishna in Kalamkari style and it is just gorgeous. Her eye for detail and finesse is evident in all her paintings.",
+      "author": "Priya R",
+      "profession": "Software Professional, Las Vegas"
     }
   ]
 };

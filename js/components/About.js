@@ -112,7 +112,7 @@ export default class About extends React.Component {
               display: 'flex',
               boxSizing: 'border-box',
               flex: '0 1 auto',
-              maxWidth: '220px',
+              maxWidth: '198px',
               margin: '0 16px 16px'
             }}
           >
