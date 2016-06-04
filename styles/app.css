@@ -381,7 +381,13 @@ textarea {
 /*! app.css */
 
 body {
-  background-color: #E0D5CD;
+  background-color: #dabfaa;
+  background-image: url("http://www.transparenttextures.com/patterns/silver-scales.png");
+}
+
+img {
+  /* Prevent context menu and drag to prevent saving images */
+  pointer-events: none;
 }
 
 .flex-item {

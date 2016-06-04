@@ -119,14 +119,16 @@ export default class Item extends React.Component {
           >
               <Card
                 onTouchTap={this.handleOpenLargeImage}
-                style={styles.center}
+                style={{
+                  cursor: 'pointer',
+                  ...styles.center
+                }}
                 zDepth={3}
               >
                 <CardMedia>
                   <img
                     src={item.images.small[0]}
                     alt={item.name}
-                    style={{cursor: 'pointer'}}
                   />
                 </CardMedia>
               </Card>
@@ -221,6 +223,9 @@ export default class Item extends React.Component {
           open={this.state.openShare}
           anchorEl={this.state.shareAnchorEl}
           onRequestClose={this.handleCloseShare}
+          style={{
+            backgroundColor: this.context.muiTheme.palette.accent2Color
+          }}
         >
           <MenuItem
             primaryText='Email'

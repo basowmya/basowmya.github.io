@@ -72,7 +72,7 @@ export default class Menubar extends React.Component {
         style={{
           display: 'flex',
           justifyContent: 'center',
-          backgroundColor: this.context.muiTheme.tabs.backgroundColor
+          backgroundColor: this.context.muiTheme.palette.accent1Color
         }}
       >
         <Tabs
@@ -115,7 +115,10 @@ export default class Menubar extends React.Component {
           anchorOrigin={{horizontal: 'middle', vertical: 'bottom'}}
           targetOrigin={{horizontal: 'middle', vertical: 'top'}}
           animation={PopoverAnimationVertical}
-          style={{transformOrigin: 'left top'}}
+          style={{
+            transformOrigin: 'left top',
+            backgroundColor: this.context.muiTheme.palette.accent2Color
+          }}
         >
           <Menu
             onChange={() => this.setState({open: false})}
