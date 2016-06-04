@@ -382,7 +382,7 @@ textarea {
 
 body {
   background-color: #dabfaa;
-  background-image: url('/img/background.png');
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAAMFBMVEXMzMzR0dHT09PW1tbX19fV1dXU1NTW1tbU1NTS0tLV1dXOzs7IyMjX19fCwsK2trbZmNwmAAAAEHRSTlMjMkBjf1xOakc5VSoceBUOgopTcgAAAKdJREFUeAHt0bEKQWEYxvHH7Bu842cVZbBYXIEbkKOsSuxKcgEc41FKspgky5ll+FbZ3Ig7kNM5w/8WDN7pN7zLv0elWndk1ui3K0jRbJqY+VUnQrrETctuGx+QTt7yS6pIw3LBdIc0UEGNkSbH/CF9zJHq15A5dbce0n55D5J7njdIfv1y709oLRIkYpCIQSIGiRgkYpCIQSIGiRhEDJKIQf+Nfn+jL42a7gHAGZoZAAAAAElFTkSuQmCC);  
 }
 
 img {
