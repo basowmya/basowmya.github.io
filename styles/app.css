@@ -382,7 +382,7 @@ textarea {
 
 body {
   background-color: #dabfaa;
-  background-image: url("http://www.transparenttextures.com/patterns/silver-scales.png");
+  background-image: url('/img/background.png');
 }
 
 img {
