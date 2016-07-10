@@ -49,7 +49,6 @@ export default class Menubar extends React.Component {
       <MenuItem
         key={id}
         href={`#/gallery/${id}`}
-        linkButton
         primaryText={name}
         value={id}
         {...attr}
@@ -86,7 +85,6 @@ export default class Menubar extends React.Component {
             label="Home"
             value="/"
             href="#/"
-            linkButton
           />
           <Tab
             label={'Gallery\u00A0\u25BE'}
@@ -98,13 +96,11 @@ export default class Menubar extends React.Component {
             label="About"
             value="/about"
             href="#/about"
-            linkButton
           />
           <Tab
             label="Contact"
             value="/contact"
             href="#/contact"
-            linkButton
           />
         </Tabs>
 

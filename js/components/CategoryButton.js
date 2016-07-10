@@ -16,7 +16,6 @@ export default class CategoryButton extends React.Component {
     return (
       <RaisedButton
         label={category.name}
-        linkButton={true}
         href={`#/gallery/${category.id}`}
         primary={true}
         style={{

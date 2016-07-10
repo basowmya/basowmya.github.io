@@ -180,7 +180,6 @@ export default class Item extends React.Component {
                 <RaisedButton
                   label='Enquire'
                   primary={true}
-                  linkButton={true}
                   href='#/contact'
                 />
                 <FlatButton
@@ -232,7 +231,6 @@ export default class Item extends React.Component {
             leftIcon={ <EmailIcon
               style={{ fill: this.context.muiTheme.palette.primary1Color }}
             /> }
-            linkButton
             href={`mailto:?body=${shareText}&subject=${shareSubject}`}
             target='_blank'
             innerDivStyle={{
@@ -244,7 +242,6 @@ export default class Item extends React.Component {
             leftIcon={ <WhatsAppIcon
               style={{ fill: this.context.muiTheme.palette.primary1Color }}
             /> }
-            linkButton
             href={`whatsapp://send?text=${shareText}`}
             innerDivStyle={{
               paddingLeft: '56px'

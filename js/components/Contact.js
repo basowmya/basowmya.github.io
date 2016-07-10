@@ -72,36 +72,45 @@ export default class Contact extends React.Component {
       return;
     }
 
-    let formData = pick(
-      this.state,
-      ['name', 'email', 'phone', 'message', '_subject', '_cc']
-    );
-
     this.setState({isLoading: true});
 
-    request
-      .post('//formspree.io/sowmya.ba@gmail.com')
-      .send(formData)
-      .type('form')
-      .accept('json')
-      .end((err, res) => {
-        this.setState({isLoading: false});
+    let formBody = ['name', 'email', 'phone', 'message', '_subject', '_cc'].map(
+      key => {
+        let encodedKey = encodeURIComponent(key);
+        let encodedValue = encodeURIComponent(this.state[key]);
+        return `${encodedKey}=${encodedValue}`;
+      }
+    )
+    .join('&');
 
-        if (err) {
-          let errText = (err.response && err.response.body && err.response.body.error) ||
-            'unknown error';
-          this.setState({
-            snackbarMessage: `Error ${(err.status || '(unknown status)')}: {$errText}`
-          });
-        }
-        else {
-          this.setState({snackbarMessage: 'Thanks for your message!'});
-          // TODO: Set two-way data-binding
-          this.setState({name: null, email: null, phone: null, message: null});
-        }
-
-        this.setState({openSnackbar: true});
+    fetch('//formspree.io/sowmya.ba@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formBody
+    })
+    .then(response => {
+      if (response.status >= 200 && response.status < 300) {
+        return response;
+      }
+      throw new Error(response.statusText);
+    })
+    .then(response => {
+      this.setState({isLoading: false});
+      this.setState({snackbarMessage: 'Thanks for your message!'});
+      // TODO: Set two-way data-binding
+      this.setState({name: null, email: null, phone: null, message: null});
+      this.setState({openSnackbar: true});
+    })
+    .catch(error => {
+      this.setState({isLoading: false});
+      this.setState({
+        snackbarMessage: `Error: ${error.message}`
       });
+      this.setState({openSnackbar: true});
+    });
   };
 
   validateForm() {

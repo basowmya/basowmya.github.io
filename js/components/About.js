@@ -71,7 +71,6 @@ export default class About extends React.Component {
 
         <CardActions>
           <RaisedButton
-            linkButton={true}
             href='#/contact'
             label='Contact the artist'
             primary={true}
