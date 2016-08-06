@@ -7,7 +7,7 @@ import {
   Router, Route, hashHistory, IndexRoute, applyRouterMiddleware
 }
 from 'react-router';
-import useScroll from 'react-router-scroll';
+import useScroll from 'react-router-scroll/lib/useScroll';
 import ReactGA from 'react-ga';
 
 import App from './App';
