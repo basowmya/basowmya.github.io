@@ -613,6 +613,11 @@ var data = {
       "quote": "Sowmya is a very talented and dedicated artist. I have her painting of Radha Krishna in Kalamkari style and it is just gorgeous. Her eye for detail and finesse is evident in all her paintings.",
       "author": "Priya R",
       "profession": "Software Professional, Las Vegas"
+    },
+    {
+      "quote": "Sowmya is a truly outstanding artist I have come across. I'm overwhelmed with the stunning Tanjore painting that she had made for me. I thank her for taking the time to execute the painting with ultimate perfection and passion.",
+      "author": "Shobha Srinivasan",
+      "profession": "Los Angeles"
     }
   ]
 };
