@@ -458,6 +458,8 @@ var data = {
       "category": "6",
       "price": 300,
       "size": [3.5, 6],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -486,6 +488,8 @@ var data = {
       "category": "6",
       "price": 600,
       "size": [4, 5.5],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -504,6 +508,8 @@ var data = {
       "category": "6",
       "price": 600,
       "size": [4.25, 5],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -529,6 +535,8 @@ var data = {
       "price": 500,
       "size": [5.5, 3.5],
       "imageCount": 2,
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -547,6 +555,8 @@ var data = {
       "category": "6",
       "price": 300,
       "size": [3.9, 4.6],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -563,6 +573,8 @@ var data = {
       "category": "6",
       "price": 400,
       "size": [4.2, 5],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -571,6 +583,8 @@ var data = {
       "category": "6",
       "price": 500,
       "size": [4.5, 5.2],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -579,6 +593,8 @@ var data = {
       "category": "6",
       "price": 300,
       "size": [4.3, 5.5],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
@@ -587,6 +603,8 @@ var data = {
       "category": "6",
       "price": 500,
       "size": [4.5, 5.2],
+      "outOfStock": true,
+      "unavailable": true,
       "media": "Acrylic on Terracotta Pot"
     },
     {
