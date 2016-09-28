@@ -25,47 +25,43 @@ export default class ItemGrid extends React.Component {
 
     let cols = props.items.map((item, index) => {
       return (
-        <div
+        <Link
           key={item.id}
-          className={`flex-item ${props.singleRow ? `flex-item-${index}` : ''}`}
+          className={
+            `flex-item ${props.singleRow ? `flex-item-${index}` : ''}`
+          }
+          to={'/item/' + item.id}
+          style={{
+            textDecoration: 'none',
+            ...styles.center
+          }}
         >
-            <Link
-              to={'/item/' + item.id}
-              style={{
-                textDecoration: 'none',
-                ...styles.center
-              }}
-            >
-              <Card
-                zDepth={3}
-              >
-                <CardMedia>
-                  <img
-                    src={item.images.small[0]}
-                    alt={item.name}
-                  />
-                </CardMedia>
-                { props.showDetails &&
-                    <CardTitle
-                      subtitle={item.name}
-                      subtitleStyle={{
-                        color: this.context.muiTheme.palette.primary1Color,
-                        textAlign: 'center'
-                      }}
-                    />
-                }
-              </Card>
-            </Link>
-          {/*<div
-            style={{
-              display: 'flex',
-              textAlign: 'center',
-              width: '100%'
-            }}
+          <Card
+            className={`${item.outOfStock} ? ribbon-box : ''`}
+            zDepth={3}
           >
-            {props.showDetails ? item.name : ''}
-          </div>*/}
-        </div>
+            <CardMedia>
+              <img
+                src={item.images.small[0]}
+                alt={item.name}
+              />
+            </CardMedia>
+            { props.showDetails &&
+                <CardTitle
+                  subtitle={item.name}
+                  subtitleStyle={{
+                    color: this.context.muiTheme.palette.primary1Color,
+                    textAlign: 'center'
+                  }}
+                />
+            }
+            { item.outOfStock &&
+              <div className='ribbon'>
+                <span>SOLD OUT</span>
+              </div>
+            }
+          </Card>
+        </Link>
       );
     });
 

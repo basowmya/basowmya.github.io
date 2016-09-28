@@ -382,7 +382,7 @@ textarea {
 
 body {
   background-color: #dabfaa;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAAMFBMVEXMzMzR0dHT09PW1tbX19fV1dXU1NTW1tbU1NTS0tLV1dXOzs7IyMjX19fCwsK2trbZmNwmAAAAEHRSTlMjMkBjf1xOakc5VSoceBUOgopTcgAAAKdJREFUeAHt0bEKQWEYxvHH7Bu842cVZbBYXIEbkKOsSuxKcgEc41FKspgky5ll+FbZ3Ig7kNM5w/8WDN7pN7zLv0elWndk1ui3K0jRbJqY+VUnQrrETctuGx+QTt7yS6pIw3LBdIc0UEGNkSbH/CF9zJHq15A5dbce0n55D5J7njdIfv1y709oLRIkYpCIQSIGiRgkYpCIQSIGiRhEDJKIQf+Nfn+jL42a7gHAGZoZAAAAAElFTkSuQmCC);  
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAAMFBMVEXMzMzR0dHT09PW1tbX19fV1dXU1NTW1tbU1NTS0tLV1dXOzs7IyMjX19fCwsK2trbZmNwmAAAAEHRSTlMjMkBjf1xOakc5VSoceBUOgopTcgAAAKdJREFUeAHt0bEKQWEYxvHH7Bu842cVZbBYXIEbkKOsSuxKcgEc41FKspgky5ll+FbZ3Ig7kNM5w/8WDN7pN7zLv0elWndk1ui3K0jRbJqY+VUnQrrETctuGx+QTt7yS6pIw3LBdIc0UEGNkSbH/CF9zJHq15A5dbce0n55D5J7njdIfv1y709oLRIkYpCIQSIGiRgkYpCIQSIGiRhEDJKIQf+Nfn+jL42a7gHAGZoZAAAAAElFTkSuQmCC);
 }
 
 img {
@@ -437,4 +437,52 @@ img {
   .container {
     width: 1168px;
   }
+}
+
+.ribbon-box {
+  position: relative;
+  border: 1px solid #BBB;
+}
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#F70505 0%, #8F0808 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #8F0808;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8F0808;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #8F0808;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8F0808;
 }

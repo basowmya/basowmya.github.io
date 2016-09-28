@@ -118,6 +118,7 @@ export default class Item extends React.Component {
             }}
           >
               <Card
+                className={`${item.outOfStock} ? ribbon-box : ''`}
                 onTouchTap={this.handleOpenLargeImage}
                 style={{
                   cursor: 'pointer',
@@ -131,6 +132,11 @@ export default class Item extends React.Component {
                     alt={item.name}
                   />
                 </CardMedia>
+                { item.outOfStock &&
+                  <div className='ribbon'>
+                    <span>SOLD OUT</span>
+                  </div>
+                }
               </Card>
           </div>
 
@@ -172,7 +178,7 @@ export default class Item extends React.Component {
                           verticalAlign: 'middle'
                         }}
                       />
-                      Out of stock {item.unavailable ? '' : '(available as commissioned work)'}
+                      Sold out {item.unavailable ? '' : '(available as commissioned work)'}
                     </p>
                 }
               </CardText>
