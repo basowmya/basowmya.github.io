@@ -2,7 +2,7 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import {Component, PropTypes} from 'react';
+import React from 'react';
 import {items, categories} from '../data';
 import sampleSize from 'lodash/sampleSize';
 import CategoryButton from './CategoryButton';
@@ -23,10 +23,10 @@ import {Card, CardActions, CardMedia, CardText, CardTitle} from 'material-ui/Car
 import Paper from 'material-ui/Paper';
 import {Popover} from 'material-ui/Popover';
 
-export default class Item extends Component {
+export default class Item extends React.Component {
 
   static contextTypes = {
-    muiTheme: PropTypes.object
+    muiTheme: React.PropTypes.object
   }
 
   constructor(props, context) {
