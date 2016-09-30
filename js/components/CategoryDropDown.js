@@ -1,14 +1,14 @@
 /*
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
-import React from 'react';
+import {Component} from 'react';
 import FlatButton from 'material-ui/FlatButton';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import data from '../data';
 
-export default class PopoverExampleSimple extends React.Component {
+export default class PopoverExampleSimple extends Component {
 
   constructor(props) {
     super(props);

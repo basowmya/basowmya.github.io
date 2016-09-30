@@ -2,17 +2,17 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component, PropTypes} from 'react';
 import Avatar from 'material-ui/Avatar';
 import {Card, CardActions, CardHeader, CardText, CardTitle} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import typography from 'material-ui/styles/typography';
 import {testimonials} from '../data';
 
-export default class About extends React.Component {
+export default class About extends Component {
 
   static contextTypes = {
-    muiTheme: React.PropTypes.object
+    muiTheme: PropTypes.object
   }
 
   render = () => (

@@ -2,7 +2,7 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component} from 'react';
 import Avatar from 'material-ui/Avatar';
 import {Card, CardActions, CardTitle} from 'material-ui/Card';
 import LinearProgress from 'material-ui/LinearProgress';
@@ -10,9 +10,8 @@ import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import pick from 'lodash/pick';
-import request from 'superagent';
 
-export default class Contact extends React.Component {
+export default class Contact extends Component {
 
   constructor(props, context) {
     super(props, context);

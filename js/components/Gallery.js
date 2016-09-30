@@ -2,14 +2,14 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component, PropTypes} from 'react';
 import ItemGrid from './ItemGrid';
 import {categories, items} from '../data';
 
-export default class Home extends React.Component {
+export default class Home extends Component {
 
   static contextTypes = {
-    muiTheme: React.PropTypes.object
+    muiTheme: PropTypes.object
   }
 
   render() {

@@ -2,7 +2,7 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
 import Menu from 'material-ui/Menu';
@@ -19,10 +19,10 @@ import Paper from 'material-ui/Paper';
 
 import {categories} from '../data';
 
-export default class Menubar extends React.Component {
+export default class Menubar extends Component {
 
   static contextTypes = {
-    muiTheme: React.PropTypes.object
+    muiTheme: PropTypes.object
   }
 
   constructor(props, context) {

@@ -2,12 +2,12 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component, PropTypes} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export default class CategoryButton extends React.Component {
+export default class CategoryButton extends Component {
   static propTypes = {
-    category: React.PropTypes.object
+    category: PropTypes.object
   };
 
   render() {

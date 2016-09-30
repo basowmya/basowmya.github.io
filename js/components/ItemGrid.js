@@ -2,15 +2,15 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component, PropTypes} from 'react';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import Link from 'react-router/lib/Link';
 import {transparent} from 'material-ui/styles/colors';
 
-export default class ItemGrid extends React.Component {
+export default class ItemGrid extends Component {
 
   static contextTypes = {
-    muiTheme: React.PropTypes.object
+    muiTheme: PropTypes.object
   }
 
   render() {

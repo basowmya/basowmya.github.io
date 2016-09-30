@@ -2,15 +2,15 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import React from 'react';
+import {Component, PropTypes} from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Menubar from './Menubar';
 import Footer from './Footer';
 import {grey300} from 'material-ui/styles/colors';
 
-export default class App extends React.Component {
+export default class App extends Component {
   static childContextTypes = {
-    muiTheme: React.PropTypes.object
+    muiTheme: PropTypes.object
   }
 
   getChildContext() {
