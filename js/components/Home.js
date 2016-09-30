@@ -2,17 +2,17 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import {Component, PropTypes} from 'react';
+import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import sampleSize from 'lodash/sampleSize';
 import {categories, items} from '../data';
 import CategoryButton from './CategoryButton';
 import ItemGrid from './ItemGrid';
 
-export default class Home extends Component {
+export default class Home extends React.Component {
 
   static contextTypes = {
-    muiTheme: PropTypes.object
+    muiTheme: React.PropTypes.object
   }
 
   render() {

@@ -2,13 +2,13 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
-import {Component, PropTypes} from 'react';
+import React from 'react';
 import typography from 'material-ui/styles/typography';
 
-export default class Footer extends Component {
+export default class Footer extends React.Component {
 
   static contextTypes = {
-    muiTheme: PropTypes.object
+    muiTheme: React.PropTypes.object
   }
 
   render = () => (

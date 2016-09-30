@@ -2,6 +2,7 @@
  * Copyright (c) 2016, Sowmya B A. All rights reserved.
  */
 
+import React from 'react';
 import {
   Router, Route, hashHistory, IndexRoute, applyRouterMiddleware
 }
