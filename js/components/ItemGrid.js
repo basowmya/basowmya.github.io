@@ -37,7 +37,7 @@ export default class ItemGrid extends Component {
           }}
         >
           <Card
-            className={`${item.outOfStock} ? ribbon-box : ''`}
+            className={item.outOfStock ? 'ribbon-box' : ''}
             zDepth={3}
           >
             <CardMedia>

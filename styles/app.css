@@ -441,7 +441,6 @@ img {
 
 .ribbon-box {
   position: relative;
-  border: 1px solid #BBB;
 }
 .ribbon {
   position: absolute;
@@ -458,8 +457,8 @@ img {
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
-  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   width: 100px;
   display: block;
   background: #79A70A;
@@ -470,7 +469,7 @@ img {
 }
 .ribbon span::before {
   content: "";
-  position: absolute; left: 0px; top: 100%;
+  position: absolute; left: 0; top: 100%;
   z-index: -1;
   border-left: 3px solid #8F0808;
   border-right: 3px solid transparent;
@@ -479,7 +478,7 @@ img {
 }
 .ribbon span::after {
   content: "";
-  position: absolute; right: 0px; top: 100%;
+  position: absolute; right: 0; top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
   border-right: 3px solid #8F0808;

@@ -118,7 +118,7 @@ export default class Item extends Component {
             }}
           >
               <Card
-                className={`${item.outOfStock} ? ribbon-box : ''`}
+                className={item.outOfStock ? 'ribbon-box' : ''}
                 onTouchTap={this.handleOpenLargeImage}
                 style={{
                   cursor: 'pointer',
