@@ -175,6 +175,7 @@ var data = {
       category: '5',
       price: 2500,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -183,6 +184,7 @@ var data = {
       category: '5',
       price: 2500,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -191,6 +193,7 @@ var data = {
       category: '5',
       price: 2500,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -207,6 +210,7 @@ var data = {
       category: '5',
       price: 3000,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -215,6 +219,7 @@ var data = {
       category: '5',
       price: 3000,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -223,6 +228,7 @@ var data = {
       category: '5',
       price: 3000,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -468,6 +474,8 @@ var data = {
       category: '6',
       price: 500,
       size: [4.75, 5.5],
+      outOfStock: true,
+      unavailable: true,
       imageCount: 2,
       media: 'Acrylic on Terracotta Pot'
     },
@@ -526,6 +534,8 @@ var data = {
       category: '6',
       price: 400,
       size: [4.2, 5.5],
+      outOfStock: true,
+      unavailable: true,
       media: 'Acrylic on Terracotta Pot'
     },
     {
@@ -565,6 +575,8 @@ var data = {
       category: '6',
       price: 500,
       size: [4, 9],
+      outOfStock: true,
+      unavailable: true,
       media: 'Acrylic on Terracotta Pot'
     },
     {
@@ -613,6 +625,8 @@ var data = {
       category: '6',
       price: 500,
       size: [4.4, 4],
+      outOfStock: true,
+      unavailable: true,
       media: 'Acrylic on Terracotta Pot'
     },
     {
