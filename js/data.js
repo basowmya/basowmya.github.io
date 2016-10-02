@@ -638,6 +638,36 @@ var data = {
       outOfStock: true,
       unavailable: true,
       media: 'Acrylic on Terracotta Pot'
+    },
+    {
+      id: 'pot-19',
+      name: 'Tribal with Headband',
+      category: '6',
+      price: 450,
+      size: [5.5, 7.5],
+      outOfStock: true,
+      unavailable: true,
+      media: 'Acrylic on Terracotta Pot'
+    },
+    {
+      id: 'pot-20',
+      name: 'Tribal with Nose Ring',
+      category: '6',
+      price: 450,
+      size: [6, 6.5],
+      outOfStock: true,
+      unavailable: true,
+      media: 'Acrylic on Terracotta Pot'
+    },
+    {
+      id: 'pot-21',
+      name: 'Strawberry',
+      category: '6',
+      price: 250,
+      size: [4, 5],
+      outOfStock: true,
+      unavailable: true,
+      media: 'Acrylic on Terracotta Pot'
     }
   ],
   testimonials: [
