@@ -19,7 +19,8 @@ export default class CategoryButton extends React.Component {
         href={`#/gallery/${category.id}`}
         primary={true}
         style={{
-          marginBottom: '24px'
+          marginBottom: '24px',
+          marginRight: '16px'
         }}
       />
     );

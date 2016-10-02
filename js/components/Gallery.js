@@ -4,6 +4,7 @@
 
 import React from 'react';
 import ItemGrid from './ItemGrid';
+import OtherCategories from './OtherCategories';
 import {categories, items} from '../data';
 
 export default class Home extends React.Component {
@@ -16,28 +17,31 @@ export default class Home extends React.Component {
     const {name, id} = categories.filter(({id}) => id === this.props.params.id)[0];
 
     return (
-      <div
-        style={{
-          boxShadow: this.context.muiTheme.palette.boxShadow
-        }}
-      >
+      <div>
         <div
           style={{
-            color: this.context.muiTheme.palette.primary1Color,
-            fontSize: '24px',
-            margin: '8px 0 24px',
-            textAlign: 'center',
-            width: '100%'
+            boxShadow: this.context.muiTheme.palette.boxShadow
           }}
         >
-          {name}
+          <div
+            style={{
+              color: this.context.muiTheme.palette.primary1Color,
+              fontSize: '24px',
+              margin: '8px 0 24px',
+              textAlign: 'center',
+              width: '100%'
+            }}
+          >
+            {name}
+          </div>
+          <ItemGrid
+            items={
+              items.filter(({category}) => category === id)
+            }
+            showDetails={true}
+          />
         </div>
-        <ItemGrid
-          items={
-            items.filter(({category}) => category === id)
-          }
-          showDetails={true}
-        />
+        <OtherCategories categoryId={id} />
       </div>
     );
   }

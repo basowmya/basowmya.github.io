@@ -6,6 +6,7 @@ import React from 'react';
 import {items, categories} from '../data';
 import sampleSize from 'lodash/sampleSize';
 import CategoryButton from './CategoryButton';
+import OtherCategories from './OtherCategories';
 import Contact from './Contact';
 import ItemGrid from './ItemGrid';
 
@@ -223,6 +224,8 @@ export default class Item extends React.Component {
             boxShadow: this.context.muiTheme.palette.boxShadow
           }}
         />
+
+        <OtherCategories categoryId={item.category} />
 
         <Popover
           open={this.state.openShare}
