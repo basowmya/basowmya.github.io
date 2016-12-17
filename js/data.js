@@ -175,7 +175,6 @@ var data = {
       category: '5',
       price: 2500,
       size: [13, 15.5],
-      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -202,6 +201,7 @@ var data = {
       category: '5',
       price: 2500,
       size: [13, 15.5],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -237,6 +237,7 @@ var data = {
       category: '5',
       price: 2500,
       size: [15.5, 13],
+      outOfStock: true,
       media: 'Pen and pencil on paper'
     },
     {
@@ -575,8 +576,6 @@ var data = {
       category: '6',
       price: 500,
       size: [4, 9],
-      outOfStock: true,
-      unavailable: true,
       media: 'Acrylic on Terracotta Pot'
     },
     {
