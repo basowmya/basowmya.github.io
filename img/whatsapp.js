@@ -1,5 +1,5 @@
 import React from 'react';
-import pure from 'material-ui/node_modules/recompose/pure';
+import pure from 'recompose/pure';
 import SvgIcon from 'material-ui/SvgIcon';
 
 let WhatsApp = (props) => (
