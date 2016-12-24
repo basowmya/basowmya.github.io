@@ -452,6 +452,14 @@ var data = {
       media: 'Acrylic Paint'
     },
     {
+      id: 'acr-02',
+      name: 'Poldark Mine',
+      category: '7',
+      price: 10000,
+      size: [16, 20],
+      media: 'Acrylic Paint'
+    },
+    {
       id: 'pos-01',
       name: 'Sakhi going to Pooja',
       category: '7',
