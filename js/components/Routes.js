@@ -20,8 +20,7 @@ import Contact from './Contact';
 ReactGA.initialize('UA-78467354-1');
 
 function logPageView() {
-  const hash = window.location.hash;
-  ReactGA.pageview(hash.substr(0, hash.indexOf('?')));
+  ReactGA.pageview(window.location.hash);
 }
 
 export default (
