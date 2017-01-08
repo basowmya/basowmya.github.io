@@ -1,7 +1,11 @@
 'use strict';
 
+/* eslint-env node */
+
 let path = require('path');
 let webpack = require('webpack');
+let swPrecacheWebpack = require('sw-precache-webpack-plugin');
+const swConfig = require('./sw-precache.config.json');
 
 module.exports = {
   // devtool: 'cheap-module-eval-source-map',
@@ -12,11 +16,11 @@ module.exports = {
   },
   module: {
     loaders: [
-       {
-         test: /\.jsx?$/,
-         exclude: /(node_modules|bower_components)/,
-         loader: 'babel-loader',
-         query: {
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
           presets: [
             'es2015',
             'stage-0',
@@ -31,12 +35,13 @@ module.exports = {
       //   include: /flexboxgrid/,
       // }
     ]
-  }
-  , plugins: [
+  },
+  plugins: [
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
-    })
+    }),
+    new swPrecacheWebpack(swConfig)
   ]
 };

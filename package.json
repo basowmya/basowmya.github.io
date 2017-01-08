@@ -5,14 +5,15 @@
   "private": true,
   "main": "js/bundle.js",
   "scripts": {
+    "serve": "live-server --watch=js/bundle.js,index.html,styles/app.css",
+    "prod": "webpack --progress -p",
     "start": "watchify -v --debug -e js/index.js -o js/bundle.js",
+    "sw": "sw-precache --config=sw-precache.config.json --verbose",
+    "lint": "eslint js/components",
     "build": "browserify --debug -e js/index.js -o js/bundle.js",
     "beefy": "beefy js/index.js:js/bundle.js --live --open",
-    "serve": "live-server --watch=js/bundle.js,index.html,styles/app.css",
     "less": "lessc styles/app.less > styles/app.css",
     "browprod": "NODE_ENV=production browserify -e js/index.js -o js/bundle.js -g uglifyify",
-    "prod": "webpack --progress -p",
-    "lint": "eslint js/components",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dheeraj V S",
@@ -46,6 +47,8 @@
     "eslint": "^3.12.2",
     "eslint-plugin-react": "^6.8.0",
     "style-loader": "^0.13.1",
+    "sw-precache": "^4.3.0",
+    "sw-precache-webpack-plugin": "^0.7.1",
     "uglifyify": "^3.0.4",
     "watchify": "^3.8.0",
     "webpack": "^1.14.0"

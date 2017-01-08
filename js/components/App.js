@@ -6,11 +6,61 @@ import React from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Menubar from './Menubar';
 import Footer from './Footer';
+import Snackbar from 'material-ui/Snackbar';
 import {grey300} from 'material-ui/styles/colors';
 
 export default class App extends React.Component {
   static childContextTypes = {
     muiTheme: React.PropTypes.object
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      autoHideDuration: 4000,
+      snackbarAction: '',
+      snackbarMessage: '',
+      openSnackbar: false
+    };
+  }
+
+  handleServiceWorkerEvent(e) {
+    if (e.detail) {
+      if (e.detail.newContent) {
+        this.setState({
+          autoHideDuration: 0,
+          snackbarAction: 'Refresh',
+          snackbarMessage: 'New content available.',
+          openSnackbar: true,
+        });
+      }
+      else if (e.detail.offlineReady) {
+        this.setState({
+          autoHideDuration: 4000,
+          snackbarMessage: 'Content is now available offline.',
+          openSnackbar: false
+        });
+      }
+    }
+  }
+
+  handleActionTouchTap() {
+    this.handleRequestClose();
+    window.location.reload();
+  }
+
+  handleRequestClose() {
+    this.setState({
+      openSnackbar: false
+    });
+  }
+
+  componentDidMount() {
+    document.addEventListener('serviceWorker', this.handleServiceWorkerEvent.bind(this));
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('serviceWorker', this.handleServiceWorkerEvent.bind(this));
   }
 
   getChildContext() {
@@ -56,6 +106,14 @@ export default class App extends React.Component {
           {this.props.children}
         </div>
         <Footer/>
+        <Snackbar
+          open={this.state.openSnackbar}
+          action={this.state.snackbarAction}
+          autoHideDuration={this.state.autoHideDuration}
+          message={this.state.snackbarMessage}
+          onActionTouchTap={this.handleActionTouchTap.bind(this)}
+          onRequestClose={this.handleRequestClose.bind(this)}
+        />
       </div>
     );
   }

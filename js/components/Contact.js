@@ -208,7 +208,7 @@ export default class Contact extends React.Component {
                 open={this.state.openSnackbar}
                 message={this.state.snackbarMessage}
                 autoHideDuration={3000}
-                onRequestClose={this.handleSnackbarClose}
+                onRequestClose={this.handleRequestClose}
               />
             </CardActions>
           </form>
