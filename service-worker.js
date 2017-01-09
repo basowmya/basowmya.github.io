@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["index.html","a90512ef3f6636dc991dc7fe8eb61882"],["js/bundle.js","de9b4b2a8b13a2bc6f59faee01749559"],["styles/app.css","b98e69020ab42a5bf1874cea5391dd5f"]];
+var precacheConfig = [["index.html","ed01bbc16254520be23344f09b1ed735"],["js/bundle.js","d0be731d16ca4660eb0c2bfdca4335be"],["styles/app.css","b98e69020ab42a5bf1874cea5391dd5f"]];
 var cacheName = 'sw-precache-v2-art-gallery-app-' + (self.registration ? self.registration.scope : '');
 
 
